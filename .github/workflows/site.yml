@@ -82,16 +82,18 @@ jobs:
         with:
           # path: _site
           pattern: web*
-          # merge-multiple: true
+          merge-multiple: true
       - name: List
         run: |
           ls -laR
-          tar tvf webcommon/artifact.tar
+          # tar tvf webcommon/artifact.tar
+          tar tvf artifact.tar
           mkdir _site
           cd _site
-          tar xvf ../webcommon/artifact.tar
-          tar xvf ../webone/artifact.tar
-          tar xvf ../webtwo/artifact.tar
+          # tar xvf ../webcommon/artifact.tar
+          # tar xvf ../webone/artifact.tar
+          # tar xvf ../webtwo/artifact.tar
+          tar xvf ../artifact.tar
       # Upload Combined Artifact
       - name: Upload Combined Artifact
         uses: actions/upload-pages-artifact@v3
