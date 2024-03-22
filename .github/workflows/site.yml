@@ -48,7 +48,6 @@ jobs:
   copy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     name: Copy Files
     runs-on: ubuntu-latest
     steps:
@@ -73,6 +72,9 @@ jobs:
     name: Deploy Web Site
     runs-on: ubuntu-latest
     steps:
+      - name: List
+        run: |
+          ls -la
       # Download All Generated Artifacts
       - name: Download All Artifacts
         uses: actions/download-artifact@v4
@@ -80,6 +82,9 @@ jobs:
           path: _site
           pattern: web*
           merge-multiple: true
+      - name: List
+        run: |
+          ls -la
       # Upload Combined Artifact
       - name: Upload Combined Artifact
         uses: actions/upload-pages-artifact@v3
