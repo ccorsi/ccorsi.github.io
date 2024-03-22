@@ -33,12 +33,12 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build the site in the jekyll/builder container
         run: |
+          cp -rpv ${{ github.worspace }}/_common/* ${{ matrix.site }}
           export JEKYLL_VERSION=stable
           docker run \
           -v ${{ github.workspace }}/${{ matrix.site }}:/srv/jekyll -v ${{ github.workspace }}/_site/${{ matrix.site }}:/srv/jekyll/_site \
           -e PAGES_REPO_NWO=${{ github.repository }} \
           jekyll/builder:$JEKYLL_VERSION /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future --trace"
-          cp -rpv _common/* _site/${{ matrix.site }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -81,13 +81,13 @@ jobs:
         with:
           # path: _site
           pattern: web*
-          merge-multiple: true
+          # merge-multiple: true
       - name: List
         run: |
           ls -laR
           mkdir _site
           cd _site
-          tar xvf ../artifact.tar
+          tar xvf ../web*/artifact.tar
       # Upload Combined Artifact
       - name: Upload Combined Artifact
         uses: actions/upload-pages-artifact@v3
