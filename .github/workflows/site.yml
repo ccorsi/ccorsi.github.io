@@ -79,12 +79,13 @@ jobs:
       - name: Download All Artifacts
         uses: actions/download-artifact@v4
         with:
-          path: _site
+          # path: _site
           pattern: web*
-          merge-multiple: true
+          merge-multiple: false
       - name: List
         run: |
           ls -laR
+          tar tvf web*.tar
       # Upload Combined Artifact
       - name: Upload Combined Artifact
         uses: actions/upload-pages-artifact@v3
