@@ -30,7 +30,7 @@ url: "https://ccorsi.github.io" # the base hostname & protocol for your site, e.
 github_username:  ccorsi
 
 # Build settings
-theme: beautiful-jekyll-theme
+remote_theme: daatali/beautiful-jekyll@6.0.1
 plugins:
   - jekyll-feed
 
@@ -69,21 +69,21 @@ round-avatar: true
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-# email: "clcorsi@yahoo.com"
-  rss: true  # remove this line if you don't want to show an RSS link at the bottom
+ email: "clcorsi@yahoo.com"
+# rss: true  # remove this line if you don't want to show an RSS link at the bottom
 # facebook: deanattali
-  github: ccorsi
+ github: ccorsi
 # twitter: daattali
 # patreon: DeanAttali
 # youtube: "@daattali"
 #  medium: yourname
 #  reddit: yourname
-#  linkedin: daattali
+ linkedin: claudio-corsi-9112193
 #  xing: yourname
-#  stackoverflow: "3943160/daattali"
+ stackoverflow: "4332437/claudio-corsi"
 #  snapchat: deanat78
 #  instagram: deanat78
-   spotify: ccorsi
+#  spotify: ccorsi
 #  telephone: +14159998888
 #  steam: deanat78
 #  twitch: yourname
