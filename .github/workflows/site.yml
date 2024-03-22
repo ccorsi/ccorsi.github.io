@@ -73,27 +73,19 @@ jobs:
     name: Deploy Web Site
     runs-on: ubuntu-latest
     steps:
-      - name: List
-        run: |
-          ls -laR
       # Download All Generated Artifacts
       - name: Download All Artifacts
         uses: actions/download-artifact@v4
         with:
-          # path: _site
           pattern: web*
-          merge-multiple: true
-      - name: List
+      - name: Populate the _site directory
         run: |
-          ls -laR
-          # tar tvf webcommon/artifact.tar
-          tar tvf artifact.tar
+          tar tvf webcommon/artifact.tar
           mkdir _site
           cd _site
-          # tar xvf ../webcommon/artifact.tar
-          # tar xvf ../webone/artifact.tar
-          # tar xvf ../webtwo/artifact.tar
-          tar xvf ../artifact.tar
+          tar xvf ../webcommon/artifact.tar
+          tar xvf ../webone/artifact.tar
+          tar xvf ../webtwo/artifact.tar
       # Upload Combined Artifact
       - name: Upload Combined Artifact
         uses: actions/upload-pages-artifact@v3
