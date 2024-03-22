@@ -44,16 +44,15 @@ jobs:
   copy:
     needs: build
     name: Copy Files
-    runs-on: ubuntu-latest
     steps:
       - name: Copy Require Web Site Files
         run: |
+          ls
           cp index.htm _site
 
   # Upload the generated and copied artifacts
   upload:
     needs: copy
-    runs-on: ubuntu-latest
     steps:
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
@@ -64,7 +63,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu_latest
     needs: upload
     steps:
       - name: Deploy to GitHub Pages
