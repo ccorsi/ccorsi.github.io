@@ -48,7 +48,7 @@ jobs:
     steps:
       - name: Copy Require Web Site Files
         run: |
-          cp index.html _site
+          cp index.htm _site
 
   # Upload the generated and copied artifacts
   upload:
