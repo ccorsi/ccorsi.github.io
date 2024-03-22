@@ -1,0 +1,21 @@
+name: Web Site Generation using the Beautiful Jekyll Theme
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        site: [webone, webtwo]
+    name: Build Jekyll
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the site in the jekyll/builder container
+        run: |
+          export JEKYLL_VERSION=stable
+          docker run \
+          -v ${{ github.workspace }}/${{ matrix.site }}:/srv/jekyll -v ${{ github.workspace }}/_site/${{ matrix.site }}:/srv/jekyll/_site \
+          -e PAGES_REPO_NWO=${{ github.repository }} \
+          jekyll/builder:$JEKYLL_VERSION /bin/bash -c "chmod 777 /srv/jekyll && jekyll build --future"
+
