@@ -85,9 +85,10 @@ jobs:
       - name: List
         run: |
           ls -laR
+          tar tvf web*/artifact.tar
           mkdir _site
           cd _site
-          tar xvf ../web*/artifact.tar
+          # tar xvf ../web*/artifact.tar
       # Upload Combined Artifact
       - name: Upload Combined Artifact
         uses: actions/upload-pages-artifact@v3
