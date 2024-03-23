@@ -83,17 +83,12 @@ jobs:
         run: |
           mkdir _site
           cd _site
-          tar xvf ../webcommon/artifact.tar
-          tar xvf ../webone/artifact.tar
-          tar xvf ../webtwo/artifact.tar
-          echo env:WEBSITES=$WEBSITES
-          for dir in $WEBSITES
+          # tar xvf ../webcommon/artifact.tar
+          # tar xvf ../webone/artifact.tar
+          # tar xvf ../webtwo/artifact.tar
+          for site in $WEBSITES
           do
-            echo dir=$dir
-          done
-          for dir in `find . -name web* -maxdepth 1 -type d`
-          do
-            echo dir=$dir
+            tar xvf ../${site}/artifact.tar
           done
       # Upload Combined Artifact
       - name: Upload Combined Artifact
