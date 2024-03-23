@@ -87,10 +87,7 @@ jobs:
           tar xvf ../webone/artifact.tar
           tar xvf ../webtwo/artifact.tar
           echo env:WEBSITES=${{ env:WEBSITES }}
-          for dir in `find . -name web* -maxdepth 1 -type d`
-          do
-            echo dir=$dir
-          done
+          for dir in `find . -name web* -maxdepth 1 -type d`; do; echo dir=$dir; done
       # Upload Combined Artifact
       - name: Upload Combined Artifact
         uses: actions/upload-pages-artifact@v3
