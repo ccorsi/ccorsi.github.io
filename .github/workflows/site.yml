@@ -80,12 +80,12 @@ jobs:
           pattern: web*
       - name: Populate the _site directory
         run: |
-          tar tvf webcommon/artifact.tar
           mkdir _site
           cd _site
           tar xvf ../webcommon/artifact.tar
           tar xvf ../webone/artifact.tar
           tar xvf ../webtwo/artifact.tar
+          for dir in $env:WEBSITES; do; echo dir=$dir; done
       # Upload Combined Artifact
       - name: Upload Combined Artifact
         uses: actions/upload-pages-artifact@v3
