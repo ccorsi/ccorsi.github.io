@@ -87,6 +87,10 @@ jobs:
           tar xvf ../webone/artifact.tar
           tar xvf ../webtwo/artifact.tar
           echo env:WEBSITES=$WEBSITES
+          for dir in "$WEBSITES"
+          do
+            echo dir=$dir
+          done
           for dir in `find . -name web* -maxdepth 1 -type d`
           do
             echo dir=$dir
