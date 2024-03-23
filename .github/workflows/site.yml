@@ -60,7 +60,7 @@ jobs:
           mkdir _site
           cp -vp index.htm _site
       # Upload the generated and copied artifacts
-      - name: Upload artifact
+      - name: Upload Static Web Pages Artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
         with: 
@@ -71,10 +71,18 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs: [ copy, build ]
-    name: Deploy Web Site
+    name: Deploy Site Web Pages
     runs-on: ubuntu-latest
     steps:
       # Download All Generated Artifacts
+      - name: Download All Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: web*
+          merge-multiple: true
+      - name: List merged artifact
+        run: |
+          ls -R .
       - name: Download All Artifacts
         uses: actions/download-artifact@v4
         with:
@@ -83,9 +91,6 @@ jobs:
         run: |
           mkdir _site
           cd _site
-          # tar xvf ../webcommon/artifact.tar
-          # tar xvf ../webone/artifact.tar
-          # tar xvf ../webtwo/artifact.tar
           for site in $WEBSITES
           do
             tar xvf ../${site}/artifact.tar
