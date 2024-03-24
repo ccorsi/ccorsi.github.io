@@ -74,17 +74,10 @@ jobs:
     name: Deploy Site Web Pages
     runs-on: ubuntu-latest
     steps:
-      - name: Download All Artifacts
-        uses: actions/download-artifact@v4
-        with:
-          pattern: web*
-          path: archives
-          merge-multiple: true
-      - name: List what is in archives
-        run: |
-          ls -R archives
-          tar tvf archives/artifact.tar
       # Download All Generated Artifacts
+      # NOTE: we are not able to use the merge-multiple feature since the are achives that was
+      # uploaded by the update-pages-artifact and it generates the same archive name for each
+      # one so the download-artifact will override the archive and only the last one will survive.
       - name: Download All Artifacts
         id: artifact
         uses: actions/download-artifact@v4
