@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title | default: 'Title' }}</title>
+    {% seo %}
+    <style>
+        body {
+            display: grid;
+            grid-template-rows: 1fr 3fr 1fr;
+        }
+        header {
+            position: fixed;
+            top: 0%;
+            background-color: grey;
+            width: 100%;
+        }
+        footer {
+            position: fixed;
+            bottom: 0%;
+            width: 100%;
+            height: auto;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>This is the header information</p>
+    </header>
+    <article>
+        {{ content }}
+    </article>
+    <footer>
+        <p>This is the footer information</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# ignore local files
+PROJECTS
+
+# ignore directory that will contain the generated static web pages
+_site
+
+# ignore all possible sub-directories that contain the generated static web pages
+**/_site
+
+# ignore all non-required ruby gem Gemfile.lock lock file since this is not required.
+**/Gemfile.lock
+

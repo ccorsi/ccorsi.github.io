@@ -1,0 +1,31 @@
+{% comment %}
+
+This include will produce a book reference that can be referenced within a page or
+set of pages.
+
+{% endif %}
+
+
+{% endcomment %}
+
+{% if include.book %}
+
+{% assign book = include.book %}
+
+{% if book.editor %}
+{% if book.author %}
+{{ book.author }} ({{ book.year }}). <em>{{ book.title }}</em>{% if book.edition %} ({{ book.edition }}){% endif %}. {{ book.publisher }}.{%if book.reference %} <a href="{{book.reference}}" target="_blank">{{book.reference}}</a>{% endif %}
+{% else %}
+{{ book.editor }} ({% count content=book.editor key="," single=Ed. plural=Eds. %}) ({{ book.year }}). <em>{{ book.title }}</em>{% if book.edition %} ({{ book.edition }}){% endif %}. {{ book.publisher }}.{%if book.reference %} <a href="{{book.reference}}" target="_blank">{{book.reference}}</a>{% endif %}
+{% endif %}
+{% elsif book.author %}
+{% if book.translator %}
+{{ book.author }} ({{ book.year }}). <em>{{ book.title }}</em>{%if book.volumn %} ({{book.volumn}}),{% endif %} ({{ book.translator }}, Trans.). {{ book.publisher }}.{% if book.org_year %} (Original work published {{book.org_year}}){% endif %}{%if book.reference %} <a href="{{book.reference}}" target="_blank">{{book.reference}}</a>{% endif %}
+{% else %}
+{{ book.author }} ({{ book.year }}). <em>{{ book.title }}</em>{% if book.edition %} ({{ book.edition }}){% endif %}. {{ book.publisher }}.{%if book.reference %} <a href="{{book.reference}}" target="_blank">{{book.reference}}</a>{% endif %}
+{% endif %}
+{% else %}
+<em>UNABLE TO DETERMINE BOOK FORMAT FOR BOOK TITLE: "{{ book.title }}"</em>.
+{% endif %}
+
+{% endif %}

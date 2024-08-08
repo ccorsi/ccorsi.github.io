@@ -1,0 +1,57 @@
+# This file will contain all of the site wide configuration that can tend to change white
+# one is developing their static web pages.  This will provide one the ability to use the
+# serve watch feature without having to restart the serve option.  The properties can then
+# be moved within the _config.yml file when the development has completed.
+title: Claudio Corsi 
+description: > # This will allow you to create a multi-line description up too the next entry
+  This site will contain different thoughts about my interests that are related to my
+  work and personal experience.  It is hoped that this site has something to offer to
+  someone.  That in itself means that I have been successful in my in effort.
+
+language: en
+
+note: >
+  This note is part of the data site config file that will hopefully be reloaded.
+  
+# The entries of javascript and css style sheets that will be included with each generated
+# static web page for this site.
+
+# This is a list of all local javascript files to be included within all generated
+#  static web page
+# Format:
+#   - <local_path_to_the_javascript_file>
+#   - <local_path_to_the_javascript_file>
+#   ...
+js:
+
+# This is a list of all remote javascript files to be included within all generated
+# static web page
+# Format:
+#   - <url_to_javascript_file>
+#       or
+#   - href: <url_to_javascript_file>
+#     sri: <integrity_string>
+#       or
+#   - href: <url_to_javascript_file>
+#     sri: <integrity_string>
+#     async:
+#   ...
+ext-js:
+
+# This is a list of all local css style sheets to be included within all generated
+# static web page
+# Format:
+#   - <local_path_to_the_style_sheet_file>
+#   - <local_path_to_the_style_sheet_file>
+#   ...
+css:
+
+# This is a list of all remote css style sheets to be included within all generated
+# static web page
+# Format:
+#   - <url_to_style_sheet_file>
+#       or
+#   - href: <url_to_style_sheet_file>
+#     sri: <integrity_string>
+#   ...
+ext-css:

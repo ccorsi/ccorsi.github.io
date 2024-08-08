@@ -1,0 +1,26 @@
+# This is a comment
+sidebar:
+  title: "Sidebar Title"
+  entries:
+    - entry: "Math Home"
+      url: /math
+    - title: "Submenu Title"
+      submenu:
+        - entry: MathJax
+          ext-url: https://cdn.jsdelivr.net/npm/mathjax
+        - title: "Subsubmenu Title"
+          submenu:
+            - entry: Foo
+              url: /foo
+        - title: "Submenu Three"
+          submenu:
+            - entry: FooBar
+              url: /foobar
+        - entry: Bar
+          url: /bar
+    - entry: Home
+      url: /
+    - title: "Submenu Four"
+      submenu:
+        - entry: FooBarFoo
+          url: /foobarfoo

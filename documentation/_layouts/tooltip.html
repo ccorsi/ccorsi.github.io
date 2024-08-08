@@ -1,0 +1,32 @@
+---
+---
+{% comment %}
+This layout will be used to generate a tooltip using any one of the tool tips that where
+created within the _data directory.
+
+For example:
+
+Creating a glossary list will then require that you create a glossary.yml file within the
+_data directory.  This file will contain entries as follows:
+
+<name>: <description>
+
+Where the name is a uniquely defined name and the description is what will be displayed
+within the tool tip.
+
+This layout will require that you define the 'tip' and 'content' attributes when it is
+being included.
+
+Thus, you can add the following to your pages:
+
+{% include tip="math.function" content="What is a function" %}
+
+This will generate a tool tip for the passed content using the math.yml file function
+key description.
+
+{% endcomment %}
+{% assign tip = 'site.data.' | append: '.' | append: tip %}
+<a href="#" data-toggle="tooltip" data-original-title="{{ tip }}">{{ content }}</a>
+{% comment %}
+Copyright 2024 Claudio Corsi
+{% endcomment %}

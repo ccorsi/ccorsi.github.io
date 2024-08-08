@@ -1,0 +1,134 @@
+# This is my attempt at creating a jekyll static web site from scratch by adding
+# features that were taken from other jekyll themes like:
+#   - Beautiful Jekyll Theme
+#   - Documentation Jekyll Theme
+
+# It is hoped that by experimenting that I will be able to create something that
+# will be extensible and yet fairly unique from the features that were taken from
+# other Jekyll themes.  Those themes will be acknowledge throughout and also within
+# the generate static web site.
+
+# Define the url associated with this web site.  This will be used when JEKYLL_ENV=production.
+url: https://ccorsi.github.io
+
+# Assign that baseurl that will be required by this web site
+baseurl: /experimental
+
+# Assign the bootstrap version that you would like to use with your web site
+bootstrap:
+  version: 5.3.3
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+note: >
+  This is a piece of text that is part of the main config file.
+
+# The following configuration settings are used to by all generated web pages
+
+# List of local javascript files to be included
+# Format:
+#   - <local-path-to-javascript-file>
+#   ...
+js:
+
+# List of remote javascript files to be included
+# Format:
+#   - <remote-path-to-javascript-file>
+#     or
+#   - href: <remote-path-to-javascript-file>
+#     sri: <integrity-hash-string>
+#   ...
+ext-js:
+
+# List of local style sheet files to be included
+# Format:
+#   - <local-path-to-style-sheet-file>
+#   ...
+css:
+
+# List of remote style sheet files to be included
+# Format:
+#   - <remote-path-to-style-sheet-file>
+#     or
+#   - href: <remote-path-to-style-sheet-file>
+#     sri: <integrity-hash-string>
+#   ...
+ext-css:
+
+# NOTE: The following list contains the default settings for the different 
+# configurations properties that can be used by the default Jekyll build process.
+#
+# # Where things are
+# source              : .
+# destination         : ./_site
+# collections_dir     : .
+# plugins_dir         : _plugins # takes an array of strings and loads plugins in that order
+# layouts_dir         : _layouts
+# data_dir            : _data
+# includes_dir        : _includes
+# sass:
+#   sass_dir: _sass
+# collections:
+#   posts:
+#     output          : true
+
+# # Handling Reading
+# safe                : false
+# include             : [".htaccess"]
+# exclude             : ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+# keep_files          : [".git", ".svn"]
+# encoding            : "utf-8"
+# markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
+# strict_front_matter : false
+
+# # Filtering Content
+# show_drafts         : null
+# limit_posts         : 0
+# future              : false
+# unpublished         : false
+
+# # Plugins
+# whitelist           : []
+# plugins             : []
+
+# # Conversion
+# markdown            : kramdown
+# highlighter         : rouge
+# lsi                 : false
+# excerpt_separator   : "\n\n"
+# incremental         : false
+
+# # Serving
+# detach              : false
+# port                : 4000
+# host                : 127.0.0.1
+# baseurl             : "" # does not include hostname
+# show_dir_listing    : false
+
+# # Outputting
+# permalink           : date
+# paginate_path       : /page:num
+# timezone            : null
+
+# quiet               : false
+# verbose             : false
+# defaults            : []
+
+# liquid:
+#   error_mode        : warn
+#   strict_filters    : false
+#   strict_variables  : false
+
+# # Markdown Processors
+# kramdown:
+#   auto_ids          : true
+#   entity_output     : as_char
+#   toc_levels        : [1, 2, 3, 4, 5, 6]
+#   smart_quotes      : lsquo,rsquo,ldquo,rdquo
+#   input             : GFM
+#   hard_wrap         : false
+#   footnote_nr       : 1
+#   show_warnings     : false
+

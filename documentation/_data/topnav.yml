@@ -1,0 +1,43 @@
+topnav:
+- title: Topnav
+  items:
+
+topnav_dropdowns:
+- title: Topnav dropdowns
+  folders:
+    - title: GitHub
+      folderitems:
+      - title: Web Site Repository
+        external_url: https://github.com/ccorsi/ccorsi.github.io
+      - title: Home Account Page
+        external_url: https://github.com/ccorsi
+      - title: Simple Command Line Python Menu
+        external_url: https://github.com/ccorsi/menucli
+      - title: SQLite3 Setup GitHub Action
+        external_url: https://github.com/ccorsi/setup-sqlite
+      - title: A Design By Contract Python Package
+        external_url: https://github.com/ccorsi/contract
+      - title: A Java Command Line Annotation Package
+        external_url: https://github.com/ccorsi/annotation-cli
+    - title: Programming Languages
+      folderitems:
+        - title: Java
+          url: /java_landing_page.html
+        - title: C/C++
+          url: /cpp_landing_page.html
+        - title: Python
+          url: /python_landing_page.html
+    - title: Jekyll
+      folderitems:
+        - title: Jekyll Talk
+          external_url: https://talk.jekyllrb.com
+        - title: Jekyll documentation
+          external_url: http://jekyllrb.com/docs/home/
+        - title: Jekyll on Stack Overflow
+          external_url: http://stackoverflow.com/questions/tagged/jekyll
+        - title: Jekyll on my blog
+          external_url: http://idratherbewriting.com/category-jekyll/
+        - title: Jekyll Documentation Theme
+          external_url: https://idratherbewriting.com/documentation-theme-jekyll/
+
+# Copyright 2024 Claudio Corsi  

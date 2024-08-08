@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-database-compat.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/assets/css/books.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/site.webmanifest">
+    <script>
+        // Initialize Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAl7ILFJfXRqkcNM-GXfCch6trpB9_DKuI",
+            databaseURL: "https://books-45547-default-rtdb.firebaseio.com",
+            authDomain: "YOUR_AUTH_DOMAIN", // I don't need this information to log onto my books firebase realtime database
+            projectId: "books-45547",
+            storageBucket: "YOUR_STORAGE_BUCKET", // I don't need this to work with my firebase realtime database
+            appId: "YOUR_APP_ID" // this is also not required to be logged to my firebase realtime database
+        };
+
+        // Initialize the Firebase Connection with the above configuration settings
+        firebase.initializeApp(firebaseConfig);
+
+        function print_entries(entries) {
+            try {
+                for (const [key, value] of entries) {
+                console.debug(`${key} = ${value}`)
+                let more = Object.entries(value)
+                if (more) {
+                    for (const [mkey, mvalue] of more)
+                        console.debug(`\t${mkey} = ${mvalue}`)
+                }
+            }
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        function setup() {
+            console.info("Processing setup() method call")
+            try {
+                // Add setup specific code to determine if we are login or not.
+                var node = document.getElementById('logout')
+                console.info(`node logout display: ${node?.style?.display}`)
+                node.style.display = 'none'
+                console.log(`Firebase authentication: ${firebase.auth()}`)
+                for (const [key, value] of Object.entries(firebase.auth())) {
+                    console.info(`entry: ${key} = ${value}`)
+                }
+                print_entries(Object.entries(firebase.auth()))
+            } finally {
+                console.info("Completed setup() method call")
+            }
+        }
+
+        function isnull(node, id) {
+            if (node == null) {
+                console.debug(`node for id: ${id} was not found`)
+                return true
+            } else {
+                console.debug(`node for id: ${id} exist`)
+                return false
+            }
+        }
+
+        function isnumber(e) {
+            console.info(`Checking keyCode: ${e.keyCode}, which: ${e.which}`)
+            switch(e.which) {
+                case 48: case 49: case 50: case 51: case 52:
+                case 53: case 54: case 55: case 56: case 57:
+                // Note a space is defined as 8
+                case 8:
+                    console.info(`Valid number input: ${e.which}`)
+                    break;
+                default:
+                    e.preventDefault()
+                    const chr = String.fromCharCode(e.keyCode)
+                    console.debug(`Character ${chr} is not a valid number input: ${e.which}`)
+                    break;
+            }
+            return true
+        }
+
+        function check_button(bid, iid) {
+            const node = document.getElementById(iid)
+            if (isnull(node,iid)) {
+                return
+            }
+
+            const bnode = document.getElementById(bid)
+            if (isnull(bnode, bid)) {
+                return
+            }
+
+            if (node.value == undefined || node.value.length == 0) {
+                console.info(`Disabling node id: ${bid} "${node?.value}"`)
+                bnode.disabled = true
+            } else {
+                console.info(`Enabling node id: ${bid} "${node?.value}"`)
+                bnode.disabled = false
+            }
+        }
+
+        function set_value(fid, tid) {
+            const value = document.getElementById(fid)?.value
+            if (value != undefined) {
+                const element = document.getElementById(tid)
+                if (element != undefined) {
+                    element.value = value
+                    console.log(`Setting id=${tid} to value: ${value}`)
+                    return value
+                }
+            }
+            return undefined
+        }
+
+        function add_value(fid, tid) {
+            const value = document.getElementById(fid)?.value
+            if (value != undefined) {
+                const element = document.getElementById(tid)
+                if (element != undefined) {
+                    for (const option of element.children) {
+                        if (option.text == value) {
+                            console.info(`value: ${value} was already added to id: ${tid}`);
+                            return value;
+                        }
+                    }
+                    const option = document.createElement('option')
+                    option.value = option.text = value
+                    element.append(option)
+                    return value
+                }
+            }
+            return undefined
+        }
+
+        function append_value(fid, tid) {
+            const value = document.getElementById(fid)?.value
+            if (value != undefined) {
+                const element = document.getElementById(tid)
+                if (element != undefined) {
+                    for (const option of element.children) {
+                        if (option.text == value) {
+                            console.info(`value: ${value} was already added to id: ${tid}`);
+                            return value;
+                        }
+                    }
+                    const li = document.createElement('li')
+                    li.text = value
+                    element.append(li)
+                    li.value = element.children.length
+                    li.append(document.createTextNode(value))
+                    console.info(`append value: ${value} to id: ${tid}`)
+                    return value
+                }
+            }
+            return undefined
+        }
+
+        function add_book() {
+            const user = firebase.auth().currentUser
+            
+            if (user) {
+                let book;
+                // Get the data from the different elements that contains the book information that needs to be stored within the database.
+                const title = document.getElementById('ttitle')?.value
+                console.info(`title: ${title}`)
+                const subtitle = document.getElementById('tsubtitle')?.value
+                console.info(`subtitle: ${subtitle}`)
+                let authors = []
+                // Get a reference to an HTMLSelectElement
+                var element = document.getElementById('sauthor')
+                if (element.options && element.options.length > 0) {
+                    for (let i = 0 ; i < element.length ; i++) {
+                        console.info(`author option value: ${element[i].value}`)
+                        authors.push(element[i].innerHTML)
+                    }
+                }
+                let translators = []
+                // Get a reference to an HTMLSelectElement
+                element = document.getElementById('stranslator')
+                if (element.options && element.options.length > 0) {
+                    for (let i = 0 ; i < element.length ; i++) {
+                        console.info(`translator value: ${element[i].value}`)
+                        translators.push(element[i].innerHTML)
+                    }
+                }
+                let editors = []
+                // Get a reference to an HTMLSelectElement
+                element = document.getElementById('seditor')
+                if (element.options && element.options.length > 0) {
+                    for (let i = 0 ; i < element.length ; i++) {
+                        console.info(`editor option value: ${element[i].value}`)
+                        editors.push(element[i].innerHTML)
+                    }
+                }
+                const published = document.getElementById('tyear')?.value
+                console.info(`published on: ${published}`)
+                const pages = document.getElementById('tlength')?.value
+                console.info(`pages: ${pages}`)
+                let dates = []
+                // Get a reference to an HTMLSelectElement
+                element = document.getElementById('sdate')
+                // Check if any options were create for the select element and that there are at least a single element
+                if (element.options && element.length > 0) {
+                    for (let i = 0 ; i < element.length ; i++) {
+                        console.info(`date option value: ${element[i].value}`)
+                        dates.push(element[i].innerHTML)
+                    }
+                }
+            } else {
+                console.info(`Unable to apply book data since the user was not logged in anylonger`)
+            }
+            /*
+                <label>Title: <input type="text" name="ttitle" id="ttitle" readonly></label>
+                <label>Subtitle: <input type="text" name="tsubtitle" id="tsubtitle" readonly></label>
+                <label>Authors: <select name="sauthor" id="sauthor"></select></label>
+                <label>Translators: <select name="stranslator" id="stranslator"></select></label>
+                <label>Editors: <select name="seditor" id="seditor"></select></label>
+                <label>Published: <input type="text" name="tyear" id="tyear" readonly></label>
+                <label>Length: <input type="text" name="tlength" id="tlength" readonly></label>
+                <label>Date Completed: <select name="sdate" id="sdate"></select></label>
+                <ul id="udate"></ul>
+            */
+        }
+
+        function login(user,password) {
+            if (user == undefined ||  user == null || password == undefined || password == null) {
+                console.info(`Mising user and password information`);
+                return;
+            }
+            console.debug('Calling login method')
+            // Check if the user has already been login.
+            if (firebase.auth().currentUser) {
+                // The current user is still logged in
+                const user = firebase.auth()._delegate.currentUser;
+                console.info(`User credential already exists: ${firebase.auth()._delegate.currentUser}`)
+                for (const [key, value] of Object.entries(firebase.auth()._delegate.currentUser)) {
+                    console.info(`${key} = ${value}`)
+                }
+                console.log(`The user '${user?.email}' is still logged in with user id: ${user?.uid}`)
+                uid = user?.uid
+                // Insure that all of the require elements are displayed and hidden correctly.
+                document.getElementById("login").style.display = "none";
+                document.getElementById("logout").style.display = '';
+                print_entries(Object.entries(firebase.auth()))
+            } else {
+                firebase.auth().signInWithEmailAndPassword(document.getElementById(user).value, document.getElementById(password).value)
+                .then((userCredential) => {
+                    // Login successful
+                    const user = userCredential.user;
+                    console.log("Logged in as:", user.email);
+                    console.log("User id:", user.uid);
+                    uid = user.uid;
+                    // You can perform further actions here, such as redirecting to another page.
+                    // We need to disable the current login element within the web page
+                    // database = firebase.database();
+                    // database.ref("groceries/users/" + uid).set({
+                    //     name: "Claudio",
+                    //     email: user.email
+                    // });
+                    // console.log("Created an entry within the Firebase Realtime Database");
+                    document.getElementById("login").style.display = "none";
+                    document.getElementById("logout").style.display = '';
+                })
+                .catch((error) => {
+                    // Login error
+                    const errorMessage = error.message;
+                    console.error("Login error:", errorMessage);
+                    const lookfor = '(auth/';
+                    if (errorMessage.includes(lookfor)) {
+                        const start = errorMessage.indexOf(lookfor) + lookfor.length;
+                        const end = errorMessage.indexOf(')', start);
+                        const errorCode = errorMessage.substring(start, end);
+                        console.debug(`start=${start}, end=${end}, code=${errorCode}`);
+                        switch (errorCode) {
+                            case 'invalid-email':
+                            case 'missing-password':
+                            case 'user-not-found':
+                                alert('Incorrect username/password entered, try again');
+                                break;
+                            default:
+                                alert(`An issue was encountered when logging in: ${errorMessage}`);
+                            }
+                    }
+                });
+            }
+        }
+
+        // Function to logout of the current firebase session
+        function logout() {
+            // Check if the user has already been login.
+            if (firebase.auth().currentUser) {
+                console.log('User is already login', firebase.auth().currentUser);
+                firebase.auth().signOut();
+                // reset the page to include the login prompt and hide the logout page
+                document.getElementById("login").style.display = '';       // enable login div
+                document.getElementById("logout").style.display = "none";  // disable logout div
+            }
+        }
+    </script>
+</head>
+<body onload="setup()">
+    <div id="login">
+        <h1>Login</h1>
+        <div class="prompt">
+            <div><label for="email">Email:</label></div>
+            <div><input type="email" id="email" required placeholder="Enter email"></div>
+            <div><label for="password">Password:</label></div>
+            <div><input type="password" id="password" required placeholder="Enter password"></div>
+        </div>
+        <button onclick="login('email','password')">Log in</button>
+    </div>
+    <div id="logout">
+        <div id="addbook">
+            <div id="left">
+                <div>
+                    <button onclick="set_value('ititle','ttitle')" id="btitle">Set Title</button>
+                    <input type="text" name="ititle" id="ititle" oninput="check_button('btitle','ititle')">
+                </div>
+                <div>
+                    <button onclick="set_value('isubtitle', 'tsubtitle')" id="bsubtitle">Set Subtile</button>
+                    <input type="text" name="isubtitle" id="isubtitle" oninput="check_button('bsubtitle', 'isubtitle')">
+                </div>
+                <div>
+                    <button onclick="set_value('iyear','tyear')">Set Year Published</button>
+                    <input type="text" name="iyear" id="iyear" oninput="check_button('byear', 'iyear')">
+                </div>
+                <div>
+                    <button onclick="set_value('ilength', 'tlength')" id="blength">Set Book Length</button>
+                    <input type="text" name="ilength" id="ilength" oninput="check_button('blength', 'ilength')" onkeydown="return isnumber(event)">
+                </div>
+                <div>
+                    <!-- <button onclick="add_value('idate','sdate'); append_value('idate','udate')" id="bdate">Add Date Completed</button> -->
+                    <button onclick="add_value('idate','sdate')" id="bdate">Add Date Completed</button>
+                    <input type="date" name="idate" id="idate" oninput="check_button('bdate', 'idate')">
+                </div>
+                <div>
+                    <button onclick="add_value('iauthor', 'sauthor')" id="bauthor">Add Author</button>
+                    <input type="text" name="iauthor" id="iauthor" oninput="check_button('bauthor', 'iauthor')">
+                </div>
+                <div>
+                    <button onclick="add_value('itranslator', 'stranslator')" id="btranslator">Add Translator</button>
+                    <input type="text" name="itranslator" id="itranslator" oninput="check_button('btranslator', 'itranslator')">
+                </div>
+                <div>
+                    <button onclick="add_value('ieditor', 'seditor')" id="beditor">Add Editor</button>
+                    <input type="text" name="ieditor" id="ieditor" oninput="check_button('beditor', 'ieditor')">
+                </div>
+            </div>
+            <div id="right">
+                <label>Title: <input type="text" name="ttitle" id="ttitle" readonly></label>
+                <label>Subtitle: <input type="text" name="tsubtitle" id="tsubtitle" readonly></label>
+                <label>Authors: <select name="sauthor" id="sauthor"></select></label>
+                <label>Translators: <select name="stranslator" id="stranslator"></select></label>
+                <label>Editors: <select name="seditor" id="seditor"></select></label>
+                <label>Published: <input type="text" name="tyear" id="tyear" readonly></label>
+                <label>Length: <input type="text" name="tlength" id="tlength" readonly></label>
+                <label>Date Completed: <select name="sdate" id="sdate"></select></label>
+                <!-- <ul id="udate"></ul> -->
+                <button type="button" onclick="add_book()">Add Book</button>
+            </div>
+        </div>
+        <button onclick="logout()">Log out</button>
+    </div>
+</body>
+</html>

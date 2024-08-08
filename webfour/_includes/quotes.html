@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="col"></div>
+	<div id="quote" class="col-lg" style="display: inline-block; font-style: italic; text-align: center;">
+
+		{% assign quotesjs = "/assets/js/quotes.js" | relative_url %}
+		{% assign quotesjson = page.quotesjson | default: site.quotesjson | default:"/assets/data/quotes.json" | relative_url %}
+	
+		<script src="{{ quotesjs }}"></script>
+	
+		<script lang="javascript">
+	
+			/*
+				This function was created to be able to get past the issue that you can not
+				use jQuery prior to it being loaded and since this is loaded prior to jQuery
+				being loaded.  We needed to create a function that is called after jQuery
+				was loaded.  Note doing so will cause an error when the page is being loaded.
+			*/
+			function setupQuotes() {
+				// This will be called as soon as the page was loaded and ready to be used.
+				$( document ).ready( () => {
+					getQuote( "{{ quotesjson }}", document.getElementById("quote"));
+				});
+			}
+	
+		</script>
+	</div>
+	<div class="col"></div>
+</div>

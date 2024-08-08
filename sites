@@ -1,0 +1,44 @@
+##########################################################################################
+# This file will contain the different sites that will be built using Jekyll static page
+# tool.  This file will be read by the run.sh script for processing.
+#
+# This file is formatted in the following way:
+#
+# <site> <build_function> <setup_function> <usebundle> <extra_args>
+#
+#  <site> - directory where sources are located for Jekyll build and destination web site
+#  <build_function> - build function used to build the Jekyll static web site
+#  <setup_function> - setup function called prior to build function for pre-setup work
+#  <usebundle> - true/false entry to determine if we should use the bundle exec command
+#  <extra_args> - extra arguements passed to the build function
+#
+# Note that all commands need to be separated by a single space.  The run.sh script will
+# skip all empty lines or lines that contain less than 4 arguments.  It will also purge
+# comments like these here from the read line.  This allows you to add comments before or
+# after the entered line. It also allows one to include a comment at the end of the site
+# build command.
+##########################################################################################
+
+##########################################################################################
+##  Building Jekyll web site using the Beautiful Jekyll Theme
+webone build_jekyll_site setup_beautiful true
+webtwo build_jekyll_site setup_beautiful true
+webthree build_jekyll_site setup_noop true
+webfour build_jekyll_site setup_noop true
+## This particular web site doesn't require the bundle command to be built
+learning build_jekyll_site setup_noop false --baseurl learning
+experimental build_jekyll_site setup_noop true
+
+##########################################################################################
+## Building Jekyll web site using the Jekyll Documentation Theme
+documentation build_jekyll_site setup_doc_theme true
+
+##########################################################################################
+## Building Jekyll web site using the Jekyll minimum theme
+testdefault build_jekyll_site setup_noop true
+experimental build_jekyll_site setup_noop true
+
+##########################################################################################
+## Building Jekyll web site using the Jekyll blank theme
+testblank build_jekyll_site setup_noop true --config _config.yml,../_config_testblank.yml
+

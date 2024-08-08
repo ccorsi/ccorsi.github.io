@@ -1,0 +1,37 @@
+
+# This is a list of all local javascript files to be included within all generated
+#  static web page
+# Format:
+#   - <local_path_to_the_javascript_file>
+#   - <local_path_to_the_javascript_file>
+#   ...
+js:
+
+# This is a list of all remote javascript files to be included within all generated
+# static web page
+# Format:
+#   - <url_to_javascript_file>
+#       or
+#   - href: <url_to_javascript_file>
+#     sri: <integrity_string>
+#   ...
+ext-js:
+
+# This is a list of all local css style sheets to be included within all generated
+# static web page
+# Format:
+#   - <local_path_to_the_style_sheet_file>
+#   - <local_path_to_the_style_sheet_file>
+#   ...
+css:
+
+# This is a list of all remote css style sheets to be included within all generated
+# static web page
+ext-css:
+# Format:
+#   - <url_to_style_sheet_file>
+#       or
+#   - href: <url_to_style_sheet_file>
+#     sri: <integrity_string>
+#   ...
+

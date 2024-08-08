@@ -1,0 +1,14 @@
+{% comment %}
+    The following include script was taken from the Beautiful Jekyll Theme created
+    by Dean Attali located at https://github.com/daattali/beautiful-jekyll
+
+    It has been simplified and enhanced to provide the ability to optionally add
+    the async attribute to the script element.
+{% endcomment %}
+{% for js in include.links -%}
+{% if js.href -%}
+  <script src="{{ js.href }}" {% if js.sri %}integrity="{{ js.sri }}" crossorigin="anonymous"{% endif %} {%if js.async %}async{% endif %}></script>
+{% else -%}
+  <script src="{{ js.src | default: js }}" {%if js.async %}async{% endif %}></script>
+{% endif -%}
+{% endfor -%}

@@ -1,0 +1,27 @@
+---
+layout: page
+css:
+    - assets/css/math.css
+---
+{% comment %}
+This layout is used to generate a glossary type list of definitions.
+It uses page.glossary.source to load the entries that are located
+with the data/glossary directory.
+{% endcomment %}
+
+{% assign glossary = site.data.glossary[page.glossary.source] %}
+
+{% if glossary %}
+<div class="container">
+    <p class="glossary-title">{{ page.glossary.title | default: glossary.title | default: 'Glossary:' }}</p>
+
+    <dl>
+        {% for entries in glossary.entries %}
+            {% for entry in entries %}
+        <dt class="glossary-title" id="{{ page.glossary.prefix | default: 'glossary' }}-{% increment index -%}">{{ entry[0] }}</dt>
+        <dd class="glossary-data">{{ entry[1] }}</dd>
+            {% endfor %}
+        {% endfor %}
+    </dl>
+</div>
+{% endif %}

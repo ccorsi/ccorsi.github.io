@@ -1,0 +1,3 @@
+testdefault true
+testblank true --config _config.yml,../_config_testblank.yml
+learning false --baseurl learning

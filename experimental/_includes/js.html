@@ -1,0 +1,13 @@
+{% comment %}
+    This file uses the include variable to determine which local javascript files to reference.
+
+    It has been enhanced to provide the ability to optionally add the async attribute to the
+    script element.
+{% endcomment %}
+{% for js in include.links -%}
+{% if js.src %}
+<script src="{{ js.src | relative_url }}" async></script>
+{% else %}
+<script src="{{ js | relative_url }}"></script>
+{% endif %}
+{% endfor -%}

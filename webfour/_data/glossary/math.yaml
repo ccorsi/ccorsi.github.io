@@ -1,0 +1,8 @@
+title: Mathematical Glossary
+
+entries:
+  - "real numbers": This is a real number entry
+  - "integer numbers": Integer values from negative infinity to positive infinity
+  - "positive numbers": Number 1,2,3,...
+  - "\\(\\mathbb{R}\\)": "Real number symbol"
+  - "\\(\\mathbb{I}^{+}\\)": "Positive integer number symbol"

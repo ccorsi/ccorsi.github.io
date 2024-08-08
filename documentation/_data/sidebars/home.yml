@@ -1,0 +1,21 @@
+# This is the home sidebar that will reference all of the different topics that will be talked about.
+
+entries:
+- title: Sidebar
+  level: one
+  folders:
+
+  - title: Topics
+    output: web
+    folderitems:
+    - title: Math
+      url: /math.html
+      output: web
+    - title: Computer Science
+      url: /computer-science.html
+      output: web
+    - title: Artificial Intelligence
+      url: /ai.html
+      output: web
+
+# Copyright 2024 Claudio Corsi

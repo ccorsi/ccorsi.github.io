@@ -1,0 +1,52 @@
+{% comment %}
+sidebar:
+  title: Sidebar Title
+  entries:
+    - entry: Math Home
+      url: /math
+    - title: Submenu Title
+      submenu:
+        - entry: MathJax
+          ext-url: https://cdn.jsdelivr.net/npm/mathjax
+        - title: Subsubmenu Title
+          submenu:
+          - entry: Foo
+            url: /foo
+        - entry: Bar
+          url: /bar
+    - entry: Home
+      url: /
+{% endcomment %}
+
+{% assign sidebar = site.data.sidebars[page.sidebar].entries %}
+{% assign menu = site.data.sidebars[page.sidebar].sidebar %}
+{% assign submenuId = 1 %}
+
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        {% if menu.title %}
+        <div class="sidebar-header">
+            <h3>{{ menu.title }}</h3>
+        </div>
+        {% endif %}
+
+        <ul class="list-unstyled components">
+        {% for item in menu.entries %}
+            {% if item.entry %}
+                <li>
+                    <a href={% if item.url %}"{{ item.url | relative_url }}"{% elsif item.ext-url %}"{{ item.ext-url }}" target="_blank" else %}"#"{% endif %}>{{ item.entry }}</a>
+                </li>
+            {% elsif item.submenu %}
+                <li>
+                    {% assign title={{ item.title | default: 'Title unknown' }} %}
+                    {% assign id = 'submenu-' | append: submenuId %}
+                    {% include submenu.html submenu=item.submenu title=item.title id=id %}
+                    {% comment %} Increment the submenuId to insure a unique element id is generated {% endcomment %}
+                    {% assign submenuId = submenuId | plus: 1 %}
+                </li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </nav>
+</div>

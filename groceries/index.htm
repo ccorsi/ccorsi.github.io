@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groceries</title>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-database-compat.js"></script>
+    <script type="module" src="/assets/js/login.js"></script>
+    <link rel="stylesheet" href="/assets/css/groceries.css"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/site.webmanifest">
+</head>
+<body onload="setup()">
+    <div id="login">
+        <h1>Login</h1>
+        <div class="prompt">
+            <div><label for="email">Email:</label></div>
+            <div><input type="email" id="email" required placeholder="Enter email"></div>
+            <div><label for="password">Password:</label></div>
+            <div><input type="password" id="password" required placeholder="Enter password"></div>
+        </div>
+        <button onclick="login()">Log in</button>
+    </div>
+    <div id="store">
+        <label for="store-name">Store:</label>
+        <input type="text" id="store-name" required placeholder="Enter Store name">
+        <button onclick="add_store()">Add Store</button>
+    </div>
+    <div id="department">
+        <label for="department-name">Department:</label>
+        <input type="text" id="department-name" required placeholder="Enter Department name">
+        <button onclick="add_department()">Add Department</button>
+    </div>
+    <div id="product">
+        <label for="product-name">Product:</label>
+        <input type="text" id="product-name" required placeholder="Enter Product name">
+        <button onclick="add_product()">Add Product</button>
+    </div>
+    <div id="brand">
+        <label for="brand-name">Product:</label>
+        <input type="text" id="brand-name" required placeholder="Enter Brand name">
+        <button onclick="add_brand()">Add Brand</button>
+    </div>
+    <div id="groceries">
+        <label for="grocery-store-name"></label>
+        <!-- The list will be populated using the javascript manipulation that is generated using the information within the Firebase Realtime Database -->
+        <select name="grocery-store-name" id="grocery-store-name"></select>
+        <label for="grocery-price"></label>
+        <input type="text" name="grocery-price" id="grocery-price" required placeholder="Entry Item Price" pattern="\d+[.\d{2}]?" oninput="">
+        <button onclick="add_grocery()">Add Grocery</button>
+    </div>
+    <div id="logout">
+        <p>Groceries</p>
+        <button onclick="add('store')" title="Create a Grocery Store, for example: Whole Foods">Create Store</button> <br>
+        <button onclick="add('department')" title="Create a Grocery Store's Department, for example: Produce">Create Store's Department</button> <br>
+        <button onclick="add('product')" title="Create a Product, for example: String Water">Create Product</button> <br>
+        <button onclick="add('brand')" title="Create a Product, for example: Poland Springs">Create Product Brand</button> <br>
+        <button onclick="add('groceries')" title="Add a Grocery Item for a given store, department, brand and price">Add Grocery Item</button> <br>
+        <button onclick="logout()">Log out</button>
+    </div>
+</body>
+</html>

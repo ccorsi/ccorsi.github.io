@@ -1,0 +1,8 @@
+url: https://ccorsi.github.io "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: /testblank "" # the subpath of your site, e.g. /blog
+title: "This is the generated testblank web site" # the name of your site, e.g. ACME Corp.
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+

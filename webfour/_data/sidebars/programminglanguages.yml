@@ -1,0 +1,13 @@
+sidebar:
+  title: "Languages"
+  entries:
+    - entry: "Home"
+      url: /compsc
+    - title: "Java"
+      submenu:
+        - entry: OpenJDK
+          ext-url: https://openjdk.org/
+    - entry: C/C++
+      submenu:
+        - entry: C/C++ Reference
+          ext-url: https://www.cppreference.com/

@@ -1,0 +1,17 @@
+{% comment %}
+
+This include is used to generate a reference for a journal article or research papers
+that can be referenced within a page.
+
+{% endcomment %}
+
+{% if include.paper %}
+
+{% assign paper = include.paper %}
+
+{% if paper.author %}
+{{ paper.author }} ({{ paper.year }}). {{ paper.title }}. <em>{{paper.publisher}}</em>{%if paper.reference %}, [{{ paper.reference }}]({{ paper.reference }}){% endif %}{%if paper.reference %} <a href="{{paper.reference}}" target="_blank">{{paper.reference}}</a>{% endif %}
+{% else %}
+<em>UNABLE TO FORMAT PAPER: {{ paper }}.</em>
+{% endif %}
+{% endif %}

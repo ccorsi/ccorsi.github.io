@@ -1,0 +1,9 @@
+[submodule "documentation-theme-jekyll"]
+	path = documentation-theme-jekyll
+	url = git@github.com:tomjoht/documentation-theme-jekyll.git
+	branch = gh-pages
+
+[submodule "learning"]
+	path = learning
+	url = git@github.com:ccorsi/learning.git
+	branch = docs

@@ -1,0 +1,197 @@
+#----------------------------------------
+#
+# Filename:    commonrc
+#
+# Description: This script will contain command functions and variables that 
+#   will be used by other scripts within this project
+#
+# Created by:  Claudio Corsi on July 05, 2024
+#
+# Copyright (c) 2024 Claudio Corsi. All rights reserved.
+#
+#----------------------------------------
+
+############################### Variables ##############################
+
+# define a general debug variable that can be used throughout when
+# sourcing this script resource file.
+# We will set it to true for now with the option to setting it to false
+# in the future.
+debug=true
+
+########################################################################
+
+############################### Functions ##############################
+
+# This function is used to determine if the minimum amount of parameters was
+# passed to a given function.  If will exit the script if the condition is 
+# false.
+# Parameters:
+# 	- The name of the function we are checking the parameter arguments
+# 	- The minimum required arguments for the passed method
+# 	- The current number of arguments passed to the method
+function check {
+   fcn=$1
+   min=$2
+   args=$3
+
+   if [ $3 -lt $2 ];
+   then
+      echo Not enough parameters for function $fcn, expected $min but passed $args
+      exit 2
+   fi
+} # check
+
+# This function is used for checking if a given file exists.  It will exit the
+# script if the file doesn't exist.
+# Parameters:
+# - fcn The name of the function that we are checking the file for
+# - file_name The name of the file that we are checking for
+function check_file_exists {
+   check "check_file_exists" 2 $#
+
+   fcn=$1
+   fname=$2
+
+   if [ ! -f $fname ]
+   then
+      echo "File $fname doesn't exist for calling function $fcn"
+      exit 1
+   fi
+} # check_file_exists
+
+# This function is used to print trace/debug statements that will be printed
+# to standard out if the debug variable is defined.
+# Parameters:
+# 	- arguments line parameters that will be displayed when enabled
+function trace {
+   if [ "$debug" = true ] ; then
+      echo $*
+   fi
+} # trace
+
+# This function is used for getting input from the command line and
+# populate the passed variable reference that will be used in other
+# parts of the script.  The second parameter will contain the prompt
+# message to be display.  The last parameter is used to determine if
+# the passed variable needs to be reset to the empty string.
+# Parameters:
+# - reference to the variable to be updated
+# - input prompt
+# - true to initialize passed variable or not
+function get_line_input {
+   # Insure that the correct number of paramters have been passed
+   check "get_line_input" 2 $#
+
+   # assign the passed variable to a local name
+   local -n var=$1
+
+   if [[ "$3" = true ]]
+   then
+      # initialize the passed varialbe reference to an empty string
+      var=""
+   fi
+
+   # read single line input
+   IFS= read -p "$2" -r var
+} # get_line_input
+
+# This function is used for getting input from the command line and
+# populate the passed variable reference that will be used in other
+# parts of the script.  The second parameter will contain the prompt
+# message to be display and will be concatenated with info on how to
+# exit the input stream.  The last parameter is used to determine if
+# the passed variable needs to be reset to the empty string.  Note
+# that a newline will be added after each entry and you need to use
+# printf or echo -e to print the new line characters properly.
+# Parameters:
+# - reference to the variable to be updated
+# - input prompt
+# - true to initialize passed variable or not
+function get_input {
+   # Insure that the correct number of paramters have been passed
+   check "get_input" 2 $#
+
+   # assign the passed variable to a local name
+   local -n var=$1
+
+   if [[ "$3" = true ]]
+   then
+      # initialize the passed varialbe reference to an empty string
+      var=""
+   fi
+
+   # read input lines until done
+   while IFS= read -p "$2 (enter CTRL-D when done): " -r line
+   do
+      if [ ! -z "$var" ]
+      then
+         var+="\n"
+      fi
+      var+="$line"
+   done
+
+} # get_input
+
+# This function is used for populating an array variable using standard
+# input entered by the user.  It expects the array variable that will be
+# populated and the prompt to be displayed prior to processing the input.
+# There is a third parameter that is used to reset the passed variable to
+# an empty array.
+# Parameters:
+# - reference to the array variable to be populated
+# - input prompt
+# - true to initialize passed array variable or not
+function get_array_input {
+   # Insure that the correct number of paramters have been passed
+   check "get_array_input" 2 $#
+
+   # assign the passed variable to a local name
+   local -n var=$1
+
+   if [ "$3" = true ]
+   then
+      # initialize passed array reference to an empty array
+      var=()
+   fi
+
+   echo $2 " (enter CTRL-D when done):"
+   # read input lines until done
+   while IFS= read -r line
+   do
+      # append entered line to the passed array reference
+      var+=("$line")
+   done
+
+} # get_array_input
+
+# This function is used for simple yes/no questions that is prompted to the
+# user.  It expects a reference to the resulting variable and a prompt
+# message that will be displayed to the user.
+# Parameters:
+# - ans reference to the variable that the result will be assigned
+# - message prompt message displayed to the user
+function is_yes {
+    # insure that the correct number of parameters was passed
+    check "is_yes" 2 $#
+
+    local -n var=$1
+
+    ans=
+    read -p "$2 [Y[es]|N[o]]: " -r ans
+
+    if [[ $ans =~ [Yy][es]? ]]
+    then
+        var=true
+    else
+        var=false
+    fi
+} # is_yes
+
+########################################################################
+
+if [ ! -z "$DEBUG" ];
+then
+   # enable echoing of script commands
+   set -x
+fi

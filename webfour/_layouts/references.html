@@ -1,0 +1,66 @@
+---
+layout: page
+css:
+    - assets/css/math.css
+---
+{% comment %}
+This layout is used to generate a page that will contain a list of book reference type list.
+It was designed such that you can create separate reference pages that can be associated to
+a particular set of documentation.  The reference data is supposed to be found within the
+site data directory, _data by default, within a references subdirectory.  Each reference 
+page will need to define the following properties:
+
+    references: This is the name of the file that contains the book references
+
+While the following standard options should be used but isn't required.
+
+    permalink:  This is the destination of the generated reference file.
+    title:  The title of the particular references, defaults to "References"
+
+It is recommended that you create you reference files within the references directory
+such that the default "References" title can be used.  You can always change the default
+location of the reference directory by updating the configuration file references attribute.
+
+We are using the APA 6th Referencing Style Guide to format the references.
+
+Author, Initial. (Year). Book Title. City of publication, Country/State: Publisher
+
+No Author:
+
+Collins concise New Zealand dictionary (7th ed.), (2008). London, England: Collins
+
+One Author:
+
+Gambles, I. (2009). Making the business case: Proposals that succeed for projects that work. Farnham, England: Ashgate
+
+
+
+
+
+Before continuing to document how to format the data that is required for the different
+APA 6th Referencing Style Guide.  We need to list the different formats that will be
+generated using the above guide.  Let us look at what we need to look for and then define
+the actions that will be taken given this information.  This can include the format of
+the data file that is generated in YAML.
+
+
+{% endcomment %}
+
+{% assign references = site.data.references[page.reference.source] %}
+
+<div class="container">
+    <p class="reference-title">{{ page.reference.title | default: references.title | default: 'Definitions:' }}</p>
+
+    <dl>
+        {% for reference in references.entries %}
+        <dd class="reference-entry" id="{{ page.reference.prefix | default: 'reference' }}-{% increment index -%}">
+            {% case reference.type %}
+                {% when 'book' %}
+                {% include book.html book=reference %}
+                {% when 'paper' %}
+                {% include paper.html paper=reference %}
+            {% endcase %}
+        </dd>
+        {% endfor %}
+    </dl>
+</div>

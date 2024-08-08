@@ -1,0 +1,41 @@
+# This file contains the different mathematical references that is being reference by a particular
+# set of generated pages.
+
+title: Mathematical References
+
+entries:
+  - type: book
+    title: Introduction to Probability Models
+    year: "1989, 1985"
+    edition: 4th ed.
+    publisher: Academic Press, Inc.
+    author: Ross, S.M.
+  - type: book
+    title: "Elements of the Theory of Functions and Functional Analysis: Metric and Normed Spaces"
+    year: 1957
+    author: Kolmogorov, A.N., & Fomin, S.V.
+    translator: L.F. Boron
+    publisher: Dover Publication, Inc.
+    org_year: 1954
+  - type: book
+    title: "Elements of the Theory of Functions and Functional Analysis: Measure. The Lebesque Integral. Hilbert Space"
+    year: 1961
+    org_year: 1960
+    author: Kolmogorov, A.N., & Fomin, S.V.
+    translator: H. Kamel, & H. Komm
+    publisher: Dover Publication, Inc.
+  - type: book
+    title: Elements of the Theory of Functions and Functional Analysis
+    year: 1957, 1961
+    org_year: 1954, 1960
+    volumn: Vols. 1&2
+    author: Kolmogorov, A.N., & Fomin, S.V.
+    translator: L.F. Boron, H. Kamel, & H. Komm
+    publisher: Dover Publication, Inc.
+  - type: paper
+    title: "DynamoLLM: Designing LLM Inference Clusters for Performance and Energy Efficiency"
+    reference: https://arxiv.org/abs/2408.00741
+    publisher: arXiv:2408.00741 [cs.AI]
+    year: 2024
+    author: Stojkovic J., Zhang C., Goiri Í., Torrellas J., & Choukse E.
+

@@ -1,0 +1,19 @@
+---
+layout: none
+---
+ 
+.math-definition {
+    // background-color: {{ site.math-definition-bg-color | default: white }};
+    background-color: white;
+}
+
+.math-definition-text {
+    // background-color: {{ site.math-definition-bg-color | default: white }};
+    background-color: white;
+}
+
+.math-definition-header {
+    background-color: grey;
+    // background-color: {{ site.math-definition-bg-color | default: grey }};
+    font-style: italic;
+}
