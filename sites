@@ -27,7 +27,6 @@ webthree build_jekyll_site setup_noop true
 webfour build_jekyll_site setup_noop true
 ## This particular web site doesn't require the bundle command to be built
 learning build_jekyll_site setup_noop false --baseurl learning
-experimental build_jekyll_site setup_noop true
 
 ##########################################################################################
 ## Building Jekyll web site using the Jekyll Documentation Theme
