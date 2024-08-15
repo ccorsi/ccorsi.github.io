@@ -1,11 +1,13 @@
 name: Web Site Generation using the Beautiful Jekyll Theme
 
+branch: main
+
 on:
   # Only build and deploy the main branch
   push:
-    branches: [main]
+    branches: [ {{ branch }}]
   pull_request:
-    branches: [main]
+    branches: [ {{ branch }}]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -75,9 +77,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Download All Generated Artifacts
-      # NOTE: we are not able to use the merge-multiple feature since the are achives that was
-      # uploaded by the update-pages-artifact and it generates the same archive name for each
-      # one so the download-artifact will override the archive and only the last one will survive.
+      # NOTE: we are not able to use the merge-multiple feature since the achives that were
+      # uploaded by the update-pages-artifact generates the same archive name for each
+      # one so the download-artifact will override the archive and only the last one
+      # downloaded will survive.
       - name: Download All Artifacts
         id: artifact
         uses: actions/download-artifact@v4
