@@ -312,6 +312,12 @@ trace Creating the _site directory
 # Create the _site directory
 mkdir _site
 
+if [ "$update" = true ]; then
+   trace "Updating dependencies for site _site"
+   # Update the dependencies of the current build site
+   bundle update
+fi
+
 # This requires ruby version 3.2.3 because of the dependencies
 if [ "$start" = true ] ; then
    # Delete the _site/index.htm file because we will wait until this file exists.
