@@ -10,6 +10,12 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and the latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
@@ -37,13 +43,13 @@ jobs:
           # -v ${{ github.workspace }}:/srv/jekyll:rw -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
           # -e PAGES_REPO_NWO=${{ github.repository }} \
           # jekyll/builder:$JEKYLL_VERSION /bin/bash -c "chmod 777 /srv/jekyll && ./run.sh -u"
-      # Upload Combined Artifact
-      - name: Upload Combined Artifact
+      # Upload Site Artifact
+      - name: Upload Site Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           name: combined
       # Deployment job
-      - name: Deploy to GitHub Pages
+      - name: Deploy Site GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
