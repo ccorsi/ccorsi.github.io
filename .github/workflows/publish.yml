@@ -24,10 +24,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Build the site in the jekyll/builder container
         run: |
-          cp -rpv ${{ github.workspace }}/_common/* ${{ matrix.site }}
           export JEKYLL_VERSION=stable
           export JEKYLL_ENV=production
-          docker run \
-          -v ${{ github.workspace }}:/srv/jekyll:rw -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          -e PAGES_REPO_NWO=${{ github.repository }} \
-          jekyll/builder:$JEKYLL_VERSION /bin/bash -c "chmod 777 /srv/jekyll && ./run.sh -u"
+          ./run.sh -u
+          # docker run \
+          # -v ${{ github.workspace }}:/srv/jekyll:rw -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+          # -e PAGES_REPO_NWO=${{ github.repository }} \
+          # jekyll/builder:$JEKYLL_VERSION /bin/bash -c "chmod 777 /srv/jekyll && ./run.sh -u"
