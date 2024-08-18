@@ -1,0 +1,33 @@
+---
+layout: page
+---
+<div class="row">
+    <div class="col-4-auto">
+        <!-- This is the left column -->
+        {% comment %}
+            Determine if the following page uses a sidebar for navigation
+        {% endcomment %}
+        {% if page.sidebar %}
+            {% include sidebar.html sidebar='site.data.sidebars[page.sidebar]' %}
+        {% endif %}
+    </div>
+    <div class="col-8" id="{{ page.id }}">
+        <!-- This is the middle column -->
+        {{ content }}
+
+        {% comment %}Add a footnote div that will be populated given certain conditions{% endcomment %}
+	    {% comment %}
+        FYI: This was the original way of adding footnotes to the given page.
+        <div id="math-footnotes"><div><b><em>Footnotes:</em></b></div></div>
+        {% endcomment %}
+    </div>
+    <!--
+    <div class="col-2">
+        &lt;!-- This is the right column --&gt;
+            {% comment %}
+            Do we actually need to extra div to be able to display our page that is used to generate
+            mathematical documentation?
+            {% endcomment %}
+    </div>
+    -->
+</div>

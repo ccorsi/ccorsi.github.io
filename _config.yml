@@ -1,0 +1,450 @@
+baseurl: "/" # This is the base directory structure used by your web site.
+title: "Claudio Corsi" # Title associated with your web site
+email: clcorsi@yahoo.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+url: "https://ccorsi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: jekyllrb
+github_username:  ccorsi
+
+# These files are being excluded because they are part of other Jekyll projects
+# that should not be included when building or using the watch feature of Jekyll
+# serve command.
+exclude:
+  - web*
+  - documentation*
+  - experimental
+  - learning
+  - test*
+  - '*.sh'
+  - PLAN.md
+  - README.md
+  - common*
+  - LICENSE
+  - sites
+  - '*-sites'
+  - pairs
+  - PROJECTS
+
+# These files are being kept around because they are part of other Jekyll projects
+# that should not be removed when using the watch feature of the Jekyll serve command.
+keep_files:
+  - documentation
+  - learning
+  - webone
+  - webtwo
+  - webthree
+  - webfour
+  - webfive
+  - testblank
+  - testdefault
+  - experimental
+  
+# Build settings
+theme: beautiful-jekyll-theme
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+### the initial set up you won't need to come back to this file often.
+###########################################################
+
+############################
+# --- Required options --- #
+############################
+
+# Your name to show in the footer
+author: Claudio Corsi
+
+###############################################
+# --- List of links in the navigation bar --- #
+###############################################
+
+navbar-links:
+  About Me: "about.htm"
+  Sciences:
+    - Mathematics: "math"
+  Software:
+    - Languages: "proglangs"
+    - Tools: "progtools"
+
+################
+# --- Logo --- #
+################
+
+# Image to show in the navigation bar - works best with a square image
+# Remove this parameter if you don't want an image in the navbar
+avatar: "/assets/img/avatar-icon.png"
+
+# By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
+round-avatar: true
+
+# If you want to have an image logo in the top-left corner instead of having the title of the website,
+# then specify the following parameter
+#title-img: /path/to/image
+
+
+#####################################
+# --- Footer social media links --- #
+#####################################
+
+# Select the social network links that you want to show in the footer.
+# Uncomment the links you want to show and add your information to each one.
+social-network-links:
+  email: "clcorsi@yahoo.com"
+  rss: true  # remove this line if you don't want to show an RSS link at the bottom
+  # facebook: deanattali
+  github: ccorsi
+  # twitter: daattali
+  # patreon: DeanAttali
+  # youtube: c/daattali
+#  medium: yourname
+#  reddit: yourname
+  linkedin: claudio-corsi-9112193
+#  xing: yourname
+  stackoverflow: "4332437/claudio-corsi"
+#  snapchat: deanat78
+#  instagram: deanat78
+  spotify: ccorsi
+#  telephone: +14159998888
+#  steam: deanat78
+#  twitch: yourname
+#  yelp: yourname
+#  telegram: yourname
+#  calendly: yourname
+#  mastodon: instance.url/@username
+#  ORCID: your ORCID ID
+#  google-scholar: your google scholar
+#  discord: users/ccorsi # "invite_code" or "users/userid" or "invite/invite_code" 
+  kaggle: ccorsi
+#  hackerrank: yourname
+
+# If you want your website to generate an RSS feed, provide a description
+# The URL for the feed will be https://<your_website>/feed.xml
+rss-description: This website is a virtual proof that I'm awesome
+
+###########################
+# --- General options --- #
+###########################
+
+# Select which social network share links to show in posts
+share-links-active:
+  twitter: true
+  facebook: true
+  linkedin: true
+  vk: false
+
+# How to display the link to your website in the footer
+# Remove this if you don't want a link in the footer
+url-pretty: "Claudio Corsi Personal Web Site"
+
+# Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
+excerpt_length: 50
+
+# Whether or not to show an excerpt for every blog post in the feed page
+feed_show_excerpt: true
+
+# Whether or not to show a list of tags below each post preview in the feed page
+feed_show_tags: true
+
+# Add a search button to the navbar
+post_search: true
+
+# Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
+edit_page_button: true
+
+# Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
+# If this setting is off, then long sub-menu words might get cut off
+# See https://github.com/daattali/beautiful-jekyll/issues/765 to understand the issue this setting can solve
+navbar-var-length: false
+
+# The keywords to associate with your website, for SEO purposes
+#keywords: "my,list,of,keywords"
+
+######################################
+# --- Colours / background image --- #
+######################################
+
+# Personalize the colours in your website. Colour values can be any valid CSS colour
+
+navbar-col: "#EAEAEA"
+navbar-text-col: "#404040"
+navbar-border-col: "#DDDDDD"
+page-col: "#FFFFFF"
+text-col: "#404040"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+footer-col: "#EAEAEA"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
+footer-hover-col: "#0085A1"
+
+# Alternatively, the navbar, footer, and page background can be set to an image
+# instead of colour
+
+#navbar-img: "/assets/img/bgimage.png"
+#footer-img: "/assets/img/bgimage.png"
+#page-img: "/assets/img/bgimage.png"
+
+# Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
+#mobile-theme-col: "#0085A1"
+
+# For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
+#site-css:
+#  - "/assets/css/custom-styles.css"
+
+# If you have common JavaScript files that should be included in every page, list them here
+#site-js:
+#  - "/assets/js/custom-script.js"
+
+#################################
+# --- Web Analytics Section --- #
+#################################
+
+# Fill in your Google Analytics tag ID (or "Measurement ID") to track your website usage
+#gtag: "G-XXXXXXXXXX"
+
+# Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
+#cloudflare_analytics: ""
+
+# Google Tag Manager ID
+#gtm: ""
+
+# Matomo (aka Piwik) Web statistics
+# Uncomment the following section to enable Matomo. The opt-out parameter controls
+# whether or not you want to allow users to opt out of tracking.
+#matomo:
+#  site_id: "9"
+#  uri: "demo.wiki.pro"
+#  opt-out: true
+
+# Google Universal Analytics ID -- deprecated
+# As of July 2023 this is no longer supported by Google! If you are still using `google_analytics`,
+# you should switch to using the `gtag` field above instead.
+#google_analytics: "UA-XXXXXXXX-X"
+
+####################
+# --- Comments --- #
+####################
+
+# To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
+#disqus: ""
+
+# To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
+#fb_comment_id: ""
+
+# To use CommentBox, sign up for a Project ID on https://commentbox.io
+#commentbox: "" # Project ID, e.g. "5694267682979840-proj"
+
+# To use Utterances comments: (0) uncomment the following section, (1) fill in
+# "repository" (make sure the repository is public), (2) Enable Issues in your repository,
+# (3) Install the Utterances app in your repository https://github.com/apps/utterances
+# See more details about the parameters below at https://utteranc.es/
+#utterances:
+#  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#  issue-term: title   # Mapping between blog posts and GitHub issues
+#  theme: github-light # Utterances theme
+#  label: blog-comments # Label that will be assigned to GitHub Issues created by Utterances
+
+# To use Staticman comments, uncomment the following section. You may leave the reCaptcha
+# section commented if you aren't using reCaptcha for spam protection. 
+# Using Staticman requires advanced knowledge, please consult 
+# https://github.com/eduardoboucas/staticman/ and https://staticman.net/ for further 
+# instructions. For any support with staticman please direct questions to staticman and 
+# not to BeautifulJekyll.
+#staticman:
+#  repository : # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#  branch     : master # If you're not using `master` branch, then you also need to update the `branch` parameter in `staticman.yml`
+#  endpoint   : # URL of your deployment, with a trailing slash eg. "https://<your-api>/v3/entry/github/"
+#  reCaptcha:   # (optional, set these parameters in `staticman.yml` as well) 
+#    siteKey  : # You need to apply for a site key on Google
+#    secret   : # Encrypt your password by going to https://<your-own-api>/v3/encrypt/<your-site-secret>
+
+# To use giscus comments:
+# (0) Uncomment the following giscus section, (1) Enable Discussions in your GitHub repository, 
+# (2) Install the giscus app in your repository (details at https://giscus.app),
+# (3) Fill in *all* the parameters below 
+# See more details about giscus and each of the following parameters at https://giscus.app
+#giscus:
+#  hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
+#  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#  repository-id: # ID of your repository, retrieve this info from https://giscus.app
+#  category: Announcements # Category name of your GitHub Discussion posts
+#  category-id: # ID of your category, retrieve this info from https://giscus.app
+#  mapping: pathname
+#  reactions-enabled: 1
+#  emit-metadata: 0
+#  theme: light
+
+################
+# --- Misc --- #
+################
+
+# Ruby Date Format to show dates of posts
+date_format: "%B %-d, %Y"
+
+# Facebook App ID
+#fb_app_id: ""
+
+#################################################################################
+# --- You don't need to touch anything below here (but you can if you want) --- #
+#################################################################################
+
+# Output options (more information on Jekyll's site)
+timezone: "America/New_York"
+markdown: kramdown
+highlighter: rouge
+permalink: /:year-:month-:day-:title/
+paginate: 5
+
+kramdown:
+  input: GFM
+
+# Default YAML values (more information on Jekyll's site)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
+      head-extra:
+        - favicon.html # This contains the definition for my favicon setttings
+  -
+    scope:
+      path: "" # any file that's not a post will be a "page" layout by default
+    values:
+      layout: "page"
+      toc: true
+      head-extra:
+        - favicon.html # This contains the definition for my favicon setttings
+      before-content:
+        - quotes.html # This includes the required script to display quotes
+        - toc.html # This will include the <div id="toc"></div> element
+      js:
+        - /assets/js/toc.js  # This will generate the toc for the page
+        - /assets/js/toc-handler.js # This will define which headers to include for the toc and add callback
+        - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
+  -
+    scope:
+      path: "math"
+    values:
+      id: math
+      layout: "sb-fn-page"
+      toc: true
+      head-extra:
+        - favicon.html # This contains the definition for my favicon setttings
+      before-content:
+        - quotes.html # This includes the required script to display quotes
+        - toc.html # This will include the <div id="toc"></div> element
+      after-content:
+        - after-footnotes.html # This will include the <div id="math-footnotes"></div> element
+      css:
+        - /assets/css/math.css
+      js:
+        - /assets/js/toc.js  # This will generate the toc for the page
+        - /assets/js/toc-handler.js # This will define which headers to include for the toc and add callback
+        - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
+        - /assets/js/math-footnotes.js # This will generate all math related footnotes.
+      ext-js:
+        - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+      footnotes:
+        length: 80
+        minimum: 1213
+  -
+    scope:
+      path: "prog*"
+    values:
+      id: compsc
+      layout: "sb-fn-page"
+      toc: true
+      head-extra:
+        - favicon.html # This contains the definition for my favicon setttings
+      before-content:
+        - quotes.html # This includes the required script to display quotes
+        - toc.html # This will include the <div id="toc"></div> element
+      after-content:
+        - after-footnotes.html # This will include the <div id="compsc-footnotes"></div> element
+      css:
+        - /assets/css/math.css
+      js:
+        - /assets/js/toc.js  # This will generate the toc for the page
+        - /assets/js/toc-handler.js # This will define which headers to include for the toc and add callback
+        - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
+        - /assets/js/compsc-footnotes.js # This will generate all compsc related footnotes.
+      ext-js:
+        - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+      footnotes:
+        length: 80
+        minimum: 1213
+  - # we are defining the different values that we want to use when processing assets related parsing
+    scope:
+      path: "assets"
+    values:
+      layout: none
+      # site wide footnotes length and minimum page text required to include footnotes
+      # NOTE: added here because this information is only required within the javascript
+      #footnotes:
+        #length: 70
+        #minimum: 1100
+
+# site wide footnotes length and minimum page text required to include footnotes
+#footnotes:
+  #length: 60
+  #minimum: 1000
+
+sass:
+  style: expanded
+  sass_dir: _sass
+  sourcemap: always
+  quiet_deps: false
+  verbose: true
+
+##################################################################################
+#
+# The following section contains configuration settings that will be used
+# to set different javascript scripts and css style sheets to be added to the
+# general web site.
+#
+# While these will require one to restart the Jekyll serve when using the watch
+# feature.  The addition of the check for the site.yml file within the data
+# config directory will be used to update these values during the Jekyll watch
+# command.  This will remove the need to restart the serve command whenever one
+# needs to update this config file.  Ultimately, these settings will updated with
+# the final ones when the web site is actually being deployed.
+#
+# Note let if we assume that you are using the default data directory _data then
+# the site.yml file will be located at _data/config/site.yml.
+#
+##################################################################################
+
+# This is used to define the particular version of Firebase being used.
+firebase:
+  version: 10.12.5
+
+# FYI:
+# The following entries are not being used since the Beautiful Jekyll Theme
+# already uses its own version of bootstrap and jQuery, although they be a it older
+# versions.  It is hoped that this theme will ultimately upgrade its version of
+# these libraries such that we can to use newer versions that might contain features
+# that are not avaliable with these older versions.  It is better that we can 
+# choose which version we are interested in using rather than be relegated to a
+# particular version.
+
+# This will be used define the particular version of bootstrap that will be used.
+bootstrap:
+  js:
+    - version: 5.3.3
+      sri: "sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  css:
+    - version: 5.3.3
+      sri: "sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+
+# This is used to define the particular version of jQuery being used.
+jquery:
+  version: 3.7.1

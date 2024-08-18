@@ -1,0 +1,41 @@
+{% comment %}
+sidebar:
+  title: Sidebar Title
+  entries:
+    - entry: Math Home
+      url: /math
+    - title: Submenu Title
+      submenu:
+        - entry: MathJax
+          ext-url: https://cdn.jsdelivr.net/npm/mathjax
+        - title: Subsubmenu Title
+          submenu:
+          - entry: Foo
+            url: /foo
+        - entry: Bar
+          url: /bar
+    - entry: Home
+      url: /
+{% endcomment %}
+
+{% if include.submenu %}
+
+<a class="text-secondary" href="#{{ include.id }}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">{{ include.title }}</a>
+<ul class="collapse list-unstyled" id="{{ include.id }}">
+    {% for item in include.submenu %}
+    <li>
+        {% if item.entry %}
+            <a href={% if item.url %}"{{ item.url | relative_url }}"{% elsif item.ext-url %}"{{ item.ext-url }}" target="_blank"{% else %}"#"{% endif %}>{{ item.entry }}</a>
+        {% elsif item.submenu %}
+            {% assign submenuId = submenuId | plus: 1 %}
+            {% assign id = 'submenu-' | append: submenuId %}
+            {% include submenu.html submenu=item.submenu title=item.title id=id %}
+        {% else %}
+            <!-- SUBMENU CONTAINS AN INVALID ENTRY: {{ item }} -->
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+{% endif %}
+

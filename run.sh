@@ -147,7 +147,7 @@ function build_jekyll_site {
 
    trace Creating site root directory _site/${site}
    # Create the required site root directory used by jekyll
-   mkdir _site/${site}
+   mkdir -p _site/${site}
 
    # call the setup function before building the site
    eval ${setup} ${site}
@@ -180,7 +180,7 @@ function build_jekyll_site {
       eval ${cmd} jekyll build -V --watch --trace --future -d ../_site/${site} ${JEKYLL_EXTRA_BUILD_ARGS} &
    else
       trace "Starting Jekyll build for site ${site}"
-      eval ${cmd} jekyll build -V --trace --future -d ../_site/${site} ${JEKYLL_EXTRA_BUILD_ARGS}
+      eval ${cmd} jekyll build -V --trace --future -d ../_site/${site} ${JEKYLL_EXTRA_BUILD_ARGS} &
    fi
 
    if [ ! -z "${JEKYLL_EXTRA_BUILD_ARGS}" ]
@@ -206,7 +206,8 @@ function usage {
    echo "Usage: $0 -s -k -d -u -w -v -h [sites]"
    echo "   -s: start a local http server"
    echo "   -k: kill all running ruby processes"
-   echo "   -d: delete the _site directory"
+   # We now always delete the _site directory
+   # echo "   -d: delete the _site directory"
    echo "   -u: update the required dependencies for each generated web site"
    echo "   -w: start the jekyll build process and enable increment build"
    echo "   -v: enable tracing of calls"
@@ -235,21 +236,22 @@ fi
 # Initialize options
 start=false
 stop=false
-delete=true
+# Reason explained above
+# delete=true
 update=false
 watch=false
 sites=()
 # FYI: The debug variable is defined within the commonrc file
 # debug=false
 
-while getopts "Dskduwvh" o; do
+while getopts "Dskuwvh" o; do
    case "${o}" in
       s) start=true
          ;;
       k) stop=true
 	      ;;
-      d) delete=true
-	      ;;
+      #d) delete=true
+	      #;;
       u) update=true
 	      ;;
       w) watch=true
@@ -280,7 +282,7 @@ echo sites=${sites[@]}
 
 trace "start is set to $start"
 trace "stop is set to $stop"
-trace "delete is set to $delete"
+# trace "delete is set to $delete"
 trace "update is set to $update"
 trace "watch is set to $watch"
 
@@ -294,18 +296,42 @@ if [ "$stop" = true ]; then
    done
 fi
 
-if [ "$delete" = true ]; then
+# TODO: Since we are now using Jekyll to build the main site.  We should delete
+# the _site directory by default.
+# if [ "$delete" = true ]; then
    # Determine if the _site directory already exists
    if test -d _site; then
       trace Deleting existing _site directory
       # delete files from the _site directory
       rm -rf _site
    fi
-fi
+# fi
 
 trace Creating the _site directory
 # Create the _site directory
 mkdir _site
+
+# This requires ruby version 3.2.3 because of the dependencies
+if [ "$start" = true ] ; then
+   # Delete the _site/index.htm file because we will wait until this file exists.
+   # if test -f _site/index.htm
+   # then
+      # rm _site/index.htm
+   # fi
+   trace "Starting Jekyll watch build for top level site _site"
+   eval bundle exec jekyll build -V --watch --trace --future &
+   # NOTE: The following is not required any longer because we are using the keep_files
+   #  Jekyll feature to not delete the other generated web sites.
+   # We need to wait until Jekyll has generated the _site/index.htm
+   # file since it deletes the _site directory
+   # while ! test -f _site/index.htm
+   # do
+   #    sleep 1
+   # done
+else
+   trace "Starting Jekyll build for top level site _site"
+   eval bundle exec jekyll build -V --trace --future &
+fi
 
 # NOTE: The commented out script code was part of the original work done
 #       provide the ability to generate the different types of web site
@@ -400,11 +426,13 @@ do
    fi
 done < sites
 
+# The following script action is not needed any longer since we are using
+# Jekyll to build the top-level web site.
 # Copy all the required common files to the _site directory
-for source in `cat common`; do
-   trace Copying files from ${source} to _site
-   cp -rpv ${source} _site
-done
+# for source in `cat common`; do
+   # trace Copying files from ${source} to _site
+   # cp -rpv ${source} _site
+# done
 
 # Start the server if requested else exit the script
 if [ "$start" = true ]; then
@@ -417,4 +445,9 @@ if [ "$start" = true ]; then
    echo Starting http server to serve generated site: _site
    # We are only going to process local connections for security reasons
    ${cmd} -m http.server --bind 127.0.0.1
+else
+   # Wait for all of the Jekyll's build completed
+   wait $(jobs -p)
+   echo All Jekyll builds have completed
 fi
+

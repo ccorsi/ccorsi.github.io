@@ -25,6 +25,7 @@ webone build_jekyll_site setup_beautiful true
 webtwo build_jekyll_site setup_beautiful true
 webthree build_jekyll_site setup_noop true
 webfour build_jekyll_site setup_noop true
+webfive build_jekyll_site setup_noop true
 ## This particular web site doesn't require the bundle command to be built
 learning build_jekyll_site setup_noop false --baseurl learning
 

@@ -1,14 +1,34 @@
+---
+layout: none
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Books</title>
-    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-database-compat.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    <title>{{ page.title | default: 'Books'}}</title>
+    {% comment %}
+    {% if site.data.config.site.firebase.version %}
+        {% assign firebaseVersion=site.data.config.site.firebase.version %}
+    {% elsif site.firebase.version %}
+        {% assign firebaseVersion=site.firebase.version %}
+    {% else %}
+        {% assign firebaseVersion='10.4.0' %}
+    {% endif %}
+    {% endcomment -%}
+    <!--
+	    site.data.config.site.firebase.version = {{ site.data.config.site.firebase.version }}
+	    site.firebase.version =  {{ site.firebase.version }}
+    -->
+    {% assign firebaseVersion=site.data.config.site.firebase.version | default: site.firebase.version | default: '10.4.0' -%}
+    {% assign firebaseBaseurl="https://www.gstatic.com/firebasejs/"| append:firebaseVersion %}
+    <script src="{{ firebaseBaseurl }}/firebase-app-compat.js"></script>
+    <script src="{{ firebaseBaseurl }}/firebase-auth-compat.js"></script>
+    <script src="{{ firebaseBaseurl }}/firebase-database-compat.js"></script>
+    {% assign jqueryVersion = site.data.config.site.jquery.version | default:site.jquery.version | default:'3.7.1' -%}
+    {% assign jqueryIntegrity = site.data.config.site.jquery.sri | default:site.jquery.sri | default:'sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=' %}
+    <script src="https://code.jquery.com/jquery-{{ jqueryVersion }}.min.js"
+	    integrity="{{ jqueryIntegrity }}"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/assets/css/books.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
@@ -309,67 +329,6 @@
     </script>
 </head>
 <body onload="setup()">
-    <div id="login">
-        <h1>Login</h1>
-        <div class="prompt">
-            <div><label for="email">Email:</label></div>
-            <div><input type="email" id="email" required placeholder="Enter email"></div>
-            <div><label for="password">Password:</label></div>
-            <div><input type="password" id="password" required placeholder="Enter password"></div>
-        </div>
-        <button onclick="login('email','password')">Log in</button>
-    </div>
-    <div id="logout">
-        <div id="addbook">
-            <div id="left">
-                <div>
-                    <button onclick="set_value('ititle','ttitle')" id="btitle">Set Title</button>
-                    <input type="text" name="ititle" id="ititle" oninput="check_button('btitle','ititle')">
-                </div>
-                <div>
-                    <button onclick="set_value('isubtitle', 'tsubtitle')" id="bsubtitle">Set Subtile</button>
-                    <input type="text" name="isubtitle" id="isubtitle" oninput="check_button('bsubtitle', 'isubtitle')">
-                </div>
-                <div>
-                    <button onclick="set_value('iyear','tyear')">Set Year Published</button>
-                    <input type="text" name="iyear" id="iyear" oninput="check_button('byear', 'iyear')">
-                </div>
-                <div>
-                    <button onclick="set_value('ilength', 'tlength')" id="blength">Set Book Length</button>
-                    <input type="text" name="ilength" id="ilength" oninput="check_button('blength', 'ilength')" onkeydown="return isnumber(event)">
-                </div>
-                <div>
-                    <!-- <button onclick="add_value('idate','sdate'); append_value('idate','udate')" id="bdate">Add Date Completed</button> -->
-                    <button onclick="add_value('idate','sdate')" id="bdate">Add Date Completed</button>
-                    <input type="date" name="idate" id="idate" oninput="check_button('bdate', 'idate')">
-                </div>
-                <div>
-                    <button onclick="add_value('iauthor', 'sauthor')" id="bauthor">Add Author</button>
-                    <input type="text" name="iauthor" id="iauthor" oninput="check_button('bauthor', 'iauthor')">
-                </div>
-                <div>
-                    <button onclick="add_value('itranslator', 'stranslator')" id="btranslator">Add Translator</button>
-                    <input type="text" name="itranslator" id="itranslator" oninput="check_button('btranslator', 'itranslator')">
-                </div>
-                <div>
-                    <button onclick="add_value('ieditor', 'seditor')" id="beditor">Add Editor</button>
-                    <input type="text" name="ieditor" id="ieditor" oninput="check_button('beditor', 'ieditor')">
-                </div>
-            </div>
-            <div id="right">
-                <label>Title: <input type="text" name="ttitle" id="ttitle" readonly></label>
-                <label>Subtitle: <input type="text" name="tsubtitle" id="tsubtitle" readonly></label>
-                <label>Authors: <select name="sauthor" id="sauthor"></select></label>
-                <label>Translators: <select name="stranslator" id="stranslator"></select></label>
-                <label>Editors: <select name="seditor" id="seditor"></select></label>
-                <label>Published: <input type="text" name="tyear" id="tyear" readonly></label>
-                <label>Length: <input type="text" name="tlength" id="tlength" readonly></label>
-                <label>Date Completed: <select name="sdate" id="sdate"></select></label>
-                <!-- <ul id="udate"></ul> -->
-                <button type="button" onclick="add_book()">Add Book</button>
-            </div>
-        </div>
-        <button onclick="logout()">Log out</button>
-    </div>
+	{{ content }}
 </body>
 </html>

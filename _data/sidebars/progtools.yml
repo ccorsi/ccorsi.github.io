@@ -1,0 +1,7 @@
+sidebar:
+  title: Tools
+  entries:
+    - title: C/C++
+      submenu:
+        - entry: CMake
+          url:  /progtools/cmake/

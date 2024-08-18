@@ -22,6 +22,10 @@ This was the original implementation for adding definitions to the page.
 </div>
 {% endcomment %}
 
+{% comment %} Increment the definition counter {% endcomment %}
+
+{% assign definition = definition | plus: 1 %}
+
 <div class="row">
     <div class="math-definition" id="definition">
         <div class="col-lg-auto pl-5">
@@ -33,5 +37,4 @@ This was the original implementation for adding definitions to the page.
     </div>
 </div>
 
-{% assign definition = definition | plus: 1 %}
 {% comment %}Copyright Claudio Corsi 2024{% endcomment %}

@@ -1,0 +1,209 @@
+---
+layout: none
+title: Page Title
+permalink: index.htm
+---
+<!DOCTYPE html>
+<html lang="{{ site.data.config.site.languange | default: site.language | default: 'en' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.data.config.site.title | default: site.title | default: 'Claudio Corsi' }}</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@{{ site.data.config.site.bootstrap.css.version | default: site.bootstrap.css.version | default: '5.3.3' }}/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="{{ site.data.config.site.bootstrap.css.sri | default: site.css.sri | default: 'sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' }}"
+        crossorigin="anonymous">
+    <style>
+        h1 {
+            text-align: center;
+            text-decoration-line: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- This is the Header of the main web page. -->
+        <!-- TODO: Create a navigation menu that will point to the different sub web sites. -->
+        <!-- <div class="container-sm">100% wide until small breakpoint</div>
+        <div class="container-md">100% wide until medium breakpoint</div>
+        <div class="container-lg">100% wide until large breakpoint<navbar navbar-expand-lg bg-body-tertiary/div>
+        <div class="container-xl">100% wide until extra large breakpoint</div>
+        <div class="container-xxl">100% wide until extra extra large breakpoint</div> -->
+        <!--
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar scroll</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Link
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Link</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        -->
+
+        <div class="container-fluid">
+            <div class="row bg-body-tertiary">
+                <div class="col border text-start">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="/">Home</a>
+                    </nav>
+                </div>
+                <div class="col border text-end">
+                    <nav class="navbar navbar-expand-lg">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarScroll">
+                            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                              <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/about.htm">About</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                              </li>
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="internal-sites">
+                                  Internal Web Sites
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="internal-sites">
+                                  <li><a class="dropdown-item" href="/books/">Books</a></li>
+                                  <li><a class="dropdown-item" href="/groceries/">Groceries</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="/learning/">Original Claudio Corsi Web Site</a></li>
+                                </ul>
+                              </li>
+                              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Experimental Web Sites
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item dropend">
+                                        <a href="#" class="nav-link dropdown-toggle bg-secondary-subtle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="beautiful-sites">
+                                            Beautiful Jekyll Generated Sites
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="beautiful-sites">
+                                            <li><a class="dropdown-item" href="/webone/">WebOne</a></li>
+                                            <li><a class="dropdown-item" href="/webtwo/">WebTwo</a></li>
+                                            <li><a class="dropdown-item" href="/webthree/">WebThree</a></li>
+                                            <li><a class="dropdown-item" href="/webfour/">WebFour</a></li>          
+                                        </ul>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="/experimental/">Experimental</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="/documentation/">Documentation Theme Site</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li class="nav-item dropend">
+                                        <a href="#" class="nav-link dropdown-toggle bg-secondary-subtle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="other-sites">
+                                            Other Theme Generated Sites
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="other-sites">
+                                            <li><a class="dropdown-item" href="/testblank/">Blank Generated Site</a></li>
+                                            <li><a class="dropdown-item" href="/testdefault/">Default Generated Site</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                              </li>
+                              <!-- <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true">Link</a>
+                              </li>
+                            </ul>
+                            <form class="d-flex" role="search">
+                              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                              <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form> -->
+                          </div>
+            
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <p>
+
+            </p>
+            <!-- <h1 class="text-center text-decoration-underline">Introduction</h1> -->
+            <h1>Introduction</h1>
+
+            <p>
+                Well here I go again.  Here is another attempt at creating a web site that I can use to write about different things that interest me.
+                This time around I can confidently state that I am in a better position to continue to use this current incarnation of my web site.  I
+                do hope to be able to produce consistent content for this web site.  It doesn't imply that the current state of this site will stay as 
+                it is now.  It is possible that the site can change but not in any drastic way that would require an extensive amount of work.  Let me
+                then talk about what I am trying to accomplish with this web site.
+            </p>
+
+            <!-- <h1 class="text-center text-decoration-underline">Objective</h1> -->
+            <h1>Objective</h1>
+
+            <p>
+                The objective of this site is to find an avenue in which I can write about different subjects that interest me.  This includes articles 
+                that will describe different knowledge that I know will be useful in the future but that I will just not remember.  This is the case will
+                things that is usually done once and then never updated.  For example, I might configure an operating system feature that doesn't need any other
+                updates.  This type of information will not be useful with that current operating system configuration but will be useful when moving to 
+                another machine that requires the save configuration.  The other objective is to write up about working experience that might be useful to
+                others in the field.  This can include any connected with developing software.
+            </p>
+
+            <p>
+                While the above is a viable objective.  There is the question of what to do with my current web sites?  I have created one that is part of this 
+                url at <a href="./learning/">Learning</a>.  There is already some interesting information that I like to keep but I have come to dislike 
+                the format of the site itself.  There are things about it that doesn't sit well with me while there are other things about it that I really
+                like.  Thus, I will be taking most if not all of the content that was created within that site and integrate within the main site.  This is 
+                just part of what I plan to do with this current incarnation.
+            </p>
+
+            <p>
+                There is the question of what will this incarnation of my site be like now?  Well, I do have some initial plan besides that one mentioned above.
+                I intend to create some separate self contained sites relative to this url.  Those include a personal one that I will use to store a list of books
+                that I have read within pertinent information.  This will be hosted at the following <a href="/books/index.htm">link</a>.  
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <!-- This is the footer of the main web page. -->
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@{{ site.data.config.site.bootstrap.js.version | default: site.bootstrap.js.version | default: '5.3.3' }}/dist/js/bootstrap.bundle.min.js"
+        integrity="{{ site.data.config.site.bootstrap.js.sri | default: site.bootstrap.js.sri | default: sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz }}"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>

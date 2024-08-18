@@ -1,0 +1,11 @@
+sidebar:
+  title: C/C++
+  entries:
+    - entry: C/C++ Reference
+      ext-url: https://en.cppreference.com/
+    - entry: Tools
+      url: progtools/
+    - entry: C/C++ Home
+      url: /proglangs/cpp.html
+    - entry: Languages Home
+      url: /proglangs/

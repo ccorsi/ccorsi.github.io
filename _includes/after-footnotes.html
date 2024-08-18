@@ -1,0 +1,9 @@
+{% if page.id %}
+	{% comment %}Add a footnote div that will be populated given certain conditions{% endcomment %}
+	<div id="{{ page.id }}-footnotes"></div>
+	{% comment %}
+	NOTE: The following include div's is not used any longer and the generate footnote javascript will
+	handle adding the required separation to the page instead of adding the below Footnotes div.
+	<div id="{{ page.id }}-footnotes"><div><b><em>Footnotes:</em></b></div></div>
+	{% endcomment %}
+{% endif %}

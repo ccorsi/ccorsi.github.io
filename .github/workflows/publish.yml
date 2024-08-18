@@ -1,0 +1,33 @@
+name: Publish my web site using GitHub Pages
+
+on:
+  # Only build and deploy the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and the latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build Jekyll
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the site in the jekyll/builder container
+        run: |
+          cp -rpv ${{ github.workspace }}/_common/* ${{ matrix.site }}
+          export JEKYLL_VERSION=stable
+          export JEKYLL_ENV=production
+          docker run \
+          -v ${{ github.workspace }}/${{ matrix.site }}:/srv/jekyll -v ${{ github.workspace }}/_site/${{ matrix.site }}:/srv/jekyll/_site \
+          -e PAGES_REPO_NWO=${{ github.repository }} \
+          jekyll/builder:$JEKYLL_VERSION /bin/bash -c "chmod 777 /srv/jekyll && sh run.sh"

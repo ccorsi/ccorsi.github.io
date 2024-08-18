@@ -1,0 +1,97 @@
+---
+---
+
+$base-color: #c6538c;
+$border-dark: rgba($base-color, 0.88);
+
+/*
+FYI:
+    # is associated with the node id attribute
+    . is associated with the node class attribute
+*/
+/*
+#math-footnotes {
+    border-top: 1px solid #aaa;
+    border-clip: 3in;
+    padding: 0.3em 0;
+    margin: 10px 0;
+}
+*/
+
+.math-definition {
+    // background-color: {{ site.math-definition-bg-color | default: white }};
+    background-color: white;
+    // border: 1px solid $border-dark;
+}
+
+.math-definition-text {
+    // background-color: {{ site.math-definition-bg-color | default: white }};
+    // background-color: lightblue;
+    font-style: italic;
+}
+
+.math-definition-header {
+    display: inline;
+    // background-color: lightgrey;
+    // background-color: {{ site.math-definition-bg-color | default: grey }};
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.math-theorem-text {
+    // background-color: {{ site.math-definition-bg-color | default: white }};
+    // background-color: pink;
+    font-style: italic;
+}
+
+.math-theorem {
+    background-color: white;
+}
+
+.math-theorem-proof {
+    // background-color: {{ site.math-definition-bg-color | default: white }};
+    // background-color: green;
+    font-style: italic;
+}
+
+.math-theorem-header {
+    display: inline;
+    // background-color: lightgrey;
+    // background-color: {{ site.math-definition-bg-color | default: grey }};
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.math-theorem-qed {
+    font-style: italic, bold;
+    // text-decoration: underline;
+    background-color: white;
+    // text-indent: center;
+    text-align: end;
+}
+
+.reference-entry-title {
+    font-style: italic;
+}
+
+.reference-title {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.reference-entry-creators {
+    font-style: normal;
+}
+
+.reference-entry-publisher {
+    font-style: normal;
+}
+
+.left {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 0 10px 10px 0;
+}

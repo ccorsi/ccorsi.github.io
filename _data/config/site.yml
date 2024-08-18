@@ -1,0 +1,21 @@
+# This file will be used to update the different dynamic configuration settings that will be
+# used when developing the generated web site.  It removes the need to restart the Jekyll
+# serve command whenever we apply any changes to the _config.yml file.  That provides a
+# quicker turnover during the development.  These values can then be added to the _config.yml
+# when we've fortified our settings.
+
+# This can be used to set the web site title
+title: Site Data Configuration Title
+
+# The following settings will be used to update the version of bootstrap that is being used
+# during the development process of the generated web site.
+bootstrap:
+  js:
+    version: 5.3.3
+    sri: "sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  css:
+    version: 5.3.3
+    sri: "sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+
+firebase:
+  version: 10.12.5

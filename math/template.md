@@ -3,14 +3,14 @@ title: Mathematics
 subtitle: Everything to do with Mathematics
 author: Claudio Corsi
 tags: [ mathematics, introduction ]
-permalink: math/
-full-width: true
-sidebar: home
+permalink: math/template.htm
 ---
 
 {% assign chapter = 2 %}
+{% comment %}
 {% assign definition = 1 %}
 {% assign theorem = 1 %}
+{% endcomment %}
 
 ## Introduction
 
@@ -47,12 +47,13 @@ properly around the area that is being used? \(x^6\).
 
 {% include definition.html content=content %}
 
-{% includeex definition.html %}
+{% capture deftwo %}
 This section is part of the includex tag that we will use to mimic the include with
 a block instead of using the content tag.
 <br><br>
 This is a simple mathematical definition.  We are going to see what happens when we extend the definition of a mathematical statement.  Will this text be wrapped properly around the area that is being used? \(x^6\).
-{% endincludeex %}
+{% endcapture %}
+{% include definition.html content=deftwo %}
 
 Let us add some text here to see what happens.
 

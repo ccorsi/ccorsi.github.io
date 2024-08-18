@@ -10,3 +10,5 @@ _site
 # ignore all non-required ruby gem Gemfile.lock lock file since this is not required.
 **/Gemfile.lock
 
+# ignore all files that contain the test string
+**/**test**

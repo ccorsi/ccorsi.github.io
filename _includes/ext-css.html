@@ -1,0 +1,16 @@
+{% comment %}
+    The following include script was taken from the Beautiful Jekyll Theme created
+    by Dean Attali located at https://github.com/daattali/beautiful-jekyll
+
+    NOTE: The include variable is defined that will include all of the variables
+    that were defined when using the include tag.  Those variables will be available
+    throughout this include file.
+{% endcomment %}
+{% assign css=include.css -%}
+{% if css.sri -%}
+  <link rel="stylesheet" href="{{ css.href }}" integrity="{{ css.sri }}" crossorigin="anonymous">
+{% elsif css.href -%}
+  <link rel="stylesheet" href="{{ css.href }}">
+{% else -%}
+  <link rel="stylesheet" href="{{ css }}">
+{% endif -%}
