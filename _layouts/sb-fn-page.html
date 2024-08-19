@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 ---
 {% comment %}
 
@@ -49,7 +49,7 @@ printNode: [true, if you want to print the currently processing node]
             {% include sidebar.html sidebar='site.data.sidebars[page.sidebar]' %}
         {% endif %}
     </div>
-    <div class="col-8" id="{{ page.id }}">
+    <div class="col" id="{{ page.id }}">
         <!-- This is the middle column -->
         {{ content }}
 

@@ -39,10 +39,6 @@ jobs:
           export JEKYLL_VERSION=stable
           export JEKYLL_ENV=production
           ./run.sh -u
-          # docker run \
-          # -v ${{ github.workspace }}:/srv/jekyll:rw -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          # -e PAGES_REPO_NWO=${{ github.repository }} \
-          # jekyll/builder:$JEKYLL_VERSION /bin/bash -c "chmod 777 /srv/jekyll && ./run.sh -u"
       # Upload Site Artifact
       - name: Upload Site Artifact
         uses: actions/upload-pages-artifact@v3
