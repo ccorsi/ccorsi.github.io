@@ -50,7 +50,7 @@ about Physics.
 - Quantum Mechanics
 - String Theory
 - Classical Mechanics
-- Biographies on Physicist like Richard Feynamen, Wolfgang Pauli, Nels Bors, and others
+- Biographies on Physicist like Richard Feynman, Wolfgang Pauli, Niels Bohr, and others
 - Big Bang Theory
 - Particle Physics
 
