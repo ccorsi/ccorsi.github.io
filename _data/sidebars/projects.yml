@@ -1,0 +1,7 @@
+sidebar:
+  title: Projects
+  entries:
+    - entry: Orignal Data Loaders
+      url:  /projects/loaders/
+    - entry: Template Data Loader
+      url:  /projects/dataloaders/

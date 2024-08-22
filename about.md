@@ -2,8 +2,17 @@
 layout: default
 title: About
 permalink: about.htm
+head-extra:
+  - favicon.html # This contains the definition for my favicon setttings
+before-content:
+  - page-header.html # This will include the title/subtitle/image information from page
+  - quotes.html # This includes the required script to display quotes
+after-content:
+  - after-footnotes.html # This will include the <div id="math-footnotes"></div> element
 css:
-    - main.css
+  - /assets/css/math.css
+js:
+  - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
 ---
 
 Welcome again to my site.  Let me tell you a bit about myself.  I am a software engineer by trade but have found many

@@ -26,7 +26,7 @@ exclude:
   - sites
   - '*-sites'
   - pairs
-  - PROJECTS
+  - PROJECTS.txt
 
 # These files are being kept around because they are part of other Jekyll projects
 # that should not be removed when using the watch feature of the Jekyll serve command.
@@ -70,6 +70,7 @@ navbar-links:
   Software:
     - Languages: "proglangs"
     - Tools: "progtools"
+    - Projects: "projects"
 
 ################
 # --- Logo --- #
@@ -340,6 +341,7 @@ defaults:
       head-extra:
         - favicon.html # This contains the definition for my favicon setttings
       before-content:
+        - page-header.html # This will include the title/subtitle/image information from page
         - quotes.html # This includes the required script to display quotes
         - toc.html # This will include the <div id="toc"></div> element
       after-content:
@@ -366,6 +368,34 @@ defaults:
       head-extra:
         - favicon.html # This contains the definition for my favicon setttings
       before-content:
+        - page-header.html # This will include the title/subtitle/image information from page
+        - quotes.html # This includes the required script to display quotes
+        - toc.html # This will include the <div id="toc"></div> element
+      after-content:
+        - after-footnotes.html # This will include the <div id="compsc-footnotes"></div> element
+      css:
+        - /assets/css/math.css
+      js:
+        - /assets/js/toc.js  # This will generate the toc for the page
+        - /assets/js/toc-handler.js # This will define which headers to include for the toc and add callback
+        - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
+        - /assets/js/compsc-footnotes.js # This will generate all compsc related footnotes.
+      ext-js:
+        - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+      footnotes:
+        length: 80
+        minimum: 1213
+  -
+    scope:
+      path: "projects"
+    values:
+      id: projects
+      layout: "sb-fn-page"
+      toc: true
+      head-extra:
+        - favicon.html # This contains the definition for my favicon setttings
+      before-content:
+        - page-header.html # This will include the title/subtitle/image information from page
         - quotes.html # This includes the required script to display quotes
         - toc.html # This will include the <div id="toc"></div> element
       after-content:

@@ -5,3 +5,5 @@ sidebar:
       submenu:
         - entry: CMake
           url:  /progtools/cmake/
+        - entry: GoogleTests
+          url:  /progtools/googletests/

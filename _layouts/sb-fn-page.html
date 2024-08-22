@@ -38,17 +38,22 @@ printNode: [true, if you want to print the currently processing node]
 ...
 ---
 
+{% include header.html type="page" %}
+
+{% include quotes.html %}
+
+{% include toc.html %}
+
 {% endcomment %}
+
 <div class="row">
+    {% comment %} Determine if the following page uses a sidebar for navigation. {% endcomment %}
+    {% if page.sidebar %}
     <div class="col-4-auto float-sm-left">
         <!-- This is the left column -->
-        {% comment %}
-            Determine if the following page uses a sidebar for navigation
-        {% endcomment %}
-        {% if page.sidebar %}
             {% include sidebar.html sidebar='site.data.sidebars[page.sidebar]' %}
-        {% endif %}
     </div>
+    {% endif %}
     <div class="col" id="{{ page.id }}">
         <!-- This is the middle column -->
         {{ content }}
