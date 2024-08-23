@@ -391,6 +391,7 @@ defaults:
     values:
       id: projects
       layout: "sb-fn-page"
+      cover-img: "/assets/img/gratisography-224H-free-stock-photo.jpg"
       toc: true
       head-extra:
         - favicon.html # This contains the definition for my favicon setttings
@@ -399,14 +400,14 @@ defaults:
         - quotes.html # This includes the required script to display quotes
         - toc.html # This will include the <div id="toc"></div> element
       after-content:
-        - after-footnotes.html # This will include the <div id="compsc-footnotes"></div> element
+        - after-footnotes.html # This will include the <div id="projects-footnotes"></div> element
       css:
         - /assets/css/math.css
       js:
         - /assets/js/toc.js  # This will generate the toc for the page
         - /assets/js/toc-handler.js # This will define which headers to include for the toc and add callback
         - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
-        - /assets/js/compsc-footnotes.js # This will generate all compsc related footnotes.
+        - /assets/js/projects-footnotes.js # This will generate all projects related footnotes.
       ext-js:
         - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
       footnotes:

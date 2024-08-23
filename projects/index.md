@@ -1,17 +1,16 @@
 ---
 layout: sb-fn-page
-title: Open Source Projects
+title: Projects
 subtitle: The Things I Do For Fun
 cover-img: "/assets/img/gratisography-224H-free-stock-photo.jpg"
 css: "/assets/css/table.css"
-sidebar: projects
+sidebar: projects-top
 ---
 
 This page contains information about the different Open Source Projects that I have on
 <a href="https://github.com/ccorsi?tab=repositories" target="_blank">GitHub</a>.  I will
-be listing and describing each of these different projects.  As part of this information,
-I will describe the different projects that I have provided some fixes for those projects.
-Let me begin by listing the different projects that I have developed.
+be listing and describing each of these different projects.  Let me begin by listing the
+different projects that I have developed.
 
 | Project | Description | Language |
 | --------- | -------- | -------- |
@@ -29,7 +28,15 @@ Let me begin by listing the different projects that I have developed.
 | [activemq-producers](https://github.com/ccorsi/activemq-producers){:target="_blank"} | Tool used to create ActiveMQ producer tests | Java |
 | [activemq-consumers](https://github.com/ccorsi/activemq-consumers){:target="_blank"} | Tool used to create ActiveMQ consumer tests | Java |
 
+As you see the above list contains projects that have been developed using C/C++, Java, Python
+and JavaScript. While these languages are being used extensively within the software field.  These
+are not the only languages that I have used before.  This includes the use of Perl, Ruby, Tcl and
+Groovy to name a few.  In time, I hope to include projects that use one or more of the programming
+languages I just mentioned.
 
+If you are then interested in learning about the above projects.  You can follow the links to their
+assocaited repository or if you are interested about just knowing more about each project.  Then
+following the link from the sidebar to your left.
 
 {% comment %}
 

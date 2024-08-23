@@ -1,5 +1,5 @@
 ---
-title: Programming Languages
+title: Languages
 sidebar: proglangs
 ---
 

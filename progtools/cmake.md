@@ -1,6 +1,6 @@
 ---
 title: CMake
-subtitle: Useful Pointers
+subtitle: Some Useful Pointers
 sidebar: progtools
 ---
 

@@ -1,6 +1,12 @@
 {% comment %}
-sidebar:
-  title: Sidebar Title
+This include file will be used to import a sidebar subbar which is basically a section
+of the sidebar that could be part of one or more sidebar.  This will allow one to be
+able to confine a change that might affect several sidebar into a single change that
+would then be applied to all sidebars.
+
+The subbar format is the following:
+
+subbar:
   entries:
     - entry: Math Home
       url: /math
@@ -16,24 +22,13 @@ sidebar:
           url: /bar
     - entry: Home
       url: /
+    - subbar: common
 {% endcomment %}
 
-{% assign sidebar = site.data.sidebars[page.sidebar].entries %}
-{% assign menu = site.data.sidebars[page.sidebar].sidebar %}
-{% assign submenuId = 1 %}
-
-{% if menu %}
-<div class="wrapper">
-    <!-- Sidebar -->
-    <nav id="sidebar">
-        {% if menu.title %}
-        <div class="sidebar-header text-primary">
-            <h3>{{ menu.title }}</h3>
-        </div>
-        {% endif %}
-
-        <ul class="list-unstyled components">
-        {% for item in menu.entries %}
+{% if include.subbar %}
+{% assign entries = site.data.sidebars[include.subbar].subbar.entries %}
+{% if entries %}
+        {% for item in entries %}
             {% if item.entry %}
                 <li>
                     <a href={% if item.url %}"{{ item.url | relative_url }}"{% elsif item.ext-url %}"{{ item.ext-url }}" target="_blank" {% else %}"#"{% endif %}>{{ item.entry }}</a>
@@ -49,10 +44,8 @@ sidebar:
             {% elsif item.subbar %}
                 {% include subbar.html subbar=item.subbar %}
             {% else %}
-                <!-- SIDEBAR CONTAINS AN INVALID ENTRY: {{ item }} -->
+                <!-- SUBBAR CONTAINS AN INVALID ENTRY: {{ item }} -->    
             {% endif %}
         {% endfor %}
-        </ul>
-    </nav>
-</div>
+{% endif %}
 {% endif %}

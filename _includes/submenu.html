@@ -30,6 +30,8 @@ sidebar:
             {% assign submenuId = submenuId | plus: 1 %}
             {% assign id = 'submenu-' | append: submenuId %}
             {% include submenu.html submenu=item.submenu title=item.title id=id %}
+        {% elsif item.subbar %}
+          {% include subbar.html subbar=item.subbar %}
         {% else %}
             <!-- SUBMENU CONTAINS AN INVALID ENTRY: {{ item }} -->
         {% endif %}
