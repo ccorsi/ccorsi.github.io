@@ -1,9 +1,6 @@
 sidebar:
   title: Languages
   entries:
-    - entry: C/C++
-      url: /proglangs/cpp.html
-    - entry: Java
-      url: /proglangs/java.html
-    - entry: Tools
-      url: progtools/
+    - subbar: proglangs-cpp-home
+    - subbar: proglangs-java-home
+    - subbar: progtools-home

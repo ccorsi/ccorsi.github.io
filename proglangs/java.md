@@ -1,6 +1,6 @@
 ---
 title: Java
-sidebar: java
+sidebar: proglangs-java
 permalink: /proglangs/java.html
 ---
 

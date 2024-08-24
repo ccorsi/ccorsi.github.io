@@ -1,7 +1,7 @@
 ---
 title: CMake
 subtitle: Some Useful Pointers
-sidebar: progtools
+sidebar: progtools-cpp
 ---
 
 I have started to use *CMake* to build several of my C++ projects.  While this is a great for me to be able to gain this knowledge

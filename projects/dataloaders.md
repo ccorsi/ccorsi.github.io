@@ -1,7 +1,7 @@
 ---
 layout: sb-fn-page
 title: Template Data Loader Class
-sidebar: projects
+sidebar: projects-list
 ---
 
 The template data loader project was something that just started to become its own project when using GoogleTests to implement the different

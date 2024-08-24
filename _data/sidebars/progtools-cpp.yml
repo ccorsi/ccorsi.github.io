@@ -1,0 +1,5 @@
+sidebar:
+  title: Tools
+  entries:
+    - subbar: progtools-cpp-individual
+    - subbar: progtools-home

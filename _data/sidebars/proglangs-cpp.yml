@@ -1,0 +1,6 @@
+sidebar:
+  title: C/C++
+  entries:
+    - subbar: proglangs-cpp-individual
+    - subbar: proglangs-home
+    - subbar: progtools-home

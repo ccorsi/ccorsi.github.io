@@ -4,7 +4,7 @@ title: Projects
 subtitle: The Things I Do For Fun
 cover-img: "/assets/img/gratisography-224H-free-stock-photo.jpg"
 css: "/assets/css/table.css"
-sidebar: projects-top
+sidebar: projects
 ---
 
 This page contains information about the different Open Source Projects that I have on

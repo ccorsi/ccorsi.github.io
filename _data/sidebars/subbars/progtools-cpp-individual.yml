@@ -1,0 +1,8 @@
+subbar:
+  entries:
+    - title: C/C++
+      submenu:
+        - entry: CMake
+          url:  /progtools/cmake/
+        - entry: GoogleTests
+          url:  /progtools/googletests/

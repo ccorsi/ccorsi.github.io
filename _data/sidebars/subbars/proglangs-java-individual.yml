@@ -1,15 +1,8 @@
-sidebar:
-  title: Java
+subbar:
   entries:
-    - entry: Java Home
-      url: /proglangs/java.html
     - title: OpenJDK
       submenu:
         - entry: OpenJDK Main Page
           ext-url: https://openjdk.org/
         - entry: JDK Project Page
           ext-url: https://openjdk.org/projects/jdk/
-    - entry: Tools
-      url: progtools/
-    - entry: Languages Home
-      url: /proglangs/

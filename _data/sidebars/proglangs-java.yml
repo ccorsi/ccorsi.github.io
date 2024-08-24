@@ -1,0 +1,6 @@
+sidebar:
+  title: Java
+  entries:
+    - subbar: proglangs-java-individual
+    - subbar: progtools-home
+    - subbar: proglangs-home

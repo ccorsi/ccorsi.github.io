@@ -26,7 +26,7 @@ subbar:
 {% endcomment %}
 
 {% if include.subbar %}
-{% assign entries = site.data.sidebars[include.subbar].subbar.entries %}
+{% assign entries = site.data.sidebars.subbars[include.subbar].subbar.entries %}
 {% if entries %}
         {% for item in entries %}
             {% if item.entry %}
@@ -47,5 +47,9 @@ subbar:
                 <!-- SUBBAR CONTAINS AN INVALID ENTRY: {{ item }} -->
             {% endif %}
         {% endfor %}
+{% else %}
+<!-- No entries for subbar: {{ include.subbar }} -->
 {% endif %}
+{% else %}
+<!-- No subbar include.subbar was defined -->
 {% endif %}

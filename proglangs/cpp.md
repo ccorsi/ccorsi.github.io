@@ -1,7 +1,7 @@
 ---
 title: C/C++
 subtitle: What I've Learned so far
-sidebar: cpp-home
+sidebar: proglangs-cpp
 permalink: /proglangs/cpp.html
 ---
 

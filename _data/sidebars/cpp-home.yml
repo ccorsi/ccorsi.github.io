@@ -1,9 +1,0 @@
-sidebar:
-  title: C/C++
-  entries:
-    - entry: C/C++ Home
-      url: /proglangs/cpp.html
-    - entry: Tools Home
-      url: progtools/
-    - entry: Languages Home
-      url: /proglangs/
