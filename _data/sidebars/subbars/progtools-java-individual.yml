@@ -4,3 +4,5 @@ subbar:
       url:  /progtools/jacoco/
     - entry: Apache Maven
       url:  /progtools/maven/
+    - entry: JUnit
+      url: /progtools/junit/

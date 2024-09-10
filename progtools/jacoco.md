@@ -8,12 +8,12 @@ The [JaCoCo](https://www.jacoco.org/jacoco/index.html){:target="_blank"} is a ja
 developers can use to determine how well their test coverage is performing.  This tool provides the ability to see
 which line of code has been tested and which line of code hasn't.   The developer can then take this information
 to create new tests that execute the line of code that hasn't been tested.  This tool can be used within a IDE like
-eclipse and IntelliJ or build tools like gradle and ant.  In this note we will be looking how to use this tool
+eclipse and IntelliJ or build tools like gradle and ant.  In this note we will be looking at how to use this tool
 within the [Maven](https://maven.apache.org){:target="_blank"} ecosystem.
 
 ## JaCoCo Maven Plugin
 
-The JaCoCo team provides a Maven plugin that makes it easier for maven projects to use the advantage of the JaCoCo
+The JaCoCo team provides a Maven plugin that makes it easier for maven projects to take advantage of the JaCoCo
 coverage tool.  This plugin provides all of the features that one can use when using the command line tool.  Let us
 then start by describing how to integrate JaCoCo within a maven project.
 
@@ -103,7 +103,7 @@ then start by describing how to integrate JaCoCo within a maven project.
 ```
 
 If you are not familiar with maven you can take a look at the [Maven](https://maven.apache.org){:target="_blank"}
-web site or at my current set of Maven notes at [Java notes](../#maven) or [Maven notes](../maven).  While those
+web site or at my current set of Maven notes at [Java notes](../#maven) or [Maven notes](../maven/).  While those
 references are maven specific we will expand on what the above means and how this can be configured.
 
 The first to notice is that the JaCoCo plugin is executed within three different goals, **prepare-agent**,

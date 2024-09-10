@@ -1,4 +1,4 @@
-baseurl: "/" # This is the base directory structure used by your web site.
+baseurl: "" # This is the base directory structure used by your web site.
 title: "Claudio Corsi" # Title associated with your web site
 email: clcorsi@yahoo.com
 description: >- # this means to ignore newlines until "baseurl:"
@@ -324,13 +324,6 @@ defaults:
       toc: true
       head-extra:
         - favicon.html # This contains the definition for my favicon setttings
-      before-content:
-        - quotes.html # This includes the required script to display quotes
-        - toc.html # This will include the <div id="toc"></div> element
-      js:
-        - /assets/js/toc.js  # This will generate the toc for the page
-        - /assets/js/toc-handler.js # This will define which headers to include for the toc and add callback
-        - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
   -
     scope:
       path: "math"
@@ -354,7 +347,8 @@ defaults:
         - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
         - /assets/js/math-footnotes.js # This will generate all math related footnotes.
       ext-js:
-        - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+        - href: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+          async: t
       footnotes:
         length: 80
         minimum: 1213
@@ -381,7 +375,8 @@ defaults:
         - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
         - /assets/js/compsc-footnotes.js # This will generate all compsc related footnotes.
       ext-js:
-        - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+        - href: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+          async: t
       footnotes:
         length: 80
         minimum: 1213
@@ -409,7 +404,8 @@ defaults:
         - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
         - /assets/js/projects-footnotes.js # This will generate all projects related footnotes.
       ext-js:
-        - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+        - href: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+          async: t
       footnotes:
         length: 80
         minimum: 1213

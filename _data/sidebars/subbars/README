@@ -1,0 +1,45 @@
+The following directory contains the different subbar menus that will be used throughout
+the generated web site.  These subbar menus will be part of the sidebar displayed on the
+left of the article that is being generated.  These subbar menus will offer more
+maintainability of the different menu definitions.  This will then make it easier to 
+confine menu definitions within a single file that can then be used within one or more
+sidebar file.
+
+The subbar will be stored within a YAML file using the following format.
+
+subbar:
+    entries:
+        - entry: <Entry Title>
+          url: <Local Page Url>
+        - entry: <Entry Title>
+          ext-url: <External Page Url>
+        - subbar: <Subbar file name>
+        - title: <Submenu Title>
+          submenu:
+            - entry: <Entry Title>
+              url: <Local Page Url>
+            - entry: <Entry Title>
+              ext-url: <External Page Url>
+            - subbar: <Subbar file name>
+
+Thus every sidebar starts with the "sidebar" attribute.  The "sidebar" attribute will then
+have a "title" and "entries" attributes.  The "title" attribute will define the title of
+the sidebar.  While the "entries" attribute will contain sidebar menu definitions.  The
+"entries" attributes can define the following attributes:
+
+    - entry/url
+    - entry/ext-url
+    - subbar
+    - submenu/title
+
+The "entry" attribute will be associated with a "url" or "ext-url" attribute.  The difference
+between the two is the the "url" points to a page within the current site while the "ext-url"
+points to a site outside of your current site.  While the "entry" attribute specifies the
+title associated with the passed link.
+
+The subbar attribute will reference a sub-sidebar that is located within the subbars
+sub-directory.  The subbar format will be described within that subbars sub-directory README
+file.
+
+The "submenu" attribute will contain the same attributes that the sidebar entries attribute
+contains.  While the "title" attribute will define the title of the submenu.
