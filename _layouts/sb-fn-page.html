@@ -47,14 +47,15 @@ printNode: [true, if you want to print the currently processing node]
 {% endcomment %}
 
 <div class="row">
-    {% comment %} Determine if the following page uses a sidebar for navigation. {% endcomment %}
-    {% if page.sidebar %}
-    <div class="col-4-auto float-sm-left">
-        <!-- This is the left column -->
-            {% include sidebar.html sidebar='site.data.sidebars[page.sidebar]' %}
-    </div>
-    {% endif %}
     <div class="col" id="{{ page.id }}">
+        {% comment %} Determine if the following page uses a sidebar for navigation. {% endcomment %}
+        {% if page.sidebar %}
+        <div class="col-4-auto float-sm-left pr-5">
+            <!-- This is the left column -->
+            {% include sidebar.html sidebar='site.data.sidebars[page.sidebar]' %}
+        </div>
+        {% endif %}
+
         <!-- This is the middle column -->
         {{ content }}
 

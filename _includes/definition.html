@@ -2,27 +2,7 @@
 This include will be used to define a Mathematical Definition.
 {% endcomment %}
 
-{% comment %}
-
-This was the original implementation for adding definitions to the page.
-
-<div class="container ">
-    <div class="row">
-        <div class="math-definition" id="definition">
-            <div class="col-1"></div>
-            <div class="col-lg-auto">
-                <div class="math-definition-header"
-                    id="definition-header" definition="{{ chapter }}.{{ definition }}">Definition {{ chapter }}.{{ definition }}:{% if caption %} ({{caption}}){% endif %}</div>
-                <div><br></div>
-                <div class="math-definition-text" id="definition-text">{{ include.content }}</div>
-            </div>
-            <!-- <div class="col-1"></div> -->
-        </div>
-    </div>
-</div>
-{% endcomment %}
-
-{% comment %} Increment the definition counter {% endcomment %}
+{% comment %} Increment the definition counter.  This guarantees that definition is assigned atleast a value of 1. {% endcomment %}
 
 {% assign definition = definition | plus: 1 %}
 
@@ -30,7 +10,7 @@ This was the original implementation for adding definitions to the page.
     <div class="math-definition" id="definition">
         <div class="col-lg-auto pl-5">
             <div class="math-definition-header"
-                id="definition-header" definition="{{ chapter }}.{{ definition }}">Definition {{ chapter }}.{{ definition }}:{% if include.caption %} ({{ include.caption }}){% endif %}</div>
+                id="definition-header" definition="{{ page.chapter }}.{{ definition }}">Definition {{ page.chapter }}.{{ definition }}:{% if include.caption %} ({{ include.caption }}){% endif %}</div>
             <div><br></div>
             <div class="math-definition-text" id="definition-text">{{ include.content }}</div>
         </div>

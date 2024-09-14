@@ -598,7 +598,7 @@ It isn't recommended besides for primitive and simple class types definitions.  
 more complex classes use a different technique.  To be able to implement a reader type class.  The
 developer would need to create a class that provides the following operator definition.
 
-```
+```cpp
 std::basic_istream<Char>& operator()(std::basic_istream<Char> & in, Type & value, int state)
 ```
 
