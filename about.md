@@ -15,26 +15,26 @@ js:
   - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
 ---
 
-Welcome again to my site.  Let me tell you a bit about myself.  I am a software engineer by trade but have found many
-things interesting besides the computer science field.  My primary joy has always and will always be Mathematics.  I
-have been fasinated with Mathematics from a young age and that fasination hasn't abated since then.  I do have a
-bachelar in Applied Mathematics that I have always wished I could use but that has not been the case.  My recent
-interest in AI is not something that is surprising since in University I was interested in what was then called
+Welcome to my site.  Let me start by telling you a bit about myself.  I am a software engineer by trade but have found
+many things interesting besides the computer science field.  My primary joy has always and will always be Mathematics.
+I have been fascinated with Mathematics from a young age and that fascination hasn't abated since then.  I do have a
+Bachelor in Applied Mathematics that I have always wished that I could use but alas that has not been the case.  My
+recent interest in AI is not something that is surprising since in University I was interested in what was then called
 Pattern Recognition, which gives you an idea of how old I am.  While Mathematics is my first love it isn't the only
 thing that I enjoy.
 
-The other passions that I have is reading non-fiction and fiction books.  I have enjoyed reading diverse subjects like:
+The other passion that I have is reading non-fiction and fiction books.  I have enjoyed reading diverse subjects like:
 
 - Physics
 - Chemistry
 - Biology
-- Psycology
+- Psychology
 - Philosophy
 - Mathematics (Real Analysis, Topology, Number Theory, Differential Equations, Calculus, Probability, etc)
 - Computer Science (Distributed Systems, Programming Languages, Agile Development, etc)
-- Buddism
+- Buddhism
 - Taoism
-- Confusciam
+- Confucianism
 - Pirating
 - Mysteries
 - Science Fiction
@@ -58,13 +58,11 @@ While the above list doesn't imply that the books I read are only technical book
 audience books related to the topics above.
 
 While my interest in books is not my only pleasure,  I also enjoy listening to music, watching movies and other
-activies that aren't sedetary.
+activities that aren't sedentary.
 
 Well, you must forgive me for my meandering about things that aren't really interesting.  Nonetheless, I do hope that
-you will find something interesting her and that it will bring some value to you.
+you will find something interesting here that will bring some value to you.
 
 Let us then enjoy the ride together.
 
 --Claudio
-
-
