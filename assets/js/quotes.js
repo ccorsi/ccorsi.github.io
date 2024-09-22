@@ -25,16 +25,26 @@
 	     div.setAttribute('style','text-align: left;');
 	     div.append(document.createElement('br'));
 
-	     quote.quote.forEach(e => {
-	        div.append(e);
-		if (formatted) {
-		    // This is the case that the quote is really a poem that needs to be written
-		    // one a different line.
-	            div.append(document.createElement('br'));
-		} else {
-		    // Add a space at the end to avoid concatinating words together.
-	            div.append(' ');
-		}
+	     quote.quote.forEach((e,idx,arr) => {
+			if (idx == 0) {
+				if (arr.length == idx + 1) {
+					div.append(`"${e}"`)
+				} else {
+					div.append(`"${e}`)
+				}
+			} else if (arr.length == idx + 1) {
+				div.append(`${e}"`)
+			} else {
+				div.append(e);
+			}
+			if (formatted) {
+				// This is the case that the quote is really a poem that needs to be written
+				// on a different line.
+				div.append(document.createElement('br'));
+			} else {
+				// Add a space at the end to avoid concatinating words together.
+				div.append(' ');
+			}
 	     });
 
 	     elm.append(div);
@@ -43,9 +53,7 @@
 
 	     div.setAttribute('style','text-align: right;');
 	     div.append(document.createElement('br'));
-	     div.append('"');
 	     div.append(quote.author);
-	     div.append('"');
 	     div.append(document.createElement('br'));
 
 	     elm.append(div);
