@@ -83,7 +83,7 @@ most detailed one of the lot.
 The <em>IsOpenChar</em> and <em>IsCloseChar</em> typenames are used to look for opening and closing characters
 that might delineate data like a vector container.  It might delineate the data within the '{' and '}' opening
 and closing characters.  These two types do require that they implement the
-<em>bool operator()(std::basic_istream&lt;Char&gt;&amp;)</em> operator.  This will be called before and after
+<code> bool operator()(std::basic_istream&lt;Char&gt;&amp;)</code> operator.  This will be called before and after
 loading each entry in a vector container instance.
 
 The <em>IsSpace</em> typename is used to skip space like characters that could hinder the loading of the data for
@@ -95,8 +95,8 @@ only real work required by the developer to be able to use the dataLoader.  The 
 implementations that should cover most if not all other situations.  While the <em>Reader</em> typename will
 understand how to read the data into the <em>Type</em> instance.  The main feature of the <em>Reader</em>
 typename is that it needs to be able to implement the
-<em>std::basic_istream&lt;Char&gt;&amp; operator()(std::basic_istream&lt;Char&gt;&amp;, Type &amp;)</em>
-operator and the <em>ctor(Type&amp;)</em> constructor.  These are the expected constructor and operator
+<code>std::basic_istream&lt;Char&gt;&amp; operator()(std::basic_istream&lt;Char&gt;&amp;, Type &amp;)</code>
+operator and the <code>ctor(Type&amp;)</code> constructor.  These are the expected constructor and operator
 that the dataLoader will be using to call the <em>Reader</em> typename such that it will load the data into the
 <em>Type</em> instance that was passed to the <em>Reader</em> constructor.
 
@@ -135,10 +135,10 @@ we are not done loading data into the <em>Type</em> instance.  The dataLoader wi
 <em>Reader</em> instance until all of the fields have been loaded.  This change doesn't add any additional
 parameters to the dataLoader template class. The difference is with the associated <em>Reader</em> parameter
 type.  The first version of the Reader class required that it implemented the
-<em>std::basic_istream&lt;Char&gt; &amp; operator()(std::basic_istream&lt;Char&gt;&amp;)</em> operator.
-Version two requires that the Reader parameter type extends the <em>dataReader&lt;Type,Char,states&gt;</em>
+<code>std::basic_istream&lt;Char&gt; &amp; operator()(std::basic_istream&lt;Char&gt;&amp;)</code> operator.
+Version two requires that the Reader parameter type extends the <code>dataReader&lt;Type,Char,states&gt;</code>
 template class.  The dataReader template class requires that you implement the
-<em>std::basic_istream&lt;Char&gt;&amp; load(std::basic_istream&lt;Char&gt;&amp;)</em> protected method.
+<code>std::basic_istream&lt;Char&gt;&amp; load(std::basic_istream&lt;Char&gt;&amp;)</code> protected method.
 The <em>state</em> parameter is used to define how many fields the <em>Type</em> instance has to be populated.
 The <em>get_data</em> method returns a reference to the <em>Type</em> instance.  The <em>state</em> parameter can
 be used to determine which field is being read next.  This removes the need for you to keep track of which field
@@ -174,7 +174,7 @@ grunt work of clearing the way to easily read the different fields of the person
 
 The third version of the dataLoader was inspired by the fact that implementing the <em>load</em> method was
 too much of an overhead.  Thus removing the requirement of implementing the <em>load</em> method to just
-implementing the Type <em>operator()(std::basic_istream&lt;Char&gt;&amp;,Type&amp;,int)</em> operator.  This
+implementing the Type <code>operator()(std::basic_istream&lt;Char&gt;&amp;,Type&amp;,int)</code> operator.  This
 remove the extra overhead of extending the dataReader template class and just required an extension of the
 <em>Type</em> classes.  Which makes more sense with what we are trying to implement.  Thus the dataLoader
 template class is still defined as:
@@ -514,7 +514,7 @@ The third parameter is the Reader operator that will actual populate the int typ
 the dataLoader template class will have done all of the grunt work such that the Reader can easily load the
 data from the input stream and assign it to the int type. There is a defined reader template class that one
 can use to load types but this is only useful if the loading types define the
-<em>std::basic_istream&lt;Char&gt;&amp; operator&gt;&gt;(std::basic_istream&lt;Char&gt;&amp;)</em> operator.
+<code>std::basic_istream&lt;Char&gt;&amp; operator&gt;&gt;(std::basic_istream&lt;Char&gt;&amp;)</code> operator.
 The use of the reader template class can be used throughout but it is better used with simple types like
 primitive types or classes that contain a single field.
 
