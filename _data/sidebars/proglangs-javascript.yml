@@ -1,0 +1,6 @@
+sidebar:
+  title: JavaScript
+  entries:
+    - subbar: proglangs-javascript-individual
+    - subbar: progtools-home
+    - subbar: proglangs-home

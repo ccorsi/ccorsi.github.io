@@ -1,0 +1,10 @@
+subbar:
+  entries:
+    - title: JavaScript
+      submenu:
+        - entry: Mozilla JavaScript Reference
+          ext-url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/
+        - entry: Mozilla JavaScript Guide
+          ext-url: https://developer.mozilla.org/en-US/docs/Learn/JavaScript
+        - entry: Promise
+          url: /proglangs/javascript/promise.html
