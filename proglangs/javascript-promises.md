@@ -2,7 +2,7 @@
 title: Promise
 subtitle: An Asynchronous Operation
 permalink: /proglangs/javascript/promise.html
-sidebar: proglangs-javascript
+sidebar: proglangs-javascript-individual
 ---
 
 Since JavaScript uses a single thread event model.  Tasks that need to wait for outside response
