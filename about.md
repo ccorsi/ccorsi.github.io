@@ -54,7 +54,7 @@ about Physics.
 - Big Bang Theory
 - Particle Physics
 
-While the above list doesn't imply that the books I read are only technical books they do include a list of general
+While the above list doesn't imply that the books I read are only technical books.  They do include a list of general
 audience books related to the topics above.
 
 While my interest in books is not my only pleasure,  I also enjoy listening to music, watching movies and other

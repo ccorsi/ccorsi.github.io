@@ -17,7 +17,7 @@ the format of the site itself.  There are things about it that doesn't sit well 
 like.  Thus, I will be taking most, if not all, of the content that was created within that site and integrating it within this main site.
 This is just part of what I plan to do here.
 
-There is the question of what will this site be like now?  Well, I do have some initial plans besides the one mentioned above. I do intend
+There is the question of what will this site be like now?  Well, I do have some initial plans beside the one mentioned above. I do intend
 to create some separate self contained sites relative to this url.  Those include a personal one that I will use to store a list of books
 that I have read with pertinent information.  This will be hosted at the following <a href="/books/index.htm">link</a>.
 
