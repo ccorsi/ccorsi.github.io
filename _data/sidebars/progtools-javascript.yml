@@ -1,0 +1,5 @@
+sidebar:
+  title: Tools
+  entries:
+    - subbar: progtools-javascript-individual
+    - subbar: progtools-home
