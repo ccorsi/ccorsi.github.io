@@ -106,12 +106,12 @@ If you are not familiar with maven you can take a look at the [Maven](https://ma
 web site or at my current set of Maven notes at [Java notes](../#maven) or [Maven notes](../maven/).  While those
 references are maven specific we will expand on what the above means and how this can be configured.
 
-The first to notice is that the JaCoCo plugin is executed within three different goals, **prepare-agent**,
+The first thing to notice is that the JaCoCo plugin is executed within three different goals, **prepare-agent**,
 **report** and **check**.  Each of these goals are required to be able to properly use JaCoCo within your maven
 project.  The **prepare-agent** goal is used to setup the JaCoCo command that will instrument the project java
 classes.  This means that the java classes will be enhanced with JaCoCo specific code that is used to gather
 metrics that will be stored and used to determine your code coverage.  The **check** goal is used to compare the
-gathered information of your test runs and compare the data with the expected conditions defined in the **rules**
+gathered information from your test runs and compare the data with the expected conditions defined in the **rules**
 section above.  If those rules have not been fulfilled then the build will fail, by default.  While the
 **report** goal is used to generate a user readable report that will contain information about the coverage
 results of your maven project test runs.
@@ -119,14 +119,14 @@ results of your maven project test runs.
 ### Prepare Agent
 
 The **prepare-agent** goal is necessary for the JaCoCo code coverage to work properly.  Without this setting any
-of the subsequent plugin setup will be in vain.  The JaCoCo goal instruments the generate project class files with
-JaCoCo specific calls which will be used to gather different metrics that will be compared with the defined rules
-that you setup for the check goal above.  The concept of instrumenting a class file is the act of injecting of java
-byte in the generated java class file.  The JaCoCo code coverage library doesn't change the functionality of the
-project java classes but it just injects itself stragetically such that it can gather information that it can then
-compare against.
+of the subsequent plugin setup will be in vain.  The JaCoCo **prepare-agent** goal instruments the generate project
+class files with JaCoCo specific calls which will be used to gather different metrics which will be compared with
+the defined rules that you defined in the **check** goal above.  The concept of instrumenting a class file is the
+act of injecting java byte code in the generated java class file.  The JaCoCo code coverage library doesn't change
+the functionality of the project java classes but it just injects itself stragetically such that it can gather
+information it can then compare against.
 
-Note that the above information is not required for understanding on how to use the JaCoCo code coverage library.
+Note that the above information is not required for understanding how to use the JaCoCo code coverage library.
 It is only to clarify the need to include the above goal to properly be able to use the JaCoCo code coverage library.
 
 ### Check
@@ -167,21 +167,21 @@ to **BUNDLE** which means that we are looking at the whole project classes.  The
 can set when creating a rule. These are mentioned at the following
 [JaCoCo check page](https://www.jacoco.org/jacoco/trunk/doc/check-mojo.html){:target="_blank"}.
 
-Upon selecting which element value you selected.  You then can create one or more limit that you want JaCoCo code
-coverage tool checks when running the check target.  The limit defined above will check the total coverage of the
-complexity counters such that it covers at least 60% of the code path of all the project classes combined.
+Upon selecting which element value you selected.  You then can create one or more limit that you want the JaCoCo
+code coverage tool checks when running the check target.  The limit defined above will check the total coverage of
+the complexity counters such that it covers at least 60% of the code path of all the project classes combined.
 
 While the above is a specific example on how you can define a particular check.  There are other options that you
-can set and this information can be found on the
+can set and this information can be found at the
 [JaCoCo Maven Check](https://www.jacoco.org/jacoco/trunk/doc/check-mojo.html){:target="_blank"} page.  Specifically
 the [rules](https://www.jacoco.org/jacoco/trunk/doc/check-mojo.html#rules){:target="_blank"} section.
 
 ### Report
 
 Let us finally look at the **report** goal for the JaCoCo code coverage tool.   This goal is executed by the maven
-**site** target.  This goal will generate a use readable files from the gathered metrices from the test runs.
-This will generate human readable data in xml, cvs or html.  These files will be located with the target/site/jacoco
-sub-directory in the top-level maven project.
+**site** target.  This goal will generate readable files from the gathered metrices from the test runs. This will
+generate human readable data in an xml, cvs or html format.  These files will be located with the target/site/jacoco
+sub-directory within the top-level maven project.
 
 Let us now look at the settings in our pom above.
 
@@ -203,19 +203,19 @@ Let us now look at the settings in our pom above.
           ...
 ```
 
-The above settings states that the generated human readable data should in be in html instead of all three formats of
-xml, cvs and html.  Note that at this time, (version 0.8.11), those are only three formats that the tool currently
-supports.  The generated html pages will be avaliable at target/site/jacoco/index.html within the top-level project
-directory.  This will contain information about which files contained metrices and it also offers information on
-which part of your code was covered by your tests and which weren't.  This is very useful to determine which part
-of the code needs tests.
+The above settings state that the generated human readable data should in be an html format instead of all three
+formats of xml, cvs and html.  Note that at this time, (version 0.8.11), those are the only three formats that the
+tool currently supports.  The generated html pages will be avaliable at target/site/jacoco/index.html within the
+top-level project directory.  This will contain information about which files contained metrices and it also offers
+information on which part of your code was covered by your tests and which weren't.  This is very useful to determine
+which part of the code needs tests to be added.
 
-There is also the title and footer tags that basically are used a display text that will be shown on the generated
-html web pages in the above case.
+There is also the **title** and **footer** tags which is used to set text to be displayed on the generated html web
+pages in the above case.
 
 While the above offers enough information for one to get started with the **report** goal.  You can find more options
 on the [JaCoCo Maven Report](https://www.jacoco.org/jacoco/trunk/doc/report-mojo.html){:target="_blank"} page.
 
-While the above information should suffice to be able to get yourself aquainted with JaCoCo code coverage maven plugin
-tool.  You can always learn more about the tool itself at
+While the above information should suffice to be able to get yourself aquainted with the JaCoCo code coverage maven
+plugin tool.  You can always learn more about the tool itself at
 [JaCoCo Code Coverage Library](https://www.jacoco.org/jacoco/index.html){:target="_blank"} web page.
