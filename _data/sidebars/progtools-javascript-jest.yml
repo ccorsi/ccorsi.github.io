@@ -1,0 +1,5 @@
+sidebar:
+  title: Jest
+  entries:
+    - subbar: progtools-javascript-home
+    - subbar: progtools-home
