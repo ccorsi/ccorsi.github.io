@@ -15,7 +15,7 @@ It has different features that are not part of the Java programming language.  F
 JavaScript is a single threaded event driven environment.  Tasks that require feedback like I/O actions
 end up being placed on a waiting queue that allows the JavaScript engine the opportunity to execute
 another action that is ready to be processed.  These *events* are managed by the JavaScript engine and
-insure that they are processed as they are available and in a serialized fashion.  This make is such
+insure that they are processed as they are available in a serialized fashion.  This make it as such
 that one doesn't need to worry about synchronizing data access since this is never an issue.  This is
 probably one of the biggest advantage of JavaScript over something like Java.  This ability to not
 need to worry about synchronizing data access greatly simplifies the development of JavaScript

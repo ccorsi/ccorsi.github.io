@@ -12,3 +12,7 @@ _site
 
 # ignore all files that contain the test string
 **/**test**
+
+# let us not ignore the GoogleTests file
+!**/googletests.md
+

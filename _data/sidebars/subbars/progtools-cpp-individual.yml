@@ -6,3 +6,5 @@ subbar:
           url:  /progtools/cmake/
         - entry: GoogleTests
           url:  /progtools/googletests/
+        - entry: Compiler Explorer
+          ext-url: https://godbolt.org/

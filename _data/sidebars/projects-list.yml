@@ -1,5 +1,4 @@
 sidebar:
   title: Projects
   entries:
-    - subbar: projects-individual
     - subbar: projects-home
