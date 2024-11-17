@@ -28,10 +28,10 @@ the different projects that I have developed.
 | [activemq-producers](https://github.com/ccorsi/activemq-producers){:target="_blank"} | Tool used to create ActiveMQ producer tests | Java |
 | [activemq-consumers](https://github.com/ccorsi/activemq-consumers){:target="_blank"} | Tool used to create ActiveMQ consumer tests | Java |
 
-As you can see the above list contains projects that have been developed using C/C++, Java, Python
-and JavaScript. While these languages are being used extensively within the software field.  These
-are not the only languages that I have used before.  Others include the use of Perl, Ruby, Tcl and
-Groovy to name a few.  In time, I hope to include projects that use one or more of the programming
+As you can see the above list contains projects that have been developed using *C/C++*, *Java*, *Python*
+and *JavaScript*. While these languages are being used extensively within the software field.  These
+are not the only languages that I have used before.  Others include the use of *Perl*, *Ruby*, *Tcl* and
+*Groovy* to name a few.  In time, I hope to include projects that use one or more of the programming
 languages I've just mentioned.
 
 If you are then interested in learning about the above projects.  You can follow the links to their

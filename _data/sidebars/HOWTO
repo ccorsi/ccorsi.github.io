@@ -1,0 +1,228 @@
+This file will explain the pattern to use whenever you are trying to create a
+sidebar.  This will include the different levels of the created sidebar.  This
+will also include when to decide that a subbar should be created for the given
+sidebar.  We will then explain the reasoning beside the given patterns.  To
+learn more about how to create and organize a subbar.  You can take a look
+at the HOWTO file located within the subbar sub-directory.  Let us then
+begin with how to create the top-level sidebar.
+
+Top Level Sidebar
+-----------------
+
+The top-level sidebar is associated to the associated links within the Main Menu
+of the website.  For instance, the Software -> Languages is associated with the
+proglangs.yml YAML sidebar file.  This is the top-level sidebar for the Software
+Languages section of the web site.  This section is then located within the
+proglangs top level sub-directory of the web site.  This top-level sidebar
+will then contain information about all of its sub-section relative to that
+sidebar.  The top-level sidebar file name will containing the following format:
+
+    <top-level-sidebar-directory-name>.yml
+
+Let us now look at how a sub-section is defined.
+
+Sub-Section Sidebar
+-------------------
+
+The top-level sidebar will then reference each sub-section home subdar.  The
+sub-section home subbar will have the following format:
+
+    <top-level-sidebar-directory-name>-<sub-section-name>.yml
+
+The sub-section-name will become a sub-directory within the top-level repository
+directory named top-level-sidebar-directory-name.  This will allow you to seperate
+the articles within their own directory which segregates these articles such
+that it reduces the amount of files are located within each directory.
+
+While the above is an example of a sub-section sidebar.  It only describes a
+single sub-section sidebar.  What is doesn't is provide the format for how
+subsequent sub-section sidebar should be defined.  Those will then follow
+this format:
+
+    <top-level-sidebar-name>-<sub-section-1-name>[-<sub-section-#-name>]*
+
+Where we assume that # starts at 2 and is incremented by 1.  The
+sub-sections-*-name will become sub-directories where the n+1 name is a
+sub-directory of the sub-section n.  Recalling that the sub-directories will
+be the name that were given to the sub-section.
+
+While the above contains information on how to create top-level and sub-section
+sidebars.  It doesn't describe how you should organize each of these types of
+sidebar.
+
+Sidebar Description Format
+--------------------------
+
+We are now going to describe how we should design each sidebar created.  We will
+then use the following technique that will describe the different levels of
+sidebar since these will be different depending on what state the given sidebar
+is being used.
+
+Sidebar Overview Description Format
+-----------------------------------
+
+Let us then look at a sidebar that is basically an overview of the articles
+that will be discussed within this sections.  This is when you are trying to
+introduce a subject that you want to then expand on.  This can be Category that
+will subsequently sub-divided.  Let us then take a look at each of the both
+types separately.
+
+Category Overview Description Format
+------------------------------------
+
+Let us say that we have a category of possible articles that require more
+subdivision than the current subdivision.  We are then going to subdivide
+this into another Category or Detailed Overview Descriptions.  Either way
+we will use the following file format:
+
+sidebar:
+    title: <title>
+    entries:
+        - subbar: <top-level-name>-<sub-section-name>-<sub-section-1-name>
+        - subbar: <top-level-name>-<sub-section-name>-<sub-section-2-name>
+        ...
+
+We are assuming that the above sidebar was defined as
+<top-level-name>-<sub-section-name>.  The sub-sections-*-name will then be
+created within the subbar sub-directory.  The overviews or articles will then
+be created within the sub-directory as per explained above.
+
+Detailed Overview Description Format
+------------------------------------
+
+Let us say that we have a set of articles that will be describing the current
+sidebar descriptions.  We can then use the following format:
+
+sidebar:
+    title: <title>
+    entries:
+        - subbar: <top-level-name>-<sub-sect-name>-<sub-sect-1-name>-individual
+        - subbar: <top-level-name>-<sub-sect-name>-<sub-sect-2-name>-individual
+        ...
+
+We are assuming that the above sidebar was defined as
+<top-level-name>-<sub-sect-name>.  The sub-sect-*-name will then be created
+within the subbar sub-directory.  The detailed overview description will then
+be created within the sub-directory as per explained above.
+
+We now look at how we create detailed description format.
+
+Sidebar Detailed Description Format
+-----------------------------------
+
+We are now looking at the child sidebar that will be referencing the articles
+themselves.  These articles will contain the meat of the subjects that have
+been defined in the sidebars.  We can then use the following format:
+
+sidebar:
+    title: <title>
+    entries:
+        - subbar: <top-level-name>-<sub-sect-name>-<sub-sect-1-name>-individual
+        - subbar: <top-level-name>-<sub-sect-name>-<sub-sect-1-name>-home
+        - subbar: <top-level-name>-<sub-sect-name>-<sub-sect-2-name>-individual
+        - subbar: <top-level-name>-<sub-sect-name>-<sub-sect-2-name>-home
+        ...
+
+We are assuming that the above sidebar was defined as
+<top-level-name>-<sub-sect-name>.  The sub-sect-*-name will then be created
+within the subbar sub-directory.  The detailed description will then be created
+within the sub-directory as per explained above.
+
+The *-home subbar will contain a reference to that section main page.  While the
+*-individual subbar will contain a reference to the different articles or
+sub-section associated with the *-home subbar reference.
+
+Putting it all together
+-----------------------
+
+The above description speaks about how to define and use sidebar and subbar
+YAML files and their associated files.  We shall then explain the idea behind
+the above mentioned file names.  While the top-level sidebar is self-evident
+given the above explainations.  I will include its descriptions in this section.
+
+Let us start by taking an example that will use the above pattern.
+
+Let the top level section be "Programming Languages" that will then contain
+sub-sections that will expand on "Programming Languates".  We can then create
+the top level sidebar as proglangs.  Let us then assume that we have sub-sections
+that will separate programming languages into Dynamic and Static languages.  Here
+is the definition of the top level sidebar stored within the proglangs.yml file.
+
+sidebar:
+    title: Languages
+    entries:
+        - subbar: proglangs-dynamic-home
+        - subnar: proglangs-static-home
+
+The above was stored in the proglangs.yml within the sidebar directory.  While
+the top level overview article will be created within the proglangs directory
+within the root directory of the web site.
+
+Continue to look at the above layout we notice that there are two references
+to the dynamic and static programming language overviews.  These two references
+will be defined within the subbar data directory that is a sub-directory of the
+sidebar directory.  We will then take a look at each of the above subbar yaml
+file starting with the dynamic one.
+
+subbar:
+    entries:
+        - subbar: proglangs-dynamic-individual
+        - subbar: proglangs-home
+
+The above will be stored with the proglangs-dynamic-home.yml file within the
+subbar directory.  The proglangs-dynamic-individual will contain the different
+dynamic programming languages that articles will be written.  While the
+proglangs-home subbar will just contain a reference back to the top-level
+overview section.  Let us then look at each above yaml separately.
+
+subbar:
+    entries:
+        - entry: Python
+          url: /proglangs/dynamic/python
+        - entry: Perl
+          url: /proglangs/dynamic/perl
+        - subbar: proglangs-dynamic-home
+        - subbar: proglangs-home
+
+The above subbar will be stored within the proglangs-dynamic-individual.yml file.
+The above file contains a reference to the separate articles for the list of
+dynamic programming languages.  This file will be located with the subbar
+directory.
+
+Let us then look at the proglangs-home subbar.
+
+subbar:
+    entries:
+        - entry: Languages
+          utl: /proglangs/
+
+The above will be stored within the proglangs-home.yml file within the subbar
+directory.  The sidebar just references the top level programming languages
+overview article.
+
+The remaining two subbar entries will then point to the parent section and to
+the top level Programming Languages section.  These two yaml files will also
+be located within the subbar directory and have been described above.
+
+As similar format will be followed for the proglangs-static-home yaml files.
+
+Now that we looked at some examples of how to create the different yaml files.
+Let us explain the reasoning behind these file content and name patterns.
+
+Let us start with why and when to create a sidebar yaml file.  The main reason
+for creating a sidebar file is to allow the different articles the ability to
+reference the sidebar since these articles are not able to reference any of the
+defined subbar files.  The subbar files are only referenceable by the sidebar
+yaml files.  The defined sidebar files should only be referencing the subbar
+yaml files.  The use of this pattern makes maintaining the site easier whenever
+there is an intention to move the articles around.  This localizes any updates
+which reduces the chances for invalid links across sections.
+
+The subbar yaml files are created to be able to manage each section home page
+and their individual articles.  This separation makes it such that you can
+easily use the home yaml to reference the section and the individual yaml to
+list the different articles.
+
+The above should hopefully clarify the reasoning between the different sidebar
+and subbar yaml files.
+

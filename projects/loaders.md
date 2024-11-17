@@ -2,7 +2,7 @@
 layout: sb-fn-page
 title: Techie Delight &lt;/&gt;
 subtitle: Input Data Stream Loaders
-sidebar: projects-list
+sidebar: projects-project
 ---
 
 This section is an outgrowth of my work using
