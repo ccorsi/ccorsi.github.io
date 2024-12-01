@@ -194,7 +194,7 @@ Let us then look at the proglangs-home subbar.
 subbar:
     entries:
         - entry: Languages
-          utl: /proglangs/
+          url: /proglangs/
 
 The above will be stored within the proglangs-home.yml file within the subbar
 directory.  The sidebar just references the top level programming languages
