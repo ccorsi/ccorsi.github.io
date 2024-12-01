@@ -1,0 +1,5 @@
+sidebar:
+  title: Advanced
+  entries:
+    - subbar: math-number-home
+    - subbar: math-home

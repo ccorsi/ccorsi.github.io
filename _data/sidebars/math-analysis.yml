@@ -1,0 +1,5 @@
+sidebar:
+  title: Analysis
+  entries:
+    - subbar: math-analysis-individual
+    - subbar: math-home

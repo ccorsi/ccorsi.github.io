@@ -1,0 +1,5 @@
+sidebar:
+  title: Topology
+  entries:
+    - subbar: math-topology-individual
+    - subbar: math-home

@@ -10,7 +10,7 @@ This include will be used to define a Mathematical Definition.
     <div class="math-definition" id="definition">
         <div class="col-lg-auto pl-5">
             <div class="math-definition-header"
-                id="definition-header" definition="{{ chapter }}.{{ definition }}">Definition {{ chapter }}.{{ definition }}:{% if include.caption %} ({{ include.caption }}){% endif %}</div>
+                id="definition-header" definition="{{ chapter }}.{{ definition }}">Definition {{ chapter }}.{{ definition }}:{% if caption %} ({{ caption }}){% endif %}</div>
             <div><br></div>
             <div class="math-definition-text" id="definition-text">{{ include.content }}</div>
         </div>

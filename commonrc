@@ -26,6 +26,7 @@ debug=true
 # This function is used to determine if the minimum amount of parameters was
 # passed to a given function.  If will exit the script if the condition is 
 # false.
+#
 # Parameters:
 # 	- The name of the function we are checking the parameter arguments
 # 	- The minimum required arguments for the passed method
@@ -44,6 +45,7 @@ function check {
 
 # This function is used for checking if a given file exists.  It will exit the
 # script if the file doesn't exist.
+#
 # Parameters:
 # - fcn The name of the function that we are checking the file for
 # - file_name The name of the file that we are checking for
@@ -62,6 +64,7 @@ function check_file_exists {
 
 # This function is used to print trace/debug statements that will be printed
 # to standard out if the debug variable is defined.
+#
 # Parameters:
 # 	- arguments line parameters that will be displayed when enabled
 function trace {
@@ -75,10 +78,12 @@ function trace {
 # parts of the script.  The second parameter will contain the prompt
 # message to be display.  The last parameter is used to determine if
 # the passed variable needs to be reset to the empty string.
+#
 # Parameters:
 # - reference to the variable to be updated
 # - input prompt
 # - true to initialize passed variable or not
+# - default input
 function get_line_input {
    # Insure that the correct number of paramters have been passed
    check "get_line_input" 2 $#
@@ -92,8 +97,21 @@ function get_line_input {
       var=""
    fi
 
+   # Set the prompt depending on the passed parameters
+   if [ ! -z "$4" ]
+   then
+      prompt="$2 [$4]: "
+   else
+      prompt="$2: "
+   fi
+
    # read single line input
-   IFS= read -p "$2" -r var
+   IFS= read -p "${prompt}" -r var
+
+   if [ -z "${var}" ]
+   then
+      var=$4
+   fi
 } # get_line_input
 
 # This function is used for getting input from the command line and
@@ -104,6 +122,7 @@ function get_line_input {
 # the passed variable needs to be reset to the empty string.  Note
 # that a newline will be added after each entry and you need to use
 # printf or echo -e to print the new line characters properly.
+#
 # Parameters:
 # - reference to the variable to be updated
 # - input prompt
@@ -131,6 +150,7 @@ function get_input {
       var+="$line"
    done
 
+   echo
 } # get_input
 
 # This function is used for populating an array variable using standard
@@ -138,6 +158,7 @@ function get_input {
 # populated and the prompt to be displayed prior to processing the input.
 # There is a third parameter that is used to reset the passed variable to
 # an empty array.
+#
 # Parameters:
 # - reference to the array variable to be populated
 # - input prompt
@@ -163,11 +184,13 @@ function get_array_input {
       var+=("$line")
    done
 
+   echo
 } # get_array_input
 
 # This function is used for simple yes/no questions that is prompted to the
 # user.  It expects a reference to the resulting variable and a prompt
 # message that will be displayed to the user.
+#
 # Parameters:
 # - ans reference to the variable that the result will be assigned
 # - message prompt message displayed to the user
@@ -187,6 +210,138 @@ function is_yes {
         var=false
     fi
 } # is_yes
+
+# This function will get the basename of the passed script
+#
+# Parameters:
+# - reference to the variable to store the script name into
+# - the path to the script
+function get_script_name {
+   check "get_script_name" 2 $#
+
+   local -n ref=$1
+
+   ref=`basename $2`
+} # get_script_name
+
+# This function will get the dirname of the passed script
+#
+# Parameters:
+# - reference to the variable to store the script directory into
+# - the path to the script
+function get_script_dir {
+   check "get_script_dir" 2 $#
+
+   local -n ref=$1
+
+   ref=`dirname $2`
+   pushd $directory >/dev/nul
+   ref=`pwd`
+   popd >/dev/nul
+} # get_script_dir
+
+# This function will create an array and add all of the entries to
+# the array given a generator and formatter function.
+#
+# Parameters:
+# - reference to the variable to store the entries into
+# - command that will be executed to generate entries to be added
+# - command used to extract specific value for each entry
+# - use to determine if you want to initialize the reference array
+function get_entries {
+   check "get_entries" 3 $#
+
+   local -n ref=$1
+
+   if [ "$4" = true ]
+   then
+      trace Creating an empty entries array
+      # initialize passed array reference to an empty array
+      ref=()
+   fi
+
+   for value in `eval $2`
+   do
+      trace Processing value: ${value}
+      value=`eval $3 $value`
+      trace Formatted value: ${value}
+      ref+=("$value")
+      trace Current populated array: ${ref[@]}
+   done
+
+   trace Completed populating array: ${ref[@]}
+} # get_entries
+
+# This function is used to select an entry from within the passed array.
+#
+# Parameters:
+# - array of selectable entries
+# - reference to the variable to store the select entry into
+function select_from_array {
+   check "select_from_array" 2 $#
+
+   local -n ref=$1
+   local -n num=$2
+
+   typeset -i idx
+   typeset -i len
+   len=${#ref[@]}
+
+   num=""
+
+   while [[ -z "$num" ]]
+   do
+      idx=0
+
+      while [[ $idx -lt $len ]]; do
+         option=${ref[$idx]}
+         idx+=1
+         echo "$idx - ${option}"
+      done
+      idx+=1
+      echo "$idx - None of the above"
+
+      read -e -p "Select an item: " opt
+
+      trace Selected option: $opt
+
+      # Check if a number was entered
+      if ! [[ "$opt" =~ ^[0-9]+$ ]]
+      then
+	 echo A number needs to be entered from 1 to $len, please try again
+         num=""
+      else
+	 # Check if the entered number was within range
+         if ! [ $opt -gt 0 ]
+         then
+            echo The entered number ${num} was not part of the range 1 to $len, please try again
+            num=""
+         elif ! [ $opt -le $idx ]
+         then
+            echo The entered number ${num} was not part of the range 1 to $len, please try again
+            num=""
+         else
+	    idx=$opt
+	    idx+=-1
+            num=$idx
+         fi
+      fi
+      trace Current num: ${num}
+   done
+
+   trace Selected num: ${num} len: ${len}
+
+   if [ $num -eq $len ]
+   then
+      trace Selected num: ${num} is equal to ${len}
+      num=""
+   else
+      trace Selected num: ${num} is not equal to ${len}
+      num="${ref[$num]}"
+   fi
+
+   trace Returning selection: $num
+} # select_from_array
 
 ########################################################################
 

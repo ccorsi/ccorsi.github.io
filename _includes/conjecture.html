@@ -1,0 +1,20 @@
+{% comment %}
+This include will be used to define a Mathematical Conjecture.
+{% endcomment %}
+
+{% comment %} Increment the conjecture counter.  This guarantees that conjecture is assigned atleast a value of 1. {% endcomment %}
+
+{% assign conjecture = conjecture | plus: 1 %}
+
+<div class="row">
+    <div class="math-conjecture" id="conjecture">
+        <div class="col-lg-auto pl-5">
+            <div class="math-conjecture-header"
+                id="conjecture-header" conjecture="{{ chapter }}.{{ conjecture }}">Conjecture {{ chapter }}.{{ conjecture }}:{% if caption %} ({{ caption }}){% endif %}</div>
+            <div><br></div>
+            <div class="math-conjecture-text" id="conjecture-text">{{ include.content }}</div>
+        </div>
+    </div>
+</div>
+
+{% comment %}Copyright Claudio Corsi 2024{% endcomment %}

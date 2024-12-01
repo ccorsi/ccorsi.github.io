@@ -1,0 +1,15 @@
+---
+layout: sb-fn-page
+---
+
+{{ content }}
+
+{% if page.references %}
+{% assign references = site.data.references[page.references] %}
+{% for reference in references %}
+<div id="{{ reference[0] }}" class="reference">
+{{ reference[1].reference }}
+</div>
+{% endfor %}
+{% endif %}
+

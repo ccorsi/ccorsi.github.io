@@ -1,0 +1,5 @@
+sidebar:
+  title: Number Theory
+  entries:
+    - subbar: math-number-individual
+    - subbar: math-home

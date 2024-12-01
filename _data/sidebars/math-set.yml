@@ -1,0 +1,5 @@
+sidebar:
+  title: Set Theory
+  entries:
+    - subbar: math-set-individual
+    - subbar: math-home

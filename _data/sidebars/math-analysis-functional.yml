@@ -1,0 +1,5 @@
+sidebar:
+  title: Functional
+  entries:
+    - subbar: math-analysis-home
+    - subbar: math-home

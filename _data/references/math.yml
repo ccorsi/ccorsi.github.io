@@ -1,0 +1,35 @@
+################################################################################
+#
+# This data file contains the references for the all the Mathematics section
+# such that it is easier to generate the required reference page and citation
+# with the generated mathematics pages.  The reference layout can be used to
+# generate the mathematics reference page.  While the citation include can be
+# used within the generated math pages.
+#
+# This file format is setup as a dictionary in which the key value is an
+# increment value started from 1.  The associated value reference attribute
+# contains the reference stored within the generated reference page.  While
+# the citation attribute will be used within the generate Mathematical pages.
+# The key is used to reference the citation within the Mathematical pages and
+# its associated text will be placed within the Mathematical pages with a
+# reference to the Mathematics Reference page.
+#
+################################################################################
+1:
+  reference: Kolomogorov, A.N., & Fomin, S.V. (1975). <em>Introductory Real Analysis</em> (R.A. Silverman, Ed. & Trans.). Dover Publications, INC. (Original work published 1970)
+  citation: Kolomogorov & Fomin (1975/1970)
+2:
+  reference: Axler, S. (2020). <em>Measure, Integration & Real Analysis</em>. Springer. <a href="https://measure.axler.net/MIRA.pdf" target="_blank">https://measure.axler.net/MIRA.pdf</a>
+  citation: Axler (2020)
+3:
+  reference: >
+    Lebl, J. (2009-2024). <em>Basic Analysis I & II: Introduction to Real Analysis</em> (Vols. 1-2). Independently Published
+  citation: Lebl (2009-2024)
+4:
+  reference: Moham, A., & Zhan, H. (2024). <em>Discrete Quantum Walks with Marked Vertices and Their Average Vertex Mixing Matrices</em>. arXiv:2411.16676v1 [math.CO]. <a href="https://arxiv.org/pdf/2411.16676v1" target="_blank">https://arxiv.org/pdf/2411.16676v1</a>
+  citation: Moham,& Zhan (2024)
+5:
+  reference: Morris, D.W. (2015). <em>Introduction to Arithmetic Groups</em>. arXiv:0106063v6 [math.DG]. <a href="https://arxiv.org/pdf/math/0106063v6" target="_blank">https://arxiv.org/pdf/math/0106063v6</a>
+  citation: Morris (2015)
+
+

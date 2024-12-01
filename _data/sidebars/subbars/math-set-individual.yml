@@ -1,0 +1,10 @@
+subbar:
+  entries:
+    - entry: Naive Set Theory
+      url: /math/set/naive.htm
+    - entry: Axiomatic Set Theory
+      url: /math/set/axiomatic.htm
+    - entry: Descriptive Set Theory
+      url: /math/set/descriptive.htm
+    - entry: Homotopy Type Theory
+      url: /math/set/homotopy.htm

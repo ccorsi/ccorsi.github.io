@@ -1,0 +1,5 @@
+sidebar:
+  title: Elementary
+  entries:
+    - subbar: math-number-home
+    - subbar: math-home
