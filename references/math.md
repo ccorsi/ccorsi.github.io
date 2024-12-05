@@ -13,6 +13,9 @@ before-content:
 css:
   - /assets/css/reference.css
   - /assets/css/math.css
+js:
+  - /assets/js/reference.js # This is used to execute the reference javascript command
+  - /assets/js/reference-handler.js # This is used to execute the reference javascript command
 ext-js:
   - href: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
     async: t
@@ -21,6 +24,6 @@ ext-js:
 This page contains all of the different references referenced in the Mathematics section of this web
 site.  The intention is to combine all the different references from the different mathematical
 topics into this single reference because the different mathematical subjects reference similar
-references within those pages.  The task of creating unique mathematical references for each of the
+references within those pages.  The task of creating a unique mathematical references for each of the
 different mathematical topics would only cause confusion instead.
 

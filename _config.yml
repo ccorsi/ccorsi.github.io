@@ -352,6 +352,7 @@ defaults:
       footnotes:
         length: 80
         minimum: 1213
+      references: /math/references.htm
   -
     scope:
       path: "prog*"

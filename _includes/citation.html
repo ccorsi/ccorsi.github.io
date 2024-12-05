@@ -1,0 +1,1 @@
+{%- if site.data.references[include.file] and site.data.references[include.file][include.key] and site.data.references[include.file][include.key].citation %} <a href="{{ include.references | relative_url }}#{{ include.key }}">{{ site.data.references[include.file][include.key].citation }}</a> {% endif %}
