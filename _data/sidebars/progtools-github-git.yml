@@ -1,0 +1,5 @@
+sidebar:
+  title: Code
+  entries:
+    - subbar: progtools-github-home
+    - subbar: progtools-home

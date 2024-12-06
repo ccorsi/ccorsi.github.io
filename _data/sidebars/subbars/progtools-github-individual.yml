@@ -1,4 +1,7 @@
 subbar:
   entries:
-    - entry: WorkFlow
-      url:  /progtools/github-workflow.html
+    - subbar: progtools-github-workflow-home
+    - subbar: progtools-github-issues-home
+    - subbar: progtools-github-pull-requests-home
+    - subbar: progtools-github-git-home
+    - subbar: progtools-github-project-home

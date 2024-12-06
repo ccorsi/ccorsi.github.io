@@ -1,0 +1,5 @@
+sidebar:
+  title: Pull Requests
+  entries:
+    - subbar: progtools-github-home
+    - subbar: progtools-home
