@@ -72,6 +72,81 @@ FYI:
     text-align: end;
 }
 
+.math-lemma-text {
+    font-style: italic;
+}
+
+.math-lemma {
+    background-color: white;
+}
+
+.math-lemma-proof {
+    font-style: italic;
+}
+
+.math-lemma-header {
+    display: inline;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.math-lemma-qed {
+    font-style: italic, bold;
+    background-color: white;
+    text-align: end;
+}
+
+.math-corollary-text {
+    font-style: italic;
+}
+
+.math-corollary {
+    background-color: white;
+}
+
+.math-corollary-proof {
+    font-style: italic;
+}
+
+.math-corollary-header {
+    display: inline;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.math-corollary-qed {
+    font-style: italic, bold;
+    background-color: white;
+    text-align: end;
+}
+
+.math-proposition-text {
+    font-style: italic;
+}
+
+.math-proposition {
+    background-color: white;
+}
+
+.math-proposition-proof {
+    font-style: italic;
+}
+
+.math-proposition-header {
+    display: inline;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.math-proposition-qed {
+    font-style: italic, bold;
+    background-color: white;
+    text-align: end;
+}
+
 .reference-entry-title {
     font-style: italic;
 }

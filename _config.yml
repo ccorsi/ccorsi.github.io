@@ -337,6 +337,7 @@ defaults:
         - page-header.html # This will include the title/subtitle/image information from page
         - quotes.html # This includes the required script to display quotes
         - toc.html # This will include the <div id="toc"></div> element
+        - mathjax-config.html # This will include the MathJax configuration script
       after-content:
         - after-footnotes.html # This will include the <div id="math-footnotes"></div> element
       css:

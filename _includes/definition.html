@@ -5,12 +5,23 @@ This include will be used to define a Mathematical Definition.
 {% comment %} Increment the definition counter.  This guarantees that definition is assigned atleast a value of 1. {% endcomment %}
 
 {% assign definition = definition | plus: 1 %}
+{% if include.caption %}
+{% assign caption=include.caption %}
+{% elsif page.caption %}
+{% assign caption=page.caption %}
+{% endif %}
+{% if include.chapter %}
+{% assign chapter=include.chapter %}
+{% elsif page.chapter %}
+{% assign chapter=page.chapter %}
+{% endif %}
 
 <div class="row">
     <div class="math-definition" id="definition">
         <div class="col-lg-auto pl-5">
             <div class="math-definition-header"
-                id="definition-header" definition="{{ chapter }}.{{ definition }}">Definition {{ chapter }}.{{ definition }}:{% if caption %} ({{ caption }}){% endif %}</div>
+                id="definition-header" definition="{{ chapter }}.{{ definition }}">Definition {{ chapter }}.{{
+                definition }}:{% if caption %} ({{ caption }}){% endif %}</div>
             <div><br></div>
             <div class="math-definition-text" id="definition-text">{{ include.content }}</div>
         </div>

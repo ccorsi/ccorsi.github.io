@@ -1,6 +1,6 @@
 sidebar:
-  title: Elementary
+  title: Integers
   entries:
-    - subbar: math-number-elementary-integers-home
+    - subbar: math-number-elementary-home
     - subbar: math-number-home
     - subbar: math-home

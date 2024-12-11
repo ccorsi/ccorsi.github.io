@@ -1,0 +1,32 @@
+{% comment %}
+This include will be used to define a Mathematical Proposition.
+{% endcomment %}
+
+{% comment %} Increment the proposition counter {% endcomment %}
+
+{% assign proposition = proposition | plus: 1 %}
+
+<div class="row">
+    <div class="math-proposition" id="proposition">
+        <div class="col-lg-auto pl-5">
+            <div class="math-proposition-header"
+                id="proposition-header" proposition="{{chapter}}.{{proposition}}">
+                Proposition {{chapter}}.{{proposition}}: {% if caption %}({{caption}}){% endif %}
+            </div>
+            <div><br></div>
+            <div class="math-proposition-text" id="proposition-text">
+{{ include.content | newline_to_br }}
+            </div>
+            {% if include.proof %}
+            <div><br></div>
+            <div class="math-proposition-proof">
+<i><b>Proof:</b></i><br>
+{{ include.proof | newline_to_br }}
+            </div>
+            <div class="math-proposition-qed"><em>QED</em></div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% comment %} Copyright 2024 Claudio Corsi {% endcomment %}

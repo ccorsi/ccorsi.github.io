@@ -2,7 +2,7 @@
 layout: footnotes
 id: math
 type: Mathematical
-values: [ ['definition', 'def'], ['theorem', 'thrm'], ['proposition', 'prop'] ]
+values: [ ['definition', 'def'], ['theorem', 'thm'], ['proposition', 'prop'], ['lemma', 'lem' ], ['corollary', 'cor'] ]
 debug: true
 ---
 {% comment %}
@@ -29,7 +29,7 @@ $( document ).ready(function() {
     }
 
     // Process all types of mathematical types
-    const values = [ ['definition', 'def'], ['theorem', 'thrm'], ['proposition', 'prop'] ];
+    const values = {{ page.values }};
 
     $.each( values, (_, [name, prefix]) => {
         $.each( $( `[id=${name}]` ), (_, elem) => {
