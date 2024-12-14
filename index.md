@@ -14,7 +14,7 @@ others in the field.  This can include anything connected with developing softwa
 While the above is a viable objective.  There is the question of what to do with my current web sites?  I have created one that is found
 <a href="./learning/">here</a>.  There is already some interesting information there that I like to keep but I have come to dislike
 the format of the site itself.  There are things about it that doesn't sit well with me while there are other things about it that I really
-like.  Thus, I will be taking most, if not all, of the content that was created within that site and integrating it within this main site.
+like.  Thus, I will be taking most, if not all, of the content that was created within that site and integrate it within this main site.
 This is just part of what I plan to do here.
 
 There is the question of what will this site be like now?  Well, I do have some initial plans beside the one mentioned above. I do intend
