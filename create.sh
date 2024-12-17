@@ -12,7 +12,7 @@ function usage {
 
 function create_selection {
    local selected="0"
-   local selections=("page" "sidebar" "subbar")
+   local selections=("page" "sidebar" "subbar" "post")
 
    while [ ! -z "$selected" ]
    do
@@ -28,6 +28,9 @@ function create_selection {
             ;;
          "subbar")
             create_subbar
+            ;;
+         "post")
+            create_post
             ;;
          *)
             break ;;
@@ -86,7 +89,7 @@ function add_selection {
 }
 
 function cleanup {
-   if [ -f ${tmpfile} ]
+   if [ ! -z "${tmpfile}" ] && [ -f ${tmpfile} ]
    then
       echo deleting ${tmpfile}
       rm ${tmpfile}
@@ -193,6 +196,116 @@ function create_sidebar {
       rm ${tmpfile}
 
    fi
+}
+
+function create_post {
+   # Enter title of the post.
+   get_line_input title "Enter post title" true
+   echo
+
+   # Enter subtitle of the post.
+   get_line_input subtitle "Enter post subtitle" true
+   echo
+
+   # Enter author of the post.
+   get_line_input author "Enter post Author" true "Claudio Corsi"
+   echo
+
+   # Enter post tags.
+   get_array_input tags "Enter post tag{s}" true
+   echo
+
+   # Enter post categories
+   get_array_input categories "Enter post associated categories" true
+   echo
+
+   # Enable debug.
+   is_yes enable "Do you want to enable debugging"
+   trace Enable debug=${enable}
+   echo
+
+   # Enable debug.
+   is_yes published "Do you want to publish your post"
+   trace Enable publish=${published}
+   echo
+
+   # Enter initial post text
+   get_array_input text "Enter initial post text" true
+   echo
+
+   # Enter relative path name of the creating file
+   get_line_input filename "Enter post file name without date prefix [YYYY-MM-DD-]" true
+   echo
+
+   # Determine if the _post directory exists
+   if [ ! -d "${directory}/_post" ]
+   then
+       mkdir -p "${directory}/_post"
+   fi
+
+   fullname=${directory}/_posts/`date +"%Y-%m-%d"`-${filename}.md
+
+   echo "Creating file ${fullname}"
+
+   echo --- > ${fullname}
+   echo layout: post >> ${fullname}
+   echo title: ${title} >> ${fullname}
+   if [ ! -z "${subtitle}" ]
+   then
+      echo subtitle: ${subtitle} >> ${fullname}
+   fi
+   if [ ! -z "author" ]
+   then
+      echo author: ${author} >> ${fullname}
+   fi
+   echo date: `date +"%Y-%m-%d %T %z"` >> ${fullname}
+   if [ ${#tags[*]} -gt 0 ]
+   then
+      echo -n tags: [ ${tags[0]} >> ${fullname}
+      typeset -i idx=1 len=${#tags[@]}
+      while [ $idx -lt $len ]
+      do
+         echo -n , ${tags[$idx]} >> ${fullname}
+         idx+=1
+      done
+      echo " ]" >> ${fullname}
+   fi
+   if [ ${#categories[*]} -gt 0 ]
+   then
+      echo -n categories: [ ${categories[0]} >> ${fullname}
+      typeset -i idx=1 len=${#categories[@]}
+      while [ $idx -lt $len ]
+      do
+         echo -n , ${categories[$idx]} >> ${fullname}
+         idx+=1
+      done
+      echo " ]" >> ${fullname}
+   fi
+   echo debug: ${enable} >> ${fullname}
+   echo published: ${published} >> ${fullname}
+   if [ ! -z "${sidebar}" ]
+   then
+      echo sidebar: ${sidebar} >> ${fullname}
+   fi
+   echo --- >> ${fullname}
+   echo >> ${fullname}
+   if [ "${#text[@]}" -gt 0 ]
+   then
+      for line in "${text[@]}"
+      do
+         echo ${line} >> ${fullname}
+      done
+   else
+      if [ ! -z "${subtitle}" ]
+      then
+         echo Landing post for ${title} ${subtitle} >> ${fullname}
+      else
+         echo Landing post for ${title} >> ${fullname}
+      fi
+   fi
+   echo >> ${fullname}
+
+   echo "Created front matter for file ${fullname}"
 }
 
 function create_page {

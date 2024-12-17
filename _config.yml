@@ -65,6 +65,7 @@ author: Claudio Corsi
 
 navbar-links:
   About Me: "about.htm"
+  # Notes: "notes"
   Sciences:
     - Mathematics: "math"
   Software:
@@ -314,8 +315,17 @@ defaults:
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
+      toc: true
       head-extra:
         - favicon.html # This contains the definition for my favicon setttings
+      before-content:
+        - toc.html # This will include the <div id="toc"></div> element
+      js:
+        - /assets/js/toc.js  # This will generate the toc for the page
+        - /assets/js/toc-handler.js # This will define which headers to include for the toc and add callback
+      ext-js:
+        - href: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+          async: t
   -
     scope:
       path: "" # any file that's not a post will be a "page" layout by default
@@ -405,6 +415,64 @@ defaults:
         - /assets/js/toc-handler.js # This will define which headers to include for the toc and add callback
         - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
         - /assets/js/projects-footnotes.js # This will generate all projects related footnotes.
+      ext-js:
+        - href: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+          async: t
+      footnotes:
+        length: 80
+        minimum: 1213
+  -
+    scope:
+      path: "notes"
+    values:
+      id: notes
+      layout: "sb-fn-page"
+      toc: true
+      head-extra:
+        - favicon.html # This contains the definition for my favicon setttings
+      before-content:
+        - page-header.html # This will include the title/subtitle/image information from page
+        - quotes.html # This includes the required script to display quotes
+        - toc.html # This will include the <div id="toc"></div> element
+        - mathjax-config.html # This will include the MathJax configuration script
+      after-content:
+        - after-footnotes.html # This will include the <div id="math-footnotes"></div> element
+      css:
+        - /assets/css/math.css
+      js:
+        - /assets/js/toc.js  # This will generate the toc for the page
+        - /assets/js/toc-handler.js # This will define which headers to include for the toc and add callback
+        - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
+        - /assets/js/notes-footnotes.js # This will generate all math related footnotes.
+      ext-js:
+        - href: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
+          async: t
+      footnotes:
+        length: 80
+        minimum: 1213
+      references: /notes/references.htm
+  -
+    scope:
+      path: "compsc"
+    values:
+      id: compsc
+      layout: "sb-fn-page"
+      toc: true
+      head-extra:
+        - favicon.html # This contains the definition for my favicon setttings
+      before-content:
+        - page-header.html # This will include the title/subtitle/image information from page
+        - quotes.html # This includes the required script to display quotes
+        - toc.html # This will include the <div id="toc"></div> element
+      after-content:
+        - after-footnotes.html # This will include the <div id="compsc-footnotes"></div> element
+      css:
+        - /assets/css/math.css
+      js:
+        - /assets/js/toc.js  # This will generate the toc for the page
+        - /assets/js/toc-handler.js # This will define which headers to include for the toc and add callback
+        - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
+        - /assets/js/compsc-footnotes.js # This will generate all compsc related footnotes.
       ext-js:
         - href: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js
           async: t

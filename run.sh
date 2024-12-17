@@ -204,13 +204,14 @@ function setup_noop {
 }
 
 function usage {
-   echo "Usage: $0 -s -k -d -u -w -v -h [sites]"
+   echo "Usage: $0 -s -k -d -u -w -t -v -h [sites]"
    echo "   -s: start a local http server"
    echo "   -k: kill all running ruby processes"
    # We now always delete the _site directory
    # echo "   -d: delete the _site directory"
    echo "   -u: update the required dependencies for each generated web site"
    echo "   -w: start the jekyll build process and enable increment build"
+   echo "   -t: only build the top level _site web site"
    echo "   -v: enable tracing of calls"
    echo "   -D: enable command echo"
    echo "   -h: print this message and exit"
@@ -241,12 +242,15 @@ stop=false
 # delete=true
 update=false
 watch=false
+top=false
 sites=()
 # FYI: The debug variable is defined within the commonrc file
 # debug=false
 
-while getopts "Dskuwvh" o; do
+while getopts "Dskuwvht" o; do
    case "${o}" in
+      t) top=true
+         ;;
       s) start=true
          ;;
       k) stop=true
@@ -364,74 +368,77 @@ fi
 #    build_jekyll_site ${site} setup_noop ${usebundle} $extra
 # done < selfcontained-sites
 
-# Generate all Jekyll static pages for the given sites
-while IFS=' ' read -ra line
-do
-   if [ ! "${#line[@]}" -lt "4" ]
-   then
-      # this is used to determine how many parameters are assigned to the extra arguement
-      len=0
-      # determine if the line contains the comment character
-      if [[ ${line[@]} =~ '#' ]]
+if [ "$top" = false ]
+then
+   # Generate all Jekyll static pages for the given sites
+   while IFS=' ' read -ra line
+   do
+      if [ ! "${#line[@]}" -lt "4" ]
       then
-         # loop through the array until we find the comment character
-         for last in "${!line[@]}"
-         do
-            if [[ "${line[$last]}" =~ "#" ]]
-            then
-               # we found the comment character thus break out of for loop
-               break
-            fi
-         done
-         # determine if the comment character is located beyond the 4th entry
-         if [ "$last" -gt "4" ]
+         # this is used to determine how many parameters are assigned to the extra arguement
+         len=0
+         # determine if the line contains the comment character
+         if [[ ${line[@]} =~ '#' ]]
          then
-            len=$(($last - 4))
-         fi
-         # reassign the line variable to only include required data and purge comment
-         line=(${line[@]:0:${last}})
-      else
-         # determine if the line contains more than 4 entries
-         if [ "${#line[@]}" -gt "4" ]
-         then
-            len=$((${#line[@]} - 4))
-         fi
-      fi
-      if ! test -z $line
-      then
-         site=${line[0]}
-         build=${line[1]}
-         setup=${line[2]}
-         usebundle=${line[3]}
-         extra=${line[@]:4:${len}}
-         # The following was the original script code but it didn't provide the
-         # ability to selectively build and run a subset of the web sites.
-         # trace Executing command: ${build} ${site} ${setup} ${usebundle} $extra
-         # eval ${build} ${site} ${setup} ${usebundle} $extra
-
-         if [ ${#sites[@]} -gt 0 ]
-         then
-            # This updated script code allows one the ability to build and run a 
-            # subset of the web sites to allow for quicker turnaround.
-            for s in "${sites[@]}"
+            # loop through the array until we find the comment character
+            for last in "${!line[@]}"
             do
-               if [[ "$site" =~ "$s" ]]
+               if [[ "${line[$last]}" =~ "#" ]]
                then
-                  trace Generating web site: ${site}
                   # we found the comment character thus break out of for loop
-                  trace Executing command: ${build} ${site} ${setup} ${usebundle} $extra
-                  eval ${build} ${site} ${setup} ${usebundle} $extra
                   break
                fi
             done
+            # determine if the comment character is located beyond the 4th entry
+            if [ "$last" -gt "4" ]
+            then
+               len=$(($last - 4))
+            fi
+            # reassign the line variable to only include required data and purge comment
+            line=(${line[@]:0:${last}})
          else
-            # Start all web sites 
-            trace Executing command: ${build} ${site} ${setup} ${usebundle} $extra
-            eval ${build} ${site} ${setup} ${usebundle} $extra
+            # determine if the line contains more than 4 entries
+            if [ "${#line[@]}" -gt "4" ]
+            then
+               len=$((${#line[@]} - 4))
+            fi
+         fi
+         if ! test -z $line
+         then
+            site=${line[0]}
+            build=${line[1]}
+            setup=${line[2]}
+            usebundle=${line[3]}
+            extra=${line[@]:4:${len}}
+            # The following was the original script code but it didn't provide the
+            # ability to selectively build and run a subset of the web sites.
+            # trace Executing command: ${build} ${site} ${setup} ${usebundle} $extra
+            # eval ${build} ${site} ${setup} ${usebundle} $extra
+
+            if [ ${#sites[@]} -gt 0 ]
+            then
+               # This updated script code allows one the ability to build and run a
+               # subset of the web sites to allow for quicker turnaround.
+               for s in "${sites[@]}"
+               do
+                  if [[ "$site" =~ "$s" ]]
+                  then
+                     trace Generating web site: ${site}
+                     # we found the comment character thus break out of for loop
+                     trace Executing command: ${build} ${site} ${setup} ${usebundle} $extra
+                     eval ${build} ${site} ${setup} ${usebundle} $extra
+                     break
+                  fi
+               done
+            else
+               # Start all web sites
+               trace Executing command: ${build} ${site} ${setup} ${usebundle} $extra
+               eval ${build} ${site} ${setup} ${usebundle} $extra
+            fi
          fi
       fi
-   fi
-done < sites
+   done < sites
+fi
 
 # The following script action is not needed any longer since we are using
 # Jekyll to build the top-level web site.
