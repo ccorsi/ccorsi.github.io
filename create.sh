@@ -248,7 +248,6 @@ function create_post {
    echo "Creating file ${fullname}"
 
    echo --- > ${fullname}
-   echo layout: post >> ${fullname}
    echo title: ${title} >> ${fullname}
    if [ ! -z "${subtitle}" ]
    then
