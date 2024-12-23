@@ -22,7 +22,7 @@ Let us look at these different states before we talk about how to define and use
 
 ## Pending
 
-A Promise is in a *pending* state whenever the method has not completed successfully nor has is
+A Promise is in a *pending* state whenever the method has not completed successfully nor has it
 completed unsuccessfully.  This is the case whenever the Promise object was initially created and
 placed on the wait queue.  It is also in this state when the defined method has not completed its
 task or that an error was not generated.  Basically, this just means that the function is in
@@ -31,25 +31,25 @@ progress.
 ## Fulfilled
 
 The Promise instance is in a fulfilled state whenever the defined function has completed its task
-while not generating any exceptions along the way.  Thus the function has completed and may or may
+while not generating any exceptions along the way.  Thus, the function has completed and may or may
 not provide a return value.  The processing of the returned value of a Promise can be processed
 using one of two techniques.  There is the use of the <code>await</code> feature or the use of the
 returned Promise instance <code>then(onFulfilled, onRejected)</code> method.  The description of
-this method will be explained when we look at the Promise object itself.  For now we just need to
-understand that there are two ways of processing the function returned value.
+this method will be explained when we look at the Promise object itself.  For now, we just need to
+understand that there are two ways of processing the function's returned value.
 
 ## Rejected
 
-The Promise instance is in a rejected state whenever the defined function when it uses the defined
-reject callback to the Promise constructor to pass an rejection reason.  The passed reason can be
-anything and it not confined to an instance of an Error object.  The error can then be processed
-using several mechanism that the Promise object provides.  There is the use of the
-<code>then(onFulfilled, onRejected)</code> callback where you pass a defined onRejected callback
-that is passed the reason for why the call failed.  There is also the <code>catch(onRejected)</code>
-callback where the reason is passed to that callback.  Finally, there is also the use of the
-<code>await</code> feature where you wrap the call within a try/catch block.  These are the only
-ways that you can process errors encountered during the call of a function that returns a Promise
-instance.
+The Promise instance is in a rejected state whenever it uses the passed reject callback to the
+Promise constructor which is passed a rejection reason.  The passed reason can be anything and is
+not confined to an instance of an Error object.  The error can then be processed using several
+mechanism that the Promise object provides.  There is the use of the
+<code>then(onFulfilled, onRejected)</code> callback where you pass a defined <code>onRejected</code>
+callback that is passed the reason for why the call failed.  There is also the
+<code>catch(onRejected)</code> callback where the reason is passed to that callback.  Finally,
+there is also the use of the <code>await</code> feature where you wrap the call within a
+<code>try</code>/<code>catch</code> block.  These are the only ways that you can process errors
+encountered during the call of a function that returns a Promise instance.
 
 We are now ready to look at the Promise object itself.
 
@@ -62,10 +62,10 @@ at the different features of the Promise and expand on how to implement and use 
 ### Promise((resolve,reject))
 
 The constructor of the Promise object will provide two callbacks that can be used to state that the
-actions have been resolved, (fulfilled), or that the actions have been rejected.  When an instance of
-a Promise is created.  The actions that that Promise will run will be contained within the passed
-callback that expects a resolved and rejected callback functions.  Thus a Promise instance is created
-as follows:
+actions have been resolved, (fulfilled), or that the actions have been rejected.  When a Promise
+instance is created.  The actions that that Promise will execute will be contained within the passed
+callback that will be passed a <code>resolved</code> and <code>rejected</code> callback functions.
+Thus, a Promise instance is created as:
 
 ```javascript
 const p = new Promise((resolve, rejected) => {
@@ -82,9 +82,9 @@ Promise object.  You will note that the constructor expects a callback that will
 One used when the actions executed within the Promise completed successfully, <code>resolve</code>, and
 the case when the actions executed within the Promise didn't complete successfully, <code>rejected</code>.
 
-Let us then look at each function starting with the resolve callback.  The resolve callback is used to
-inform the Promise instance that the executed actions were successful.  The user can pass the returning
-value of the Promise instance to the resolve function like the following.
+Let us then look at each function starting with the <code>resolve</code> callback.  The <code>resolve</code>
+callback is used to inform the Promise instance that the executed actions were successful.  The user can pass
+the returning value to the Promise instance using the <code>resolve</code> function like the following.
 
 ```javascript
 const p =  new Promise((resolve, reject) => {
@@ -92,14 +92,15 @@ const p =  new Promise((resolve, reject) => {
 })
 ```
 
-The above function will return the value of 101 upon completion of the define Promise.  The return value
+The above function will return the value of 101 upon completion of the Promise instance.  The return value
 can then be processed using the <code>await</code> syntax or using the Promise <code>then</code> function.
 This will be explained within its own section below.
 
-Before looking into the reject function callback.  I want to state that the resolve callback can also
-return a new instance of a Promise object.  The act of returning another Promise instance still signifies
-that the Promise has been "resolved" but it is still not "settled".  A Promise is considered "settled" when
-the passed resolved value is not a Promise instance.  Here is an example of returning a Promise.
+Before looking into the <code>reject</code> function callback.  I want to state that the <code>resolve</code>
+callback can also return a new instance of a Promise object.  The act of returning another Promise instance
+still signifies that the Promise has been **"resolved"** but it is still not **"settled"**.  A Promise is
+considered **"settled"** when the passed **resolved value** is not a Promise instance.  Here is an example of
+returning a Promise.
 
 ```javascript
 const p = new Promise((resolve, rejected) => {
@@ -114,8 +115,8 @@ The above Promise instance is returning a second inner Promise instance that wil
 actions.   The returned resolved Promise instance will be the returned instance of a Promise instance that
 wraps around a non-Promise value in the prior example of the resolve function.
 
-While the reject function can be use to inform the caller that the actions did not execute successfully
-like the following.
+While the <code>reject</code> function can be use to inform the caller that the actions did not execute
+successfully like in the following.
 
 ```javascript
 const p = new Promise((resolve, reject) => {
@@ -123,12 +124,12 @@ const p = new Promise((resolve, reject) => {
 })
 ```
 
-The above function will generate a error with the reason 'Incorrect input' associated to it.  The error
-can be processed using the <code>await</code> syntax wrapped within a try/catch block or using the
-Promise <code>catch</code> or <code>then</code> functions.  The <code>catch(onRejected)</code> function
-expects a callback that will be passed the reason.  While the <code>then(onFulfilled, onRejected)</code>
-function will expect the onRejected callback that will be passed the reason.  We will further look into
-the above Promise functions and await syntax in its own section below.
+The above function will generate a error with the reason *'Incorrect input'* associated to it.  The error
+can be processed using the <code>await</code> syntax wrapped within a <code>try</code>/<code>catch</code>
+block or using the Promise <code>catch</code> or <code>then</code> functions.  The
+<code>catch(onRejected)</code> function expects a callback that will be passed the reason.  While the
+<code>then(onFulfilled, onRejected)</code> function will expect the onRejected callback that will be passed
+the reason.  We will further look into the above Promise functions and await syntax in their own section below.
 
 ## Using the await and async Syntax
 
@@ -137,9 +138,10 @@ simplifies the use of the Promise instance.
 
 The JavaScript standard was augmented to include the <code>async</code> and <code>await</code> syntax to
 simplify the use of the Promise instance.  The inclusion of these syntax sugar allows one the ability to
-create cleaner code when using Promises.  This thus allow others to have a better understanding of how
+create cleaner code when using Promises.  This allow others to have a better understanding of how
 one can use Promises.  Let us then look at how one can go about using the above syntax.  We will start
-by providing the Promise equivalent version first and transform it into the async/await use case.
+by providing the Promise equivalent version first and then transform it into the
+<code>async</code>/<code>await</code> use case.
 
 ```javascript
 function callme() {
@@ -154,8 +156,8 @@ callme()
 ```
 
 The above code <code>callme()</code> will return a Promise instance that will be used to determine if the
-call was fulfilled or not.  Let us now look at how one can go ahead and replace the above with the async
-and await syntax.
+call was fulfilled or not.  Let us now look at how one can go ahead and replace the above with the
+<code>async</code> and <code>await</code> syntax.
 
 ```javascript
 async function callme() {
@@ -173,7 +175,7 @@ try {
 The above code is equivalent to the prior code snippet.  The above code is cleaner than the prior one
 and is clearer in its use case.  Thou I have shown how you can use the two different ways of creating
 and using Promises.  This doesn't imply that one can't combine the two techniques.  For instance, we
-can assume that a library function <code>foo()</code> is defined as follows:
+can assume that a library function <code>foo()</code> is defined as:
 
 ```javascript
 function foo() {
@@ -183,14 +185,14 @@ function foo() {
 }
 ```
 
-The above doesn't limit you to only using the then/catch/final functions.  You can still use the
-await syntax like the following:
+The above doesn't limit you to only using the <code>then</code>/<code>catch</code>/<code>finally</code>
+functions.  You can still use the <code>await</code> syntax like the following:
 
 ```javascript
 await foo()
 ```
 
-which will work just as well as using the then function with the returned Promise instance.
+which will work just as well as using the <code>then</code> function with the returned Promise instance.
 
 Let us now take a closer look at the different functions associated with the Promise object.
 
@@ -219,11 +221,12 @@ function onFulfilled( value ) {
 }
 ```
 
-The function value can be any kind of type that the Promise that has been passed to the resolve callback. 
-This can be anything from a void type to a complex type.  The only caveat is that it can only be a single
-parameter and you are not allowed to passed multiple values to the resolve function.  This doesn't mean
-that you can't return an iterable value like any array.  Let us then look at several examples that will
-clarify what I just mentioned above.  Let us start with a Promise that returns a void.
+The function *value* parameter can be of any type that the Promise has been passed through the
+<code>resolve</code> callback. This can be anything from a void type to a complex type.  The only caveat
+is that it can only be a single parameter and you are not allowed to passed multiple values to the
+<code>resolve</code> function.  This doesn't mean that you can't return an *iterable value* like any array.
+Let us then look at several examples that will clarify what I just mentioned above.  Let us start with a
+Promise that returns a void.
 
 ```javascript
 new Promise((resolve) => {
@@ -234,8 +237,8 @@ new Promise((resolve) => {
 })
 ```
 
-Note that the above Promise will not be returning any value, aka void, so the defined onFulfilled
-callback require us to define a passed value since none will be passed.
+Note that the above Promise will not be returning any value, aka void, so the defined <code>onFulfilled</code>
+callback doesn't require us to define a passed value since none will be passed.
 
 Let us now look at a case where a simple value is return by the defined Promise instance.
 
@@ -247,8 +250,8 @@ new Promise((resolve) => {
 })
 ```
 
-The above onFulfilled callback will be passed the value 101 which is then displayed to standard out.
-While the above is a simple integer.  The callback can be passed any single type that the defined
+The above <code>onFulfilled</code> callback will be passed the value *101* which is then displayed to
+standard out.  While the above is a simple integer.  The callback can be passed any single type that the defined
 Promise instance wants to return.  Let us look at a example that returns a complex data type.
 
 ```javascript
@@ -267,9 +270,9 @@ The above Promise will be returning a complex object that contains the name, typ
 The fulfilled callback will then be passed this value to it and it can then use that information to
 perform its own actions.
 
-While that above example shows how one can go about returning different types of data that will be
-passed to the defined onFulfilled callback.  Let us look at a different example that will assign
-results to unique parameters.
+While that above example shows how one can go about returning different types of data to be passed to the
+defined <code>onFulfilled</code> callback.  Let us look at a different example that will assign results to
+unique parameters.
 
 ```javascript
 new Promise((resolve) => {
@@ -281,7 +284,7 @@ new Promise((resolve) => {
 })
 ```
 
-The above shows you how you can return a iterable instance that contains different entry types. While
+The above shows you how you can return a *iterable* instance that contains different entry types. While
 the above is a simple solution for processing the returned values.  We can create a fulfilled callback
 that knows what types of values are returned and assign them to specific variables like the following.
 
@@ -298,8 +301,8 @@ that the first entry is an integer and the second a string.  It then assigns tho
 local variables value and msg.
 
 Note that the above fulfilled callback doesn't return any values after completing the callback.  The
-callback can return other values that will be forwarded to other calls.  The then method will return
-a Promise instance that can be defined in several ways.
+callback can return other values that will be forwarded to other calls.  The <code>then</code> method
+will return a Promise instance that can be defined in several ways.
 
 - Return a value using the <code>return</code> method
 - Return nothing
@@ -308,10 +311,10 @@ a Promise instance that can be defined in several ways.
 
 The <code>then</code> method will return a wrapped Promise instance with the first three cases while the
 last case the defined Promise will be returned.  Note that returning a Promise can mean anything from
-it being fulfilled, rejected or pending.
+it being *fulfilled*, *rejected* or *pending*.
 
 We have now looked at how one can go about processing the returned value from a defined Promise
-instance.  We now look at how we can use the onRejected callback.
+instance.  We now look at how we can use the <code>onRejected</code> callback.
 
 #### onRejected callback
 
@@ -324,7 +327,7 @@ function onRejected( reason ) {
 ```
 
 The above rejected callback function syntax will be used whenever a Promise was not successful.
-The callback reason will be passed to the callback function that was passed to the Promise
+The reason will be passed to the callback function that was passed to the Promise
 <code>then</code> and/or <code>catch</code> methods.  While the reason will be thrown when
 using the <code>await</code> syntax.
 
@@ -332,8 +335,8 @@ Note that the type of the reason parameter is not limited to it being a exceptio
 type that is passed to the Promise instance reject callback.
 
 Note that the above rejected callback doesn't return any values after completing the callback.  The
-callback can return other values that will be forwarded to other calls.  The then method will return
-a Promise instance that can be defined in several ways.
+callback can return other values that will be forwarded to other calls.  The <code>then</code> method
+will return a Promise instance that can be defined in several ways.
 
 - Return a value using the <code>return</code> method
 - Return nothing
@@ -344,7 +347,7 @@ The <code>then</code> method will return a wrapped Promise instance with the fir
 last case the defined Promise will be returned.  Note that returning a Promise can mean anything from
 it being fulfilled, rejected or pending.
 
-Let us now look at an example using the onRejected callback.
+Let us now look at an example using the <code>onRejected</code> callback.
 
 ```javascript
 new Promise((resolve, reject) => {
@@ -358,7 +361,7 @@ new Promise((resolve, reject) => {
 })
 ```
 
-The above Promise implementation will then pass the string 'This is an error' as the error
+The above Promise implementation will then pass the string *'This is an error'* as the error
 associated with the failure of the executed Promise.  While the above code uses the *then* callback
 definition.  This can also be processed when using the *await* syntax.
 
@@ -387,7 +390,7 @@ try {
 }
 ```
 
-Again, the above will again generate the same output as the prior examples.
+Again, the above will generate the same output as the prior examples.
 
 ### The <code>catch</code> instance method
 
@@ -395,7 +398,7 @@ We've seen what we can do with the Promise <code>then</code> method.  We will th
 what we can do with the Promise <code>catch</code> method.  This method can be used to process
 errors that have been raised by the implemented Promise instance.  The passed callback to
 the <code>catch</code> method is the same as the <code>then</code> onRejected callback.  Thus,
-the catch onRejected callback syntax is.
+the <code>catch</code> onRejected callback syntax is.
 
 ```javascript
 function onRejected( error ) {
@@ -403,7 +406,7 @@ function onRejected( error ) {
 }
 ```
 
-Thus, the then examples using the onRejected callback can then be implemented as.
+Thus, the <code>then</code> examples using the onRejected callback can then be implemented as.
 
 ```javascript
 new Promise((resolve, reject) => {
@@ -414,8 +417,8 @@ new Promise((resolve, reject) => {
 })
 ```
 
-but when using the await syntax you will be using the same syntax as the above <code>then</code>
-example.
+but when using the <code>await</code> syntax you will be using the same syntax as the above
+<code>then</code> example.
 
 ```javascript
 async function callme() {
@@ -428,7 +431,7 @@ try {
 }
 ```
 
-As is shown above, the syntax is similar in everyway as with the use of the <code>then</code> method.
+As is shown above, the syntax is similar in every way as with the use of the <code>then</code> method.
 The difference is that the <code>catch</code> method allows you to only process error associated with
 the Promise instance.  The use of the <code>catch</code> method is better whenever the Promise instance
 doesn't return a result but you want to be able to handle only errors associated with the Promise.
@@ -438,13 +441,14 @@ passed callback functions to the <code>then</code> method.  For more information
 <code>then</code> or <code>catch</code> sections.
 
 We've looked at the <code>then</code> and <code>catch</code> methods.  We are now going to look
-at the remaining <code>final</code> instance method.
+at the remaining <code>finally</code> instance method.
 
 ### The <code>finally</code> instance method
 
 The Promise <code>finally</code> instance method can be used to determine when the Promise has
-completed irrespective of it fulfilled or rejected.  This call be always be done after the
-then or catch callbacks have been called.  The finally callback syntax is.
+completed irrespective of it being fulfilled or rejected.  This call will always be called after the
+<code>then</code> or <code>catch</code> callbacks have been called.  The <code>finally</code>  callback
+syntax is.
 
 ```javascript
 function onFinally() {
@@ -452,7 +456,7 @@ function onFinally() {
 }
 ```
 
-Note that the finally callback doesn't get passed any data since this is not used to process
+Note that the <code>finally</code> callback doesn't get passed any data since this is not used to process
 any of the resulting outcome of the Promise instance.  Thus, you need not worry about processing
 passed values and just use the callback to determine when the Promise instance was completed and
 you can then use that action to perform another action if this is something that is required.  Let
@@ -465,7 +469,7 @@ new Promise((resolve, reject) => {
 ```
 
 The defined onFinally method will then be called when the Promise has settled which is after the
-then and catch callbacks have been called.  Let us look at an example that succeeds.
+<code>then</code> and <code>catch</code> callbacks have been called.  Let us look at an example that succeeds.
 
 ```javascript
 new Promise((resolve, reject) => {
