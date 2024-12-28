@@ -12,7 +12,7 @@ function usage {
 
 function create_selection {
    local selected="0"
-   local selections=("page" "sidebar" "subbar" "post")
+   local selections=("page" "sidebar" "subbar" "post" "update")
 
    while [ ! -z "$selected" ]
    do
@@ -32,10 +32,159 @@ function create_selection {
          "post")
             create_post
             ;;
+         "update")
+            update_data
+            ;;
          *)
             break ;;
       esac
    done
+}
+
+function update_data {
+   local selected="0"
+   local selections=("sidebar" "subbar")
+
+   while [ ! -z "$selected" ]
+   do
+      # Select what to create
+      select_from_array selections selected
+      trace selected update: ${selected}
+      case "${selected}" in
+         "sidebar")
+            update_sidebar
+            ;;
+         "subbar")
+            update_subbar
+            ;;
+         *)
+            break ;;
+      esac
+   done
+}
+
+function update_sidebar {
+
+   # Select the sidebar
+   select_from_array sidebars sidebar
+   trace Selected sidebar=${sidebar}
+   echo
+
+   if [ ! -z "${sidebar}" ]
+   then
+      # Read in the selected sidebar
+      local fname="${directory}/_data/sidebars/${sidebar}.yml"
+
+      if [ -f ${fname} ]
+      then
+         trace sidebar=${sidebar} exists at ${fname}
+
+         # create a temporary file
+         tmpfile=$(mktemp)
+
+         echo "Updating sidebar file with current content:"
+
+         # copy contents into temporary file
+         cat ${fname} | tee ${tmpfile}
+         echo
+
+         # setup required entries for add_selection function call
+         entries=("subbar" "entry" "submenu")
+         entry=("url" "ext-url")
+
+         # add other selections
+         add_selection "    "
+
+         cat -n ${tmpfile}
+
+         is_yes ans "Save updated sidebar above"
+
+         if [ ${ans} == true ]
+         then
+
+            trace dest=${fname}
+
+            echo Updating sidebar file ${sidebar}.yml in sidebars data directory
+
+            # Replace current sidebar file with updated temporary file
+            mv ${tmpfile} ${fname}
+
+            echo Completed updating of sidebar file ${sidebar}.yml
+
+         else
+
+            rm ${tmpfile}
+
+         fi
+
+      else
+         echo "sidebar=${sidebar} doesn't exist at ${fname}"
+      fi
+   else
+      echo "no sidebar was selected"
+   fi
+}
+
+function update_subbar {
+
+   # Select the subbar
+   select_from_array subbars subbar
+   trace Selected subbar=${subbar}
+   echo
+
+   if [ ! -z "${subbar}" ]
+   then
+      # Read in the selected sidebar
+      local fname="${directory}/_data/sidebars/subbars/${subbar}.yml"
+
+      if [ -f ${fname} ]
+      then
+         trace subbar=${subbar} exists at ${fname}
+
+         # create a temporary file
+         tmpfile=$(mktemp)
+
+         echo "Updating subbar file with current content:"
+
+         # copy contents into temporary file
+         cat ${fname} | tee ${tmpfile}
+         echo
+
+         # setup required entries for add_selection function call
+         entries=("subbar" "entry" "submenu")
+         entry=("url" "ext-url")
+
+         # add other selections
+         add_selection "    "
+
+         cat -n ${tmpfile}
+
+         is_yes ans "Save updated subbar above"
+
+         if [ ${ans} == true ]
+         then
+
+            trace dest=${fname}
+
+            echo Updating subbar file ${subbar}.yml in sidebars data directory
+
+            # Replace current subbar file with updated temporary file
+            mv ${tmpfile} ${fname}
+
+            echo Completed updating of subbar file ${subbar}.yml
+
+         else
+
+            rm ${tmpfile}
+
+         fi
+
+      else
+         trace "subbar=${subbar} doesn't exist at ${fname}"
+      fi
+   else
+      trace "no subbar was selected"
+   fi
 }
 
 function add_selection {
@@ -54,33 +203,33 @@ function add_selection {
          "subbar")
             select_from_array subbars subbar true
             trace subbar selected: ${subbar}
-	    if [ ! -z "subbar" ]
+            if [ ! -z "subbar" ]
             then
-	      echo "${prefix}- subbar: ${subbar}" >> ${tmpfile}
+              echo "${prefix}- subbar: ${subbar}" >> ${tmpfile}
             fi
             ;;
          "entry")
             get_line_input title "Enter entry title" true
             trace title selected: ${title}
-	    if [ ! -z "title" ]
+            if [ ! -z "title" ]
             then
-	      echo "${prefix}- entry: ${title}" >> ${tmpfile}
+              echo "${prefix}- entry: ${title}" >> ${tmpfile}
             fi
             select_from_array entry uri
             trace uri selected: ${uri}
-	    if [ ! -z "uri" ]
+            if [ ! -z "uri" ]
             then
               get_line_input link "Enter entry link" true
               trace link selected: ${link}
-	      echo "${prefix}  ${uri}: ${link}" >> ${tmpfile}
+              echo "${prefix}  ${uri}: ${link}" >> ${tmpfile}
             fi
             ;;
          "submenu")
             get_line_input title "Enter submenu title" true
-	    echo "${prefix}- title: ${title}" >> ${tmpfile}
-	    echo "${prefix}  submenu:" >> ${tmpfile}
+            echo "${prefix}- title: ${title}" >> ${tmpfile}
+            echo "${prefix}  submenu:" >> ${tmpfile}
             local append="    ${prefix}"
-	    add_selection "$append"
+            add_selection "$append"
             ;;
          *)
             break ;;
@@ -447,7 +596,7 @@ trap cleanup INT SIGINT
 while getopts "Dvh" o; do
    case "${o}" in
       v) debug=true
-	      ;;
+         ;;
       D) set -x
          ;;
       h) usage
