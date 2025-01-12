@@ -1,10 +1,25 @@
 {% comment %}
 This include will be used to define a Mathematical Corollary.
+Parameters:
+    caption - The conjecture caption, optional
+    chapter - The chapter the corollary was defined
+    content - The corollary itself
+    proof - The corollary's proof, optional
 {% endcomment %}
 
 {% comment %} Increment the corollary counter {% endcomment %}
 
 {% assign corollary = corollary | plus: 1 %}
+{% if include.caption %}
+{% assign caption=include.caption %}
+{% elsif page.caption %}
+{% assign caption=page.caption %}
+{% endif %}
+{% if include.chapter %}
+{% assign chapter=include.chapter %}
+{% elsif page.chapter %}
+{% assign chapter=page.chapter %}
+{% endif %}
 
 <div class="row">
     <div class="math-corollary" id="corollary">

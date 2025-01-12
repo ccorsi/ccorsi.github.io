@@ -1,10 +1,25 @@
 {% comment %}
 This include will be used to define a Mathematical Lemma.
+Parameters:
+    caption - The lemma caption, optional
+    chapter - The chapter the lemma was defined
+    content - The lemma itself
+    proof - The lemma's proof, optional
 {% endcomment %}
 
 {% comment %} Increment the lemma counter {% endcomment %}
 
 {% assign lemma = lemma | plus: 1 %}
+{% if include.caption %}
+{% assign caption=include.caption %}
+{% elsif page.caption %}
+{% assign caption=page.caption %}
+{% endif %}
+{% if include.chapter %}
+{% assign chapter=include.chapter %}
+{% elsif page.chapter %}
+{% assign chapter=page.chapter %}
+{% endif %}
 
 <div class="row">
     <div class="math-lemma" id="lemma">

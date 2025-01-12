@@ -1,0 +1,5 @@
+subbar:
+  entries:
+    - subbar: notes-latex-home
+    - subbar: notes-git-home
+    - subbar: notes-curl-home

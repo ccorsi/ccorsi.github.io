@@ -65,13 +65,15 @@ author: Claudio Corsi
 
 navbar-links:
   About Me: "about.htm"
-  # Notes: "notes"
   Sciences:
     - Mathematics: "math"
   Software:
     - Languages: "proglangs"
     - Tools: "progtools"
     - Projects: "projects"
+  Other:
+    - Notes: "notes"
+    - Reading: "reading"
 
 ################
 # --- Logo --- #
@@ -436,7 +438,7 @@ defaults:
         - toc.html # This will include the <div id="toc"></div> element
         - mathjax-config.html # This will include the MathJax configuration script
       after-content:
-        - after-footnotes.html # This will include the <div id="math-footnotes"></div> element
+        - after-footnotes.html # This will include the <div id="notes-footnotes"></div> element
       css:
         - /assets/css/math.css
       js:

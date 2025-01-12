@@ -1,10 +1,24 @@
 {% comment %}
 This include will be used to define a Mathematical Conjecture.
+Parameters:
+    caption - The conjecture caption, optional
+    chapter - The chapter the conjecture was defined
+    content - The conjecture itself
 {% endcomment %}
 
 {% comment %} Increment the conjecture counter.  This guarantees that conjecture is assigned atleast a value of 1. {% endcomment %}
 
 {% assign conjecture = conjecture | plus: 1 %}
+{% if include.caption %}
+{% assign caption=include.caption %}
+{% elsif page.caption %}
+{% assign caption=page.caption %}
+{% endif %}
+{% if include.chapter %}
+{% assign chapter=include.chapter %}
+{% elsif page.chapter %}
+{% assign chapter=page.chapter %}
+{% endif %}
 
 <div class="row">
     <div class="math-conjecture" id="conjecture">
@@ -12,7 +26,9 @@ This include will be used to define a Mathematical Conjecture.
             <div class="math-conjecture-header"
                 id="conjecture-header" conjecture="{{ chapter }}.{{ conjecture }}">Conjecture {{ chapter }}.{{ conjecture }}:{% if caption %} ({{ caption }}){% endif %}</div>
             <div><br></div>
-            <div class="math-conjecture-text" id="conjecture-text">{{ include.content }}</div>
+            <div class="math-conjecture-text" id="conjecture-text">
+{{ include.content | newline_to_br }}
+            </div>
         </div>
     </div>
 </div>

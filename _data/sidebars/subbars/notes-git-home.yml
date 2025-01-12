@@ -1,0 +1,4 @@
+subbar:
+  entries:
+    - entry: Git
+      url: /notes/git/

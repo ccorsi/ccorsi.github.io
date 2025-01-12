@@ -1,0 +1,5 @@
+sidebar:
+  title: Curl
+  entries:
+    - subbar: notes-curl-individual
+    - subbar: notes-home

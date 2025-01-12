@@ -1,5 +1,26 @@
 #!/bin/bash
 
+########################################################################
+# This script is used to create the different artifacts that are part
+# of this static web site.  This script currently contains the ability
+# to create a new page, post, sidebar and subbar.  This functionality
+# removes the need to look through prior creations of these types of
+# artifacts and just focus on what you are trying to accomplish.
+#
+# While the above implementation provides the ability to automate the
+# creation of those artifacts.  There was a need to be able to update
+# the existing sidebars and subbars.  Thus, the addition of updating
+# the current content of the sidebars and subbars have been added to
+# this script.
+#
+# While the above describes the current work that makes it easier to
+# maintain this web site.  There is at least one other addition that
+# would be helpful.  This is the ability to not only add to a sidebar
+# or subbar but it is the ability to actually remove/replace current
+# entries within these sidebars and subbars.  While this work is not
+# necessary it is something that can be useful in the future.
+########################################################################
+
 ############################### Functions ##############################
 
 function usage {
@@ -10,6 +31,14 @@ function usage {
    exit 1
 }
 
+########################################################################
+# This function is used to select the different create and update
+# actions of this script.  This is the top level call where everything
+# is handled.
+#
+# This method allows one to be able to process one or more action
+# without having to call this script multiple times.
+########################################################################
 function create_selection {
    local selected="0"
    local selections=("page" "sidebar" "subbar" "post" "update")
@@ -41,6 +70,12 @@ function create_selection {
    done
 }
 
+########################################################################
+# This method is used to determine if a sidebar or subbar will be
+# updated.  It will then call the required update calls.  While this
+# is not really required.  In the future, it can be updated to include
+# other types of updates.
+########################################################################
 function update_data {
    local selected="0"
    local selections=("sidebar" "subbar")
@@ -63,6 +98,13 @@ function update_data {
    done
 }
 
+########################################################################
+# This method will take the current set of entries within a given sidebar
+# and allow you to be able to append new entries to the current set of
+# entries.  While the current implementation doesn't provide the ability
+# to replace/remove any of the current entries.  That objective will
+# require a more extensive rewrite of the current method.
+########################################################################
 function update_sidebar {
 
    # Select the sidebar
@@ -125,6 +167,13 @@ function update_sidebar {
    fi
 }
 
+########################################################################
+# This method will take the current set of entries within a given subbar
+# and allow you to be able to append new entries to the current set of
+# entries.  While the current implementation doesn't provide the ability
+# to replace/remove any of the current entries.  That objective will
+# require a more extensive rewrite of the current method.
+########################################################################
 function update_subbar {
 
    # Select the subbar
@@ -187,7 +236,14 @@ function update_subbar {
    fi
 }
 
+########################################################################
+# This method is used to add a selection for a sidebar or subbar.  The
+# information will be appended to the current tmpfile.  This method will
+# use the passed prefix string for the generated output.  The prefix is
+# used to properly format the current tmpfile.
+########################################################################
 function add_selection {
+   # Check that the add_selection is passed a non-empty prefix string
    check "add_selection" 1 $#
 
    local prefix="$1"
@@ -237,6 +293,12 @@ function add_selection {
    done
 }
 
+########################################################################
+# This method is called within the trap functionality whenever one or
+# more of the signals hava been generated within this script.  This
+# method will just delete the currently created tmpfile such that it
+# doesn't stick around after exiting this script in an unexpected way.
+########################################################################
 function cleanup {
    if [ ! -z "${tmpfile}" ] && [ -f ${tmpfile} ]
    then
@@ -246,6 +308,14 @@ function cleanup {
    exit 1
 }
 
+########################################################################
+# This method is used to create a new subbar by asking you questions on
+# what you want to include as part of the creating subbar.  You can also
+# use the current set of subbars to add to the creating subbar.  Upon
+# creating the new subbar, it will then be added to the current list of
+# subbars such that you can then use it within the creation of new
+# sidebars or subbars.
+########################################################################
 function create_subbar {
    # Create tempfile
    tmpfile=$(mktemp)
@@ -295,6 +365,14 @@ function create_subbar {
    fi
 }
 
+########################################################################
+# This method will create a new sidebar by asking the caller questions
+# on what they would like to be part of the newly creating sidebar.  It
+# can use the current set of subbars.  The newly created sidebar will
+# then be added to the current list of sidebars such that you can then
+# include the newly created sidebar as part of the creation of a new
+# page.
+########################################################################
 function create_sidebar {
    # Create tempfile
    tmpfile=$(mktemp)
@@ -347,6 +425,12 @@ function create_sidebar {
    fi
 }
 
+########################################################################
+# This method will create a post page through the action of asking the
+# caller questions about what they would like to see within a newly
+# created web page.  It will then use the inputted information to
+# generate the web page.
+########################################################################
 function create_post {
    # Enter title of the post.
    get_line_input title "Enter post title" true
@@ -456,6 +540,12 @@ function create_post {
    echo "Created front matter for file ${fullname}"
 }
 
+########################################################################
+# This method will create a page through the action of asking the caller
+# questions about what they would like to see within a newly created
+# web page.  It will then use the inputted information to generate the
+# web page.
+########################################################################
 function create_page {
    # Enter title of the page.
    get_line_input title "Enter page title" true
@@ -491,7 +581,7 @@ function create_page {
    get_array_input text "Enter initial page text" true
    echo
 
-   # Enter relative path name of the creating file
+   # Enter relative path name for the page
    get_line_input filename "Enter relative path of file name" true
    echo
 
@@ -593,6 +683,7 @@ echo Done gathering subbars
 # Add trap to insure that the temporary file is deleted if not used
 trap cleanup INT SIGINT
 
+# Process the command line arguments
 while getopts "Dvh" o; do
    case "${o}" in
       v) debug=true

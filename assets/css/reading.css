@@ -1,0 +1,12 @@
+img {
+   max-width:   80;
+   min-width:   80;
+   min-height: 120;
+   max-height: 120;
+}
+
+.center-text {
+   text-align: center;
+   font-size: 150%;
+}
+

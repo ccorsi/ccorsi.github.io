@@ -1,0 +1,135 @@
+table:
+  header: [
+    [
+      { h: { text: Completed Books, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
+      { h: { text: Book } },
+      { h: { text: Title } },
+      { h: { text: Author } },
+      { h: { text: Completed On } },
+      { h: { text: Comments } }
+    ]
+  ]
+  entries: [
+    [
+      { d:
+        { img:
+          {
+            src: "https://groveatlantic.com/core/wp-content/uploads/2024/05/ElementsofMarieCurie_FINAL-52x68.jpg",
+            href: "https://groveatlantic.com/book/the-elements-of-marie-curie/",
+            title: The Elements of Marie Curie,
+            alt: The Elements of Marie Curie,
+            attributes: { class: read }
+          },
+        }
+      },
+      { d: { text: The Elements of Marie Curie } },
+      { d: { text: Dava Sobel } },
+      { d: { text: "<time datetime=\"2024-12-05\">December 5, 2024</time>" } },
+      { d: { text: This was an interesting book about the Nobel Prize winner Marie Curie } }
+    ],
+    [
+      { d:
+        { img:
+          {
+            src: "https://www.hachettebookgroup.com/wp-content/uploads/2023/09/9781541604292-1.jpg?resize=80,120",
+            href: "https://www.hachettebookgroup.com/titles/steve-nadis/the-gravity-of-math/9781541604292/",
+            title: The Gravity of Math,
+            alt: The Gravity of Math,
+            attributes: { class: read }
+          },
+        }
+      },
+      { d: { text: The Gravity of Math } },
+      { d: { text: Steve Nadis<br>Shing-Tung Yau } },
+      { d: { text: "<time datetime=\"2024-12-15\">December 15, 2024</time>" } },
+      { d: { text: This was an interesting book about the mathematics behind Einstein General Relativity } }
+    ],
+    [
+      { d:
+        { img:
+          {
+            src: "https://images2.penguinrandomhouse.com/cover/9780593243916?height=140",
+            href: "https://www.penguinrandomhouse.com/books/677212/supercommunicators-by-charles-duhigg/",
+            title: Supercommunicators,
+            alt: Supercommunicators,
+            attributes: { class: read }
+          },
+        }
+      },
+      { d: { text: Supercommunicators } },
+      { d: { text: Charles Duhigg } },
+      { d: { text: "<time datetime=\"2024-12-24\">December 24, 2024</time>" } },
+      { d: { text: This was an interesting book about how to effectively communicate with others } }
+    ],
+    [
+      { d:
+        { img:
+          {
+            src: "https://www.harpercollins.com/cdn/shop/files/9781335915283.jpg?v=1733337045&width=80",
+            href: "https://www.harpercollins.com/products/before-we-forget-kindness-toshikazu-kawaguchi?variant=41526300377122",
+            title: Before We Forget Kindness,
+            alt: Before We Forget Kindness,
+            attributes: { class: read }
+          },
+        }
+      },
+      { d: { text: Before We Forget Kindness } },
+      { d: { text: Toshikazu Kawaguci } },
+      { d: { text: "<time datetime=\"2024-12-30\">December 30, 2024</time>" } },
+      { d: { text: This is one of my favorite series about going back or ahead in time to do something we wished we would have done } }
+    ],
+    [
+      { d:
+        { img:
+          {
+            src: "https://images1.penguinrandomhouse.com/cover/9780593818749?width=80",
+            href: "https://www.penguinrandomhouse.com/books/763041/well-prescribe-you-a-cat-by-syou-ishida-translated-by-e-madison-shimoda/",
+            title: We'll Prescribe You a Cat,
+            alt: We'll Prescribe You a Cat,
+            attributes: { class: read }
+          },
+        }
+      },
+      { d: { text: We'll Prescribe You a Cat } },
+      { d: { text: Syou Ishida<br>Translated by E. Madison Shimoda } },
+      { d: { text: "<time datetime=\"2024-12-31\">December 31, 2024</time>" } },
+      { d: { text: This was a fun book that looks at how we can just learn to take it easy about life  } }
+    ],
+    [
+      { d:
+        { img:
+          {
+            src: "https://images4.penguinrandomhouse.com/cover/9780593230381?width=80",
+            href: "https://www.penguinrandomhouse.com/books/653438/the-message-by-ta-nehisi-coates/",
+            title: The Message,
+            alt: The Message,
+            attributes: { class: read }
+          },
+        }
+      },
+      { d: { text: The Message } },
+      { d: { text: Ta-Nehisi Coates } },
+      { d: { text: "<time datetime=\"2025-01-06\">January 6, 2025</time>" } },
+      { d: { text: This book take a look at the Israel Palestine Gaza conflict  } }
+    ],
+    [
+      { d:
+        { img:
+          {
+            src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/03/9781538757437_170fc5.jpg?resize=80,120",
+            href: "https://www.hachettebookgroup.com/titles/sanaka-hiiragi/the-lantern-of-lost-memories/9781538757437/",
+            title: The Lantern of Lost Memories,
+            alt: The Lantern of Lost Memories,
+            attributes: { class: read }
+          },
+        }
+      },
+      { d: { text: The Lantern of Lost Memories } },
+      { d: { text: Sanaka Hiiragi<br>Translated by Jesse Kirkwood } },
+      { d: { text: "<time datetime=\"2025-01-11\">January 11, 2025</time>" } },
+      { d: { text: This book takes a look at what if you can relive the most important day of your life after departing this world  } }
+    ]
+  ]
+

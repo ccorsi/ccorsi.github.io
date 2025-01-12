@@ -1,5 +1,10 @@
 {% comment %}
 This include will be used to define a Mathematical Theorem.
+Parameters:
+    caption - The proposition caption, optional
+    chapter - The chapter the proposition was defined
+    content - The proposition itself
+    proof - The proposition's proof, optional
 {% endcomment %}
 
 {% comment %}
@@ -36,6 +41,16 @@ NOTE: The following was the initial implementation of how to organize a theorem.
 {% comment %} Increment the theorem counter {% endcomment %}
 
 {% assign theorem = theorem | plus: 1 %}
+{% if include.caption %}
+{% assign caption=include.caption %}
+{% elsif page.caption %}
+{% assign caption=page.caption %}
+{% endif %}
+{% if include.chapter %}
+{% assign chapter=include.chapter %}
+{% elsif page.chapter %}
+{% assign chapter=page.chapter %}
+{% endif %}
 
 <div class="row">
     <div class="math-theorem" id="theorem">

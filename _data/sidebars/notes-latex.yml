@@ -1,0 +1,5 @@
+sidebar:
+  title: LaTex
+  entries:
+    - subbar: notes-latex-individual
+    - subbar: notes-home

@@ -1,0 +1,46 @@
+{% if include.row %}
+   {% for col in include.row %}
+      {% for item in col %}
+         {% if item[0] == "h" %}
+            {% assign name="th" %}
+         {% elsif item[0] == "d" %}
+            {% assign name="td" %}
+         {% else %}
+            {% assign name="" %}
+         {% endif %}
+         {% if item[1].attributes %}
+<{{ name }}
+            {% for inner in item[1].attributes %}
+{{ inner[0] }}="{{ inner[1] }}"
+            {% endfor %}
+>
+         {% else %}
+<{{ name }}>
+         {% endif %}
+         {% for inner in item[1] %}
+            {% case inner[0] %}
+               {% when "text" %}
+{{ inner[1] }}
+               {% when "img" %}
+                  {% assign aattrs='target="_blank" ' %}
+                  {% assign imgattrs="" %}
+                  {% for img in inner[1] %}
+                     {% case img[0] %}
+                        {% when "attributes" %}
+                           {% for attr in img[1] %}
+                              {% capture imgattrs %}{{ imgattrs | append: attr[0] | append: '="' | append: attr[1] | append: '" ' }}{% endcapture %}
+                           {% endfor %}
+                        {% when "href", "title" %}
+                           {% capture aattrs %}{{ aattrs | append: img[0] | append: '="' | append: img[1] | append: '" ' }}{% endcapture %}
+                        {% else %}
+                           {% capture imgattrs %}{{ imgattrs | append: img[0] | append: '="' | append: img[1] | append: '" ' }}{% endcapture %}
+                     {% endcase %}
+                  {% endfor %}
+<a {{ aattrs }}><img {{ imgattrs }}></a>
+            {% endcase %}
+         {% endfor %}
+      {% endfor %}
+</{{ name }}>
+   {% endfor %}
+{% endif %}
+

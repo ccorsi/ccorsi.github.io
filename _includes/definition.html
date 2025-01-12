@@ -1,5 +1,9 @@
 {% comment %}
 This include will be used to define a Mathematical Definition.
+Parameters:
+    caption - The definition caption, optional
+    chapter - The chapter the definition was defined
+    content - The definition itself
 {% endcomment %}
 
 {% comment %} Increment the definition counter.  This guarantees that definition is assigned atleast a value of 1. {% endcomment %}
@@ -23,7 +27,9 @@ This include will be used to define a Mathematical Definition.
                 id="definition-header" definition="{{ chapter }}.{{ definition }}">Definition {{ chapter }}.{{
                 definition }}:{% if caption %} ({{ caption }}){% endif %}</div>
             <div><br></div>
-            <div class="math-definition-text" id="definition-text">{{ include.content }}</div>
+            <div class="math-definition-text" id="definition-text">
+{{ include.content | newline_to_br }}
+            </div>
         </div>
     </div>
 </div>

@@ -1,3 +1,5 @@
+---
+---
 // <!-- 
 //  this handles the automatic toc. use ## for subheads to auto-generate the
 //  on-page minitoc. if you use html tags, you must supply an ID for the heading
@@ -9,7 +11,7 @@ $( document ).ready(function() {
 
   try {
      $('#toc').toc({
-       minimumHeaders: 0,
+       minimumHeaders: {{ site.minimumHeaders | default: 0 }},
        listType: 'ul',
        showSpeed: 0,
        headers: 'h2,h3,h4'

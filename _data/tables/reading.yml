@@ -1,0 +1,74 @@
+table:
+  header: [
+    [
+      { h: { text: Started Books, attributes: { colspan: 4, class: "center-text" } } }
+    ],
+    [
+      { h: { text: Book } },
+      { h: { text: Title } },
+      { h: { text: Author } },
+      { h: { text: Started } }
+    ]
+  ]
+  entries: [
+    [
+      { d:
+        { img:
+          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/06/9781541606715.jpg?resize=80,120",
+            href: "https://www.hachettebookgroup.com/titles/eugenia-cheng/is-math-real/9781541606715/",
+            title: Is Math Real,
+            alt: Is Math Real,
+            attributes: { class: read }
+          },
+        }
+      },
+      { d: { text: Is Math Real } },
+      { d: { text: Eugenia Cheng } },
+      { d: { text: } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2023/09/9781541604292-1.jpg?resize=80,120",
+            href: "https://www.hachettebookgroup.com/titles/steve-nadis/the-gravity-of-math/9781541604292/",
+            title: The Gravity of Math,
+            alt: The Gravity of Math,
+            attributes: { class: read }
+          },
+        }
+      },
+      { d: { text: The Gravity of Math } },
+      { d: { text: Steve Nadis<br>Shing-Tung Yau } },
+      { d: { text: } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.harpercollins.com/cdn/shop/files/9780063340800_355bd8fc-ff18-4901-aae4-5ef68e8f40d5.jpg?v=1728218752&width=80&height=120",
+            href: "https://www.harpercollins.com/products/math-ish-jo-boaler?variant=41226038083618",
+            title: Math-ish,
+            alt: Math-ish,
+            attributes: { class: read }
+          },
+        }
+      },
+      { d: { text: Math-ish } },
+      { d: { text: Jo Boaler } },
+      { d: { text: } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://assets.cambridge.org/97811088/41658/cover/9781108841658.jpg",
+            href: "https://www.cambridge.org/core/books/geography-of-words/96135D6C7A76C6BF0AB4978C9DD8C335",
+            title: The Geography of Words,
+            alt: The Geography of Words,
+            attributes: { class: read, width: 80, height: 120 }
+          },
+        }
+      },
+      { d: { text: The Geography of Words } },
+      { d: { text: Daniko Šipka } },
+      { d: { text: } }
+    ]
+  ]

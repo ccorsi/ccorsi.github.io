@@ -1,0 +1,107 @@
+{% if include.table and site.data.tables[include.table] and site.data.tables[include.table].table %}
+{% assign table=site.data.tables[include.table].table %}
+
+{% if table.attributes %}
+   {% for entry in table.attributes %}
+<table
+{{ entry[0] }}="{{ entry[1] }}"
+   {% endfor %}
+>
+{% else %}
+<table>
+{% endif %}
+{% if table.caption %}
+<caption>{{ table.caption }}</caption>
+{% endif %}
+{% if table.header %}
+<thead>
+   {% for header in table.header %}
+<tr>
+{% include tableentry.html row=header %}
+</tr>
+   {% endfor %}
+</thead>
+{% endif %}
+{% if table.entries %}
+   {% for row in table.entries %}
+<tr>
+{% include tableentry.html row=row %}
+</tr>
+   {% endfor %}
+{% endif %}
+{% if table.footer %}
+<tr>
+{% include tableentry.html row=table.footer %}
+</tr>
+{% endif %}
+</table>
+{% endif %}
+
+{% comment %}
+This layout can be used to produce a dynamic table that is generated using data within the
+_datai/tables directory.  The data table will be passed using the page table front header
+information.  The table will then include the following attributes.
+
+table:
+   attributes: An array of name/value attributes associated with the table element
+   caption: The caption text associated with this table
+   header: An array of array containing the following information per table header column
+         h: If this is a header type column entry
+            img: An image entry
+               url: location of the image
+               tip: tip associated with the image
+            text: The text that will be used as is for this entry
+            attributes: An array of key/value attributes associated with the current table row column
+         d: If this is a data type column entry
+            img: An image entry
+               url: location of the image
+               tip: tip associated with the image
+            text: The text that will be used as is for this entry
+            attributes: An array of key/value attributes associated with the current table row column
+   entries:  An array of array of entries that contain data that will be populating the table row
+      h: If this is a header type column entry
+         img: An image entry
+            url: location of the image
+            tip: tip associated with the image
+         text: The text that will be used as is for this entry
+         attributes: An array of key/value attributes associated with the current table row column
+      d: If this is a data type column entry
+         img: An image entry
+            url: location of the image
+            tip: tip associated with the image
+         text: The text that will be used as is for this entry
+         attributes: An array of key/value attributes associated with the current table row column
+   footer: The tables footer row contain an array or array containing the following
+      h: If this is a header type column entry
+         img: An image entry
+            url: location of the image
+            tip: tip associated with the image
+         text: The text that will be used as is for this entry
+         attributes: An array of key/value attributes associated with the current table row column
+      d: If this is a data type column entry
+         img: An image entry
+            url: location of the image
+            tip: tip associated with the image
+         text: The text that will be used as is for this entry
+         attributes: An array of key/value attributes associated with the current table row column
+
+for example:
+
+table:
+   attributes: { class: foo, id: bar }
+   header: [
+      { h: { text: Some } },
+      { h: { text: Else, attributes: { class: bar } } }
+   ]
+   entries: [
+      [
+         { h: { text: line } },
+         { d: { text: value } }
+      ]
+   ]
+   footer: [
+      { h: { text: footer } },
+      { d: { text: value } }
+   ]
+{% endcomment %}
+

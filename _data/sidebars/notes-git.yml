@@ -1,0 +1,5 @@
+sidebar:
+  title: Git
+  entries:
+    - subbar: notes-git-individual
+    - subbar: notes-home

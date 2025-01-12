@@ -1,10 +1,12 @@
+---
+---
 // https://github.com/ghiculescu/jekyll-table-of-contents
 (function($){
   $.fn.toc = function(options) {
     var defaults = {
       noBackToTopLinks: false,
       title: '',
-      minimumHeaders: 3,
+      minimumHeaders: {{ site.default.minimunHeaders | default: 3 }},
       headers: 'h1, h2, h3, h4',
       listType: 'ol', // values: [ol|ul]
       showEffect: 'show', // values: [show|slideDown|fadeIn|none]
