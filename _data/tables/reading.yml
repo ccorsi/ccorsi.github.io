@@ -1,13 +1,12 @@
 table:
   header: [
     [
-      { h: { text: Started Books, attributes: { colspan: 4, class: "center-text" } } }
+      { h: { text: Started Books, attributes: { colspan: 3, class: "center-text" } } }
     ],
     [
       { h: { text: Book } },
       { h: { text: Title } },
-      { h: { text: Author } },
-      { h: { text: Started } }
+      { h: { text: Author } }
     ]
   ]
   entries: [
@@ -23,23 +22,7 @@ table:
         }
       },
       { d: { text: Is Math Real } },
-      { d: { text: Eugenia Cheng } },
-      { d: { text: } }
-    ],
-    [
-      { d:
-        { img:
-          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2023/09/9781541604292-1.jpg?resize=80,120",
-            href: "https://www.hachettebookgroup.com/titles/steve-nadis/the-gravity-of-math/9781541604292/",
-            title: The Gravity of Math,
-            alt: The Gravity of Math,
-            attributes: { class: read }
-          },
-        }
-      },
-      { d: { text: The Gravity of Math } },
-      { d: { text: Steve Nadis<br>Shing-Tung Yau } },
-      { d: { text: } }
+      { d: { text: Eugenia Cheng } }
     ],
     [
       { d:
@@ -53,8 +36,7 @@ table:
         }
       },
       { d: { text: Math-ish } },
-      { d: { text: Jo Boaler } },
-      { d: { text: } }
+      { d: { text: Jo Boaler } }
     ],
     [
       { d:
@@ -68,7 +50,48 @@ table:
         }
       },
       { d: { text: The Geography of Words } },
-      { d: { text: Daniko Šipka } },
-      { d: { text: } }
+      { d: { text: Daniko Šipka } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://washingtonpress-us.imgix.net/covers/9780295743868.jpg?auto=format&w=298?auto=format&w=450&dpr=1.4&q=100",
+            href: "https://uwapress.uw.edu/book/9780295743868/footprints-of-war/",
+            title: Footprints of War,
+            alt: Footprints of War,
+            attributes: { class: read, width: 80, height: 120 }
+          },
+        }
+      },
+      { d: { text: Footprints of War } },
+      { d: { text: David Biggs } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images3.penguinrandomhouse.com/cover/9780525432913",
+            href: "https://www.penguinrandomhouse.com/books/551075/you-should-have-left-by-daniel-kehlmann/",
+            title: You Should Have Left,
+            alt: You Should Have Left,
+            attributes: { class: read, width: 80, height: 120 }
+          },
+        }
+      },
+      { d: { text: You Should Have Left } },
+      { d: { text: Daniel Kehlmann } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images1.penguinrandomhouse.com/cover/9780593191897",
+            href: "https://www.penguinrandomhouse.com/books/646981/life-as-no-one-knows-it-by-sara-imari-walker/",
+            title: Life as No One Knows It,
+            alt: Life as No One Knows It,
+            attributes: { class: read, width: 80, height: 120 }
+          },
+        }
+      },
+      { d: { text: Life as No One Knows It } },
+      { d: { text: Sara Imari Walker } }
     ]
   ]
