@@ -130,6 +130,22 @@ table:
       { d: { text: Sanaka Hiiragi<br>Translated by Jesse Kirkwood } },
       { d: { text: "<time datetime=\"2025-01-11\">January 11, 2025</time>" } },
       { d: { text: This book takes a look at what if you can relive the most important day of your life after departing this world  } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images3.penguinrandomhouse.com/cover/9780525432913",
+            href: "https://www.penguinrandomhouse.com/books/551075/you-should-have-left-by-daniel-kehlmann/",
+            title: You Should Have Left,
+            alt: You Should Have Left,
+            attributes: { class: read, width: 80, height: 120 }
+          },
+        }
+      },
+      { d: { text: You Should Have Left } },
+      { d: { text: Daniel Kehlmann } },
+      { d: { text: "<time datetime=\"2025-01-20\">January 20, 2025</time>" } },
+      { d: { text: "This ghost like story was interesting but it wasn't as good as the reviews lead to believe"   } }
     ]
   ]
 

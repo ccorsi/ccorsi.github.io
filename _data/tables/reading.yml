@@ -69,20 +69,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://images3.penguinrandomhouse.com/cover/9780525432913",
-            href: "https://www.penguinrandomhouse.com/books/551075/you-should-have-left-by-daniel-kehlmann/",
-            title: You Should Have Left,
-            alt: You Should Have Left,
-            attributes: { class: read, width: 80, height: 120 }
-          },
-        }
-      },
-      { d: { text: You Should Have Left } },
-      { d: { text: Daniel Kehlmann } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://images1.penguinrandomhouse.com/cover/9780593191897",
             href: "https://www.penguinrandomhouse.com/books/646981/life-as-no-one-knows-it-by-sara-imari-walker/",
             title: Life as No One Knows It,
