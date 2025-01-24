@@ -13,14 +13,16 @@ table:
   ]
   entries: [
     [
+      { h: { text: 2024, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
       { d:
         { img:
           {
             src: "https://groveatlantic.com/core/wp-content/uploads/2024/05/ElementsofMarieCurie_FINAL-52x68.jpg",
             href: "https://groveatlantic.com/book/the-elements-of-marie-curie/",
             title: The Elements of Marie Curie,
-            alt: The Elements of Marie Curie,
-            attributes: { class: read }
+            alt: The Elements of Marie Curie
           },
         }
       },
@@ -36,8 +38,7 @@ table:
             src: "https://www.hachettebookgroup.com/wp-content/uploads/2023/09/9781541604292-1.jpg?resize=80,120",
             href: "https://www.hachettebookgroup.com/titles/steve-nadis/the-gravity-of-math/9781541604292/",
             title: The Gravity of Math,
-            alt: The Gravity of Math,
-            attributes: { class: read }
+            alt: The Gravity of Math
           },
         }
       },
@@ -53,8 +54,7 @@ table:
             src: "https://images2.penguinrandomhouse.com/cover/9780593243916?height=140",
             href: "https://www.penguinrandomhouse.com/books/677212/supercommunicators-by-charles-duhigg/",
             title: Supercommunicators,
-            alt: Supercommunicators,
-            attributes: { class: read }
+            alt: Supercommunicators
           },
         }
       },
@@ -70,8 +70,7 @@ table:
             src: "https://www.harpercollins.com/cdn/shop/files/9781335915283.jpg?v=1733337045&width=80",
             href: "https://www.harpercollins.com/products/before-we-forget-kindness-toshikazu-kawaguchi?variant=41526300377122",
             title: Before We Forget Kindness,
-            alt: Before We Forget Kindness,
-            attributes: { class: read }
+            alt: Before We Forget Kindness
           },
         }
       },
@@ -87,8 +86,7 @@ table:
             src: "https://images1.penguinrandomhouse.com/cover/9780593818749?width=80",
             href: "https://www.penguinrandomhouse.com/books/763041/well-prescribe-you-a-cat-by-syou-ishida-translated-by-e-madison-shimoda/",
             title: We'll Prescribe You a Cat,
-            alt: We'll Prescribe You a Cat,
-            attributes: { class: read }
+            alt: We'll Prescribe You a Cat
           },
         }
       },
@@ -98,14 +96,16 @@ table:
       { d: { text: This was a fun book that looks at how we can just learn to take it easy about life  } }
     ],
     [
+      { h: { text: 2025, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
       { d:
         { img:
           {
             src: "https://images4.penguinrandomhouse.com/cover/9780593230381?width=80",
             href: "https://www.penguinrandomhouse.com/books/653438/the-message-by-ta-nehisi-coates/",
             title: The Message,
-            alt: The Message,
-            attributes: { class: read }
+            alt: The Message
           },
         }
       },
@@ -121,8 +121,7 @@ table:
             src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/03/9781538757437_170fc5.jpg?resize=80,120",
             href: "https://www.hachettebookgroup.com/titles/sanaka-hiiragi/the-lantern-of-lost-memories/9781538757437/",
             title: The Lantern of Lost Memories,
-            alt: The Lantern of Lost Memories,
-            attributes: { class: read }
+            alt: The Lantern of Lost Memories
           },
         }
       },
@@ -137,8 +136,7 @@ table:
           { src: "https://images3.penguinrandomhouse.com/cover/9780525432913",
             href: "https://www.penguinrandomhouse.com/books/551075/you-should-have-left-by-daniel-kehlmann/",
             title: You Should Have Left,
-            alt: You Should Have Left,
-            attributes: { class: read, width: 80, height: 120 }
+            alt: You Should Have Left
           },
         }
       },

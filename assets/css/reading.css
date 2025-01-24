@@ -1,12 +1,14 @@
-img {
-   max-width:   80px;
-   min-width:   80px;
-   min-height: 120px;
-   max-height: 120px;
-}
-
 .center-text {
    text-align: center;
    font-size: 150%;
+}
+
+td, th {
+   img {
+      max-width:   80px;
+      min-width:   80px;
+      min-height: 120px;
+      max-height: 120px;
+   }
 }
 

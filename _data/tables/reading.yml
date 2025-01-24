@@ -16,8 +16,7 @@ table:
           { src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/06/9781541606715.jpg?resize=80,120",
             href: "https://www.hachettebookgroup.com/titles/eugenia-cheng/is-math-real/9781541606715/",
             title: Is Math Real,
-            alt: Is Math Real,
-            attributes: { class: read }
+            alt: Is Math Real
           },
         }
       },
@@ -30,8 +29,7 @@ table:
           { src: "https://www.harpercollins.com/cdn/shop/files/9780063340800_355bd8fc-ff18-4901-aae4-5ef68e8f40d5.jpg?v=1728218752&width=80&height=120",
             href: "https://www.harpercollins.com/products/math-ish-jo-boaler?variant=41226038083618",
             title: Math-ish,
-            alt: Math-ish,
-            attributes: { class: read }
+            alt: Math-ish
           },
         }
       },
@@ -44,8 +42,7 @@ table:
           { src: "https://assets.cambridge.org/97811088/41658/cover/9781108841658.jpg",
             href: "https://www.cambridge.org/core/books/geography-of-words/96135D6C7A76C6BF0AB4978C9DD8C335",
             title: The Geography of Words,
-            alt: The Geography of Words,
-            attributes: { class: read, width: 80, height: 120 }
+            alt: The Geography of Words
           },
         }
       },
@@ -58,8 +55,7 @@ table:
           { src: "https://washingtonpress-us.imgix.net/covers/9780295743868.jpg?auto=format&w=298?auto=format&w=450&dpr=1.4&q=100",
             href: "https://uwapress.uw.edu/book/9780295743868/footprints-of-war/",
             title: Footprints of War,
-            alt: Footprints of War,
-            attributes: { class: read, width: 80, height: 120 }
+            alt: Footprints of War
           },
         }
       },
@@ -72,8 +68,7 @@ table:
           { src: "https://images1.penguinrandomhouse.com/cover/9780593191897",
             href: "https://www.penguinrandomhouse.com/books/646981/life-as-no-one-knows-it-by-sara-imari-walker/",
             title: Life as No One Knows It,
-            alt: Life as No One Knows It,
-            attributes: { class: read, width: 80, height: 120 }
+            alt: Life as No One Knows It
           },
         }
       },
