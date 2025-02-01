@@ -13,19 +13,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/06/9781541606715.jpg?resize=80,120",
-            href: "https://www.hachettebookgroup.com/titles/eugenia-cheng/is-math-real/9781541606715/",
-            title: Is Math Real,
-            alt: Is Math Real
-          },
-        }
-      },
-      { d: { text: Is Math Real } },
-      { d: { text: Eugenia Cheng } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://www.harpercollins.com/cdn/shop/files/9780063340800_355bd8fc-ff18-4901-aae4-5ef68e8f40d5.jpg?v=1728218752&width=80&height=120",
             href: "https://www.harpercollins.com/products/math-ish-jo-boaler?variant=41226038083618",
             title: Math-ish,
@@ -65,14 +52,27 @@ table:
     [
       { d:
         { img:
-          { src: "https://images1.penguinrandomhouse.com/cover/9780593191897",
-            href: "https://www.penguinrandomhouse.com/books/646981/life-as-no-one-knows-it-by-sara-imari-walker/",
-            title: Life as No One Knows It,
-            alt: Life as No One Knows It
+          { src: "https://media.springernature.com/w158/springer-static/cover-hires/book/978-3-030-47487-4?as=webp",
+            href: "https://link.springer.com/book/10.1007/978-3-030-47487-4",
+            title: A Journey of Embedded and Cyber-Physical Systems,
+            alt: A Journey of Embedded and Cyber-Physical Systems
           },
         }
       },
-      { d: { text: Life as No One Knows It } },
-      { d: { text: Sara Imari Walker } }
+      { d: { text: A Journey of Embedded and Cyber-Physical Systems } },
+      { d: { text: Jian-Jia Chen } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.harpercollins.com/cdn/shop/files/9780358299288_d111b131-2cf7-41d0-95ad-b6ee18578c5b.jpg?v=1736890784&width=80",
+            href: "https://www.harpercollins.com/products/infinite-powers-steven-strogatz?variant=40975101329442",
+            title: Infinite Powers,
+            alt: Infinite Powers
+          },
+        }
+      },
+      { d: { text: Infinite Powers } },
+      { d: { text: Steven Strogatz } }
     ]
   ]

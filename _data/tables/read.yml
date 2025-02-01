@@ -144,6 +144,36 @@ table:
       { d: { text: Daniel Kehlmann } },
       { d: { text: "<time datetime=\"2025-01-20\">January 20, 2025</time>" } },
       { d: { text: "This ghost like story was interesting but it wasn't as good as the reviews lead to believe"   } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images1.penguinrandomhouse.com/cover/9780593191897",
+            href: "https://www.penguinrandomhouse.com/books/646981/life-as-no-one-knows-it-by-sara-imari-walker/",
+            title: Life as No One Knows It,
+            alt: Life as No One Knows It
+          },
+        }
+      },
+      { d: { text: Life as No One Knows It } },
+      { d: { text: Sara Imari Walker } },
+      { d: { text: "<time datetime=\"2025-01-26\">January 26, 2025</time>" } },
+      { d: { text: "This book talks about a new theory called Assembly Theory which combines the Laws of Physics and Algorithms.  It is being used to try to explain the difficult questions, What is Consciousness?, What is Matter? and What is Life?  It was a very interesting look into creating a new paradigm shift in Science."   } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/06/9781541606715.jpg?resize=80,120",
+            href: "https://www.hachettebookgroup.com/titles/eugenia-cheng/is-math-real/9781541606715/",
+            title: Is Math Real,
+            alt: Is Math Real
+          },
+        }
+      },
+      { d: { text: Is Math Real } },
+      { d: { text: Eugenia Cheng } },
+      { d: { text: "<time datetime=\"2025-01-26\">January 26, 2025</time>" } },
+      { d: { text: "This book looks at Math from a different perspective from how we normally look at Math.  It is trying to show that anyone can do Math.  She talks about elementary math and leads one into a field of Mathematics called, Category Theory." } }
     ]
   ]
 
