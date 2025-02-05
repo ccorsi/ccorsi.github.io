@@ -482,5 +482,20 @@
     ],
     "author": "Sonnets by William Shakespeare",
     "formatted": true
+  },
+  {
+    "quote": [
+      "He who is prudent",
+      "and patiently waits for an enemy who is not,",
+      "will be victorious."
+    ],
+    "author": "The Art of War, SUN TZU",
+    "formatted": true
+  },
+  {
+     "quote": [
+        "This is no sin but ignorance."
+     ],
+     "author": "Christopher Marlowe"
   }
 ]
