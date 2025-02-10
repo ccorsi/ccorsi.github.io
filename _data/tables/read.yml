@@ -174,6 +174,21 @@ table:
       { d: { text: Eugenia Cheng } },
       { d: { text: "<time datetime=\"2025-01-26\">January 26, 2025</time>" } },
       { d: { text: "This book looks at Math from a different perspective from how we normally look at Math.  It is trying to show that anyone can do Math.  She talks about elementary math and leads one into a field of Mathematics called, Category Theory." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://media.springernature.com/w158/springer-static/cover-hires/book/978-3-030-47487-4?as=webp",
+            href: "https://link.springer.com/book/10.1007/978-3-030-47487-4",
+            title: A Journey of Embedded and Cyber-Physical Systems,
+            alt: A Journey of Embedded and Cyber-Physical Systems
+          },
+        }
+      },
+      { d: { text: A Journey of Embedded and Cyber-Physical Systems } },
+      { d: { text: Jian-Jia Chen } },
+      { d: { text: "<time datetime=\"2025-02-07\">February 7, 2025</time>" } },
+      { d: { text: "This book contains research papers on embedded and cyber-physical systems.  It was interesting learning about this type of work even thou it isn't the type of work that I do.  I enjoyed learning about these different topics." } }
     ]
   ]
 

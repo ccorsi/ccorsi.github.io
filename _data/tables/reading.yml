@@ -52,19 +52,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://media.springernature.com/w158/springer-static/cover-hires/book/978-3-030-47487-4?as=webp",
-            href: "https://link.springer.com/book/10.1007/978-3-030-47487-4",
-            title: A Journey of Embedded and Cyber-Physical Systems,
-            alt: A Journey of Embedded and Cyber-Physical Systems
-          },
-        }
-      },
-      { d: { text: A Journey of Embedded and Cyber-Physical Systems } },
-      { d: { text: Jian-Jia Chen } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://www.harpercollins.com/cdn/shop/files/9780358299288_d111b131-2cf7-41d0-95ad-b6ee18578c5b.jpg?v=1736890784&width=80",
             href: "https://www.harpercollins.com/products/infinite-powers-steven-strogatz?variant=40975101329442",
             title: Infinite Powers,
