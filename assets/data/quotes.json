@@ -141,13 +141,13 @@
   {
     "quote": [
       "Some say the world will end in fire,",
-      "\u00a0\u00a0Some say in ice.",
+      "&nbsp;&nbsp;Some say in ice.",
       "From what I've tasted of desire",
-      "\u00a0\u00a00I hold with those who favor fire.",
+      "&nbsp;&nbsp;I hold with those who favor fire.",
       "But if it had to perish twice,",
-      "\u00a0\u00a00I think I know enough of hate",
+      "&nbsp;&nbsp;I think I know enough of hate",
       "To say that for destruction ice",
-      "\u00a0\u00a00Is also great",
+      "&nbsp;&nbsp;Is also great",
       "And would suffice."
     ],
     "author": "Fire and Ice by Robert Frost",
