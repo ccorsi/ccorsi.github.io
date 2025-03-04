@@ -178,21 +178,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://www.harpercollins.com/cdn/shop/files/9780063340800_355bd8fc-ff18-4901-aae4-5ef68e8f40d5.jpg?v=1728218752&width=80&height=120",
-            href: "https://www.harpercollins.com/products/math-ish-jo-boaler?variant=41226038083618",
-            title: Math-ish,
-            alt: Math-ish
-          },
-        }
-      },
-      { d: { text: Math-ish } },
-      { d: { text: Jo Boaler } },
-      { d: { text: "<time datetime=\"2025-02-13\">February 13, 2025</time>" } },
-      { d: { text: "This book discusses the state of our teaching of Mathematics and how archaic it is in its current state.  It offers a new way of teaching Mathematics that can be more beneficial to students and society.  These techniques have been used within other societies with great success." } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://media.springernature.com/w158/springer-static/cover-hires/book/978-3-030-47487-4?as=webp",
             href: "https://link.springer.com/book/10.1007/978-3-030-47487-4",
             title: A Journey of Embedded and Cyber-Physical Systems,
@@ -204,6 +189,21 @@ table:
       { d: { text: Jian-Jia Chen } },
       { d: { text: "<time datetime=\"2025-02-07\">February 7, 2025</time>" } },
       { d: { text: "This book contains research papers on embedded and cyber-physical systems.  It was interesting learning about this type of work even thou it isn't the type of work that I do.  I enjoyed learning about these different topics." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.harpercollins.com/cdn/shop/files/9780063340800_355bd8fc-ff18-4901-aae4-5ef68e8f40d5.jpg?v=1728218752&width=80&height=120",
+            href: "https://www.harpercollins.com/products/math-ish-jo-boaler?variant=41226038083618",
+            title: Math-ish,
+            alt: Math-ish
+          },
+        }
+      },
+      { d: { text: Math-ish } },
+      { d: { text: Jo Boaler } },
+      { d: { text: "<time datetime=\"2025-02-13\">February 13, 2025</time>" } },
+      { d: { text: "This book discusses the state of our teaching of Mathematics and how archaic it is in its current state.  It offers a new way of teaching Mathematics that can be more beneficial to students and society.  These techniques have been used within other societies with great success." } }
     ]
   ]
 

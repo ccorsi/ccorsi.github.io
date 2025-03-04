@@ -48,5 +48,31 @@ table:
       },
       { d: { text: Infinite Powers } },
       { d: { text: Steven Strogatz } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781451654431/smartest-kids-in-the-world-9781451654431_lg.jpg",
+            href: "https://www.simonandschuster.com/books/The-Smartest-Kids-in-the-World/Amanda-Ripley/9781451654431",
+            title: The Smartest Kids in the World,
+            alt: The Smartest Kids in the World
+          },
+        }
+      },
+      { d: { text: The Smartest Kids in the World } },
+      { d: { text: Amanda Ripley } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://cdn2.wwnorton.com/wwnproducts/TRADE/9/4/9781324076049/9781324076049_300.jpg",
+            href: "https://wwnorton.com/books/9781324005421",
+            title: From One Cell,
+            alt: From One Cell
+          },
+        }
+      },
+      { d: { text: From One Cell } },
+      { d: { text: Ben Stanger } }
     ]
   ]
