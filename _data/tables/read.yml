@@ -193,7 +193,7 @@ table:
     [
       { d:
         { img:
-          { src: "https://www.harpercollins.com/cdn/shop/files/9780063340800_355bd8fc-ff18-4901-aae4-5ef68e8f40d5.jpg?v=1728218752&width=80&height=120",
+          { src: "https://www.harpercollins.com/cdn/shop/files/9780063340800.jpg?v=1741359607",
             href: "https://www.harpercollins.com/products/math-ish-jo-boaler?variant=41226038083618",
             title: Math-ish,
             alt: Math-ish
@@ -204,6 +204,21 @@ table:
       { d: { text: Jo Boaler } },
       { d: { text: "<time datetime=\"2025-02-13\">February 13, 2025</time>" } },
       { d: { text: "This book discusses the state of our teaching of Mathematics and how archaic it is in its current state.  It offers a new way of teaching Mathematics that can be more beneficial to students and society.  These techniques have been used within other societies with great success." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781451654431/smartest-kids-in-the-world-9781451654431_lg.jpg",
+            href: "https://www.simonandschuster.com/books/The-Smartest-Kids-in-the-World/Amanda-Ripley/9781451654431",
+            title: The Smartest Kids in the World,
+            alt: The Smartest Kids in the World
+          },
+        }
+      },
+      { d: { text: The Smartest Kids in the World } },
+      { d: { text: Amanda Ripley } },
+      { d: { text: "<time datetime=\"2025-03-09\">March 9, 2025</time>" } },
+      { d: { text: "This book discusses the different level of education around the world.  It shows how the United States compares to other countries education system.  It looks who is successful and what makes them successful.  It also goes into greater details on what might make a great education system." } }
     ]
   ]
 
