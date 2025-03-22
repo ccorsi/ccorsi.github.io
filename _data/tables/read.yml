@@ -219,6 +219,36 @@ table:
       { d: { text: Amanda Ripley } },
       { d: { text: "<time datetime=\"2025-03-09\">March 9, 2025</time>" } },
       { d: { text: "This book discusses the different level of education around the world.  It shows how the United States compares to other countries education system.  It looks who is successful and what makes them successful.  It also goes into greater details on what might make a great education system." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://assets.cambridge.org/97811088/41658/cover/9781108841658.jpg",
+            href: "https://www.cambridge.org/core/books/geography-of-words/96135D6C7A76C6BF0AB4978C9DD8C335",
+            title: The Geography of Words,
+            alt: The Geography of Words
+          },
+        }
+      },
+      { d: { text: The Geography of Words } },
+      { d: { text: Daniko Šipka } },
+      { d: { text: "<time datetime=\"2025-03-19\">March 19, 2025</time>" } },
+      { d: { text: "This book talks about how the different languages in the world can have different meanings with similar words and phrases.  It also talks about how similar languages culture impact words and phrases." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images1.penguinrandomhouse.com/cover/9780593489277",
+            href: "https://www.penguinrandomhouse.com/books/691257/the-life-impossible-by-matt-haig",
+            title: The Life Impossible,
+            alt: The Life Impossible
+          },
+        }
+      },
+      { d: { text: The Life Impossible } },
+      { d: { text: Matt Haig } },
+      { d: { text: "<time datetime=\"2025-03-22\">March 22, 2025</time>" } },
+      { d: { text: "This book was written by one of my favorite author in recent years.  It is a story about realizing that we should live our life with the understanding that we aren't perfect.  We shouldn't let our past influence our future well-being." } }
     ]
   ]
 

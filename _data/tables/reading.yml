@@ -13,19 +13,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://assets.cambridge.org/97811088/41658/cover/9781108841658.jpg",
-            href: "https://www.cambridge.org/core/books/geography-of-words/96135D6C7A76C6BF0AB4978C9DD8C335",
-            title: The Geography of Words,
-            alt: The Geography of Words
-          },
-        }
-      },
-      { d: { text: The Geography of Words } },
-      { d: { text: Daniko Šipka } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://washingtonpress-us.imgix.net/covers/9780295743868.jpg?auto=format&w=298?auto=format&w=450&dpr=1.4&q=100",
             href: "https://uwapress.uw.edu/book/9780295743868/footprints-of-war/",
             title: Footprints of War,
@@ -61,5 +48,31 @@ table:
       },
       { d: { text: From One Cell } },
       { d: { text: Ben Stanger } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://pup-assets.imgix.net/onix/images/9780691145020.jpg?w=410&auto=format",
+            href: "https://press.princeton.edu/books/hardcover/9780691145020/oxygen",
+            title: "Oxygen: A Four Billion Year History",
+            alt: "Oxygen: A Four Billion Year History"
+          },
+        }
+      },
+      { d: { text: "Oxygen: A Four Billion Year History" } },
+      { d: { text: Donald E. Canfield } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images3.penguinrandomhouse.com/cover/9780593852699",
+            href: "https://www.penguinrandomhouse.com/books/763702/the-blanket-cats-by-kiyoshi-shigematsu/",
+            title: The Blanket Cats,
+            alt: The Blanket Cats
+          },
+        }
+      },
+      { d: { text: The Blanket Cats } },
+      { d: { text: Kiyoshi Shigematsu } }
     ]
   ]
