@@ -193,8 +193,8 @@ table:
     [
       { d:
         { img:
-          { src: "https://www.harpercollins.com/cdn/shop/files/9780063340800.jpg?v=1741359607",
-            href: "https://www.harpercollins.com/products/math-ish-jo-boaler?variant=41226038083618",
+          { src: "https://i.harperapps.com/covers/9780063340800/x480.jpg",
+            href: "https://www.harperacademic.com/book/9780063340800/math-ish/",
             title: Math-ish,
             alt: Math-ish
           },

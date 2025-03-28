@@ -52,19 +52,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://pup-assets.imgix.net/onix/images/9780691145020.jpg?w=410&auto=format",
-            href: "https://press.princeton.edu/books/hardcover/9780691145020/oxygen",
-            title: "Oxygen: A Four Billion Year History",
-            alt: "Oxygen: A Four Billion Year History"
-          },
-        }
-      },
-      { d: { text: "Oxygen: A Four Billion Year History" } },
-      { d: { text: Donald E. Canfield } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://images3.penguinrandomhouse.com/cover/9780593852699",
             href: "https://www.penguinrandomhouse.com/books/763702/the-blanket-cats-by-kiyoshi-shigematsu/",
             title: The Blanket Cats,
