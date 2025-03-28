@@ -249,6 +249,21 @@ table:
       { d: { text: Matt Haig } },
       { d: { text: "<time datetime=\"2025-03-22\">March 22, 2025</time>" } },
       { d: { text: "This book was written by one of my favorite author in recent years.  It is a story about realizing that we should live our life with the understanding that we aren't perfect.  We shouldn't let our past influence our future well-being." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://pup-assets.imgix.net/onix/images/9780691145020.jpg?w=410&auto=format",
+            href: "https://press.princeton.edu/books/hardcover/9780691145020/oxygen",
+            title: "Oxygen: A Four Billion Year History",
+            alt: "Oxygen: A Four Billion Year History"
+          },
+        }
+      },
+      { d: { text: "Oxygen: A Four Billion Year History" } },
+      { d: { text: Donald E. Canfield } },
+      { d: { text: "<time datetime=\"2025-03-27\">March 27, 2025</time>" } },
+      { d: { text: "This book sets out to explain our current understanding of the evolution of the planet Earth.  It explains what we understand on how the planet Earth maintains itself now.  In turn, it tries to explain how our planet has evolved throughout is exists for 4.5 billions of years.  It explains that we are limited by what we can explain since Earth contains only so much information about the past.  With that, it then explains the different speculations that we have defined." } }
     ]
   ]
 
