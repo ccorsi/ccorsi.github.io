@@ -21,12 +21,12 @@ table:
           {
             src: "https://groveatlantic.com/core/wp-content/uploads/2024/05/ElementsofMarieCurie_FINAL-52x68.jpg",
             href: "https://groveatlantic.com/book/the-elements-of-marie-curie/",
-            title: The Elements of Marie Curie,
-            alt: The Elements of Marie Curie
+            title: "The Elements of Marie Curie: How the Glow of Radium Lit a Path for Women in Science",
+            alt: "The Elements of Marie Curie: How the Glow of Radium Lit a Path for Women in Science"
           },
         }
       },
-      { d: { text: The Elements of Marie Curie } },
+      { d: { text: "The Elements of Marie Curie: How the Glow of Radium Lit a Path for Women in Science" } },
       { d: { text: Dava Sobel } },
       { d: { text: "<time datetime=\"2024-12-05\">December 5, 2024</time>" } },
       { d: { text: This was an interesting book about the Nobel Prize winner Marie Curie } }
@@ -37,12 +37,12 @@ table:
           {
             src: "https://www.hachettebookgroup.com/wp-content/uploads/2023/09/9781541604292-1.jpg?resize=80,120",
             href: "https://www.hachettebookgroup.com/titles/steve-nadis/the-gravity-of-math/9781541604292/",
-            title: The Gravity of Math,
-            alt: The Gravity of Math
+            title: "The Gravity of Math: How Geometry Rules the Universe",
+            alt: "The Gravity of Math: How Geometry Rules the Universe"
           },
         }
       },
-      { d: { text: The Gravity of Math } },
+      { d: { text: "The Gravity of Math: How Geometry Rules the Universe" } },
       { d: { text: Steve Nadis<br>Shing-Tung Yau } },
       { d: { text: "<time datetime=\"2024-12-15\">December 15, 2024</time>" } },
       { d: { text: This was an interesting book about the mathematics behind Einstein General Relativity } }
@@ -53,12 +53,12 @@ table:
           {
             src: "https://images2.penguinrandomhouse.com/cover/9780593243916?height=140",
             href: "https://www.penguinrandomhouse.com/books/677212/supercommunicators-by-charles-duhigg/",
-            title: Supercommunicators,
-            alt: Supercommunicators
+            title: "Supercommunicators: How to Unlock the Secret Language of Connection",
+            alt: "Supercommunicators: How to Unlock the Secret Language of Connection"
           },
         }
       },
-      { d: { text: Supercommunicators } },
+      { d: { text: "Supercommunicators: How to Unlock the Secret Language of Connection" } },
       { d: { text: Charles Duhigg } },
       { d: { text: "<time datetime=\"2024-12-24\">December 24, 2024</time>" } },
       { d: { text: This was an interesting book about how to effectively communicate with others } }
@@ -75,7 +75,7 @@ table:
         }
       },
       { d: { text: Before We Forget Kindness } },
-      { d: { text: Toshikazu Kawaguci } },
+      { d: { text: "Toshikazu Kawaguci<br>Translated by Geoffrey Trousselot" } },
       { d: { text: "<time datetime=\"2024-12-30\">December 30, 2024</time>" } },
       { d: { text: This is one of my favorite series about going back or ahead in time to do something we wished we would have done } }
     ],
@@ -150,12 +150,12 @@ table:
         { img:
           { src: "https://images1.penguinrandomhouse.com/cover/9780593191897",
             href: "https://www.penguinrandomhouse.com/books/646981/life-as-no-one-knows-it-by-sara-imari-walker/",
-            title: Life as No One Knows It,
-            alt: Life as No One Knows It
+            title: "Life as No One Knows It: The Physics of Life's Emergence",
+            alt: "Life as No One Knows It: The Physics of Life's Emergence"
           },
         }
       },
-      { d: { text: Life as No One Knows It } },
+      { d: { text: "Life as No One Knows It: The Physics of Life's Emergence" } },
       { d: { text: Sara Imari Walker } },
       { d: { text: "<time datetime=\"2025-01-26\">January 26, 2025</time>" } },
       { d: { text: "This book talks about a new theory called Assembly Theory which combines the Laws of Physics and Algorithms.  It is being used to try to explain the difficult questions, What is Consciousness?, What is Matter? and What is Life?  It was a very interesting look into creating a new paradigm shift in Science."   } }
@@ -165,12 +165,12 @@ table:
         { img:
           { src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/06/9781541606715.jpg?resize=80,120",
             href: "https://www.hachettebookgroup.com/titles/eugenia-cheng/is-math-real/9781541606715/",
-            title: Is Math Real,
-            alt: Is Math Real
+            title: "Is Math Real: How Simple Questions Lead Us to Mathematics' Deepest Truths",
+            alt: "Is Math Real: How Simple Questions Lead Us to Mathematics' Deepest Truths"
           },
         }
       },
-      { d: { text: Is Math Real } },
+      { d: { text: "Is Math Real: How Simple Questions Lead Us to Mathematics' Deepest Truths" } },
       { d: { text: Eugenia Cheng } },
       { d: { text: "<time datetime=\"2025-01-26\">January 26, 2025</time>" } },
       { d: { text: "This book looks at Math from a different perspective from how we normally look at Math.  It is trying to show that anyone can do Math.  She talks about elementary math and leads one into a field of Mathematics called, Category Theory." } }
@@ -180,12 +180,12 @@ table:
         { img:
           { src: "https://media.springernature.com/w158/springer-static/cover-hires/book/978-3-030-47487-4?as=webp",
             href: "https://link.springer.com/book/10.1007/978-3-030-47487-4",
-            title: A Journey of Embedded and Cyber-Physical Systems,
-            alt: A Journey of Embedded and Cyber-Physical Systems
+            title: "A Journey of Embedded and Cyber-Physical Systems: Essays Dedicated to Peter Marwedel on the Occasion of His 70th Birthday",
+            alt: "A Journey of Embedded and Cyber-Physical Systems: Essays Dedicated to Peter Marwedel on the Occasion of His 70th Birthday"
           },
         }
       },
-      { d: { text: A Journey of Embedded and Cyber-Physical Systems } },
+      { d: { text: "A Journey of Embedded and Cyber-Physical Systems: Essays Dedicated to Peter Marwedel on the Occasion of His 70th Birthday" } },
       { d: { text: Jian-Jia Chen } },
       { d: { text: "<time datetime=\"2025-02-07\">February 7, 2025</time>" } },
       { d: { text: "This book contains research papers on embedded and cyber-physical systems.  It was interesting learning about this type of work even thou it isn't the type of work that I do.  I enjoyed learning about these different topics." } }
@@ -195,12 +195,12 @@ table:
         { img:
           { src: "https://i.harperapps.com/covers/9780063340800/x480.jpg",
             href: "https://www.harperacademic.com/book/9780063340800/math-ish/",
-            title: Math-ish,
-            alt: Math-ish
+            title: "Math-ish: Finding Creativity, Diversity, and Meaning in Mathematics",
+            alt: "Math-ish: Finding Creativity, Diversity, and Meaning in Mathematics"
           },
         }
       },
-      { d: { text: Math-ish } },
+      { d: { text: "Math-ish: Finding Creativity, Diversity, and Meaning in Mathematics" } },
       { d: { text: Jo Boaler } },
       { d: { text: "<time datetime=\"2025-02-13\">February 13, 2025</time>" } },
       { d: { text: "This book discusses the state of our teaching of Mathematics and how archaic it is in its current state.  It offers a new way of teaching Mathematics that can be more beneficial to students and society.  These techniques have been used within other societies with great success." } }
@@ -210,12 +210,12 @@ table:
         { img:
           { src: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781451654431/smartest-kids-in-the-world-9781451654431_lg.jpg",
             href: "https://www.simonandschuster.com/books/The-Smartest-Kids-in-the-World/Amanda-Ripley/9781451654431",
-            title: The Smartest Kids in the World,
-            alt: The Smartest Kids in the World
+            title: "The Smartest Kids in the World: And How They Got That Way",
+            alt: "The Smartest Kids in the World: And How They Got That Way"
           },
         }
       },
-      { d: { text: The Smartest Kids in the World } },
+      { d: { text: "The Smartest Kids in the World: And How They Got That Way" } },
       { d: { text: Amanda Ripley } },
       { d: { text: "<time datetime=\"2025-03-09\">March 9, 2025</time>" } },
       { d: { text: "This book discusses the different level of education around the world.  It shows how the United States compares to other countries education system.  It looks who is successful and what makes them successful.  It also goes into greater details on what might make a great education system." } }
@@ -225,12 +225,12 @@ table:
         { img:
           { src: "https://assets.cambridge.org/97811088/41658/cover/9781108841658.jpg",
             href: "https://www.cambridge.org/core/books/geography-of-words/96135D6C7A76C6BF0AB4978C9DD8C335",
-            title: The Geography of Words,
-            alt: The Geography of Words
+            title: "The Geography of Words: Vocabulary and Meaning in the World's Languages",
+            alt: "The Geography of Words: Vocabulary and Meaning in the World's Languages"
           },
         }
       },
-      { d: { text: The Geography of Words } },
+      { d: { text: "The Geography of Words: Vocabulary and Meaning in the World's Languages" } },
       { d: { text: Daniko Šipka } },
       { d: { text: "<time datetime=\"2025-03-19\">March 19, 2025</time>" } },
       { d: { text: "This book talks about how the different languages in the world can have different meanings with similar words and phrases.  It also talks about how similar languages culture impact words and phrases." } }
@@ -264,6 +264,36 @@ table:
       { d: { text: Donald E. Canfield } },
       { d: { text: "<time datetime=\"2025-03-27\">March 27, 2025</time>" } },
       { d: { text: "This book sets out to explain our current understanding of the evolution of the planet Earth.  It explains what we understand on how the planet Earth maintains itself now.  In turn, it tries to explain how our planet has evolved throughout is exists for 4.5 billions of years.  It explains that we are limited by what we can explain since Earth contains only so much information about the past.  With that, it then explains the different speculations that we have defined." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.wiley.com/storefront-pdp-assets/_next/image?url=https%3A%2F%2Fmedia.wiley.com%2Fproduct_data%2FcoverImage300%2F83%2F13942765%2F1394276583.jpg&w=384&q=75",
+            href: "https://www.wiley.com/en-us/Essential%3A+How+Distributed+Teams%2C+Generative+AI%2C+and+Global+Shifts+Are+Creating+a+New+Human-Powered+Leadership-p-9781394276592",
+            title: "Essential: How Distributed Teams, Generative AI, and Global Shifts Are Creating a New Human-Powered Leadership",
+            alt: "Essential: How Distributed Teams, Generative AI, and Global Shifts Are Creating a New Human-Powered Leadership"
+          },
+        }
+      },
+      { d: { text: "Essential: How Distributed Teams, Generative AI, and Global Shifts Are Creating a New Human-Powered Leadership" } },
+      { d: { text: Christie Smith <br> Kelly Monahan } },
+      { d: { text: "<time datetime=\"2025-04-02\">April 2, 2025</time>" } },
+      { d: { text: "This book explains the history of leadership since the industrial revolution.  It points out the good and the bad parts of those different leadership practices.  It then delves into the current evolution of leadership model that has proven to be successful.  This model encompasses the need to involve the humanistic side of leadership to be able to succeed in this age.  Specifically, it talks about the flywheel leadership model and its benefits to companies." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.harpercollins.com/cdn/shop/files/9780358299288_d111b131-2cf7-41d0-95ad-b6ee18578c5b.jpg?v=1736890784&width=80",
+            href: "https://www.harpercollins.com/products/infinite-powers-steven-strogatz?variant=40975101329442",
+            title: "Infinite Powers: How Calculus Reveals the Secrets of the Universe",
+            alt: "Infinite Powers: How Calculus Reveals the Secrets of the Universe"
+          },
+        }
+      },
+      { d: { text: "Infinite Powers: How Calculus Reveals the Secrets of the Universe" } },
+      { d: { text: Steven Strogatz } },
+      { d: { text: "<time datetime=\"2025-04-05\">April 5, 2025</time>" } },
+      { d: { text: "This book talks about the history of Calculus from its inception to now.  It offers examples of is power and how is has impacted the world around us.  It also reveals that its birth was not through Newton but an accumulation of all that came before him.  It was such a pleasure to read and would recommend this book to anyone that is slightly interested in Math and its impact on our world." } }
     ]
   ]
 

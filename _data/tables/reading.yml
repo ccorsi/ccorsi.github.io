@@ -26,19 +26,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://www.harpercollins.com/cdn/shop/files/9780358299288_d111b131-2cf7-41d0-95ad-b6ee18578c5b.jpg?v=1736890784&width=80",
-            href: "https://www.harpercollins.com/products/infinite-powers-steven-strogatz?variant=40975101329442",
-            title: "Infinite Powers: How Calculus Reveals the Secrets of the Universe",
-            alt: "Infinite Powers: How Calculus Reveals the Secrets of the Universe"
-          },
-        }
-      },
-      { d: { text: "Infinite Powers: How Calculus Reveals the Secrets of the Universe" } },
-      { d: { text: Steven Strogatz } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://cdn2.wwnorton.com/wwnproducts/TRADE/9/4/9781324076049/9781324076049_300.jpg",
             href: "https://wwnorton.com/books/9781324005421",
             title: "From One Cell: A Journey into Life's Origins and the Future of Medicine",
@@ -60,19 +47,6 @@ table:
         }
       },
       { d: { text: The Blanket Cats } },
-      { d: { text: Kiyoshi Shigematsu } }
-    ],
-    [
-      { d:
-        { img:
-          { src: "https://www.wiley.com/storefront-pdp-assets/_next/image?url=https%3A%2F%2Fmedia.wiley.com%2Fproduct_data%2FcoverImage300%2F83%2F13942765%2F1394276583.jpg&w=384&q=75",
-            href: "https://www.wiley.com/en-us/Essential%3A+How+Distributed+Teams%2C+Generative+AI%2C+and+Global+Shifts+Are+Creating+a+New+Human-Powered+Leadership-p-9781394276592",
-            title: "Essential: How Distributed Teams, Generative AI, and Global Shifts Are Creating a New Human-Powered Leadership",
-            alt: "Essential: How Distributed Teams, Generative AI, and Global Shifts Are Creating a New Human-Powered Leadership"
-          },
-        }
-      },
-      { d: { text: "Essential: How Distributed Teams, Generative AI, and Global Shifts Are Creating a New Human-Powered Leadership" } },
-      { d: { text: Christie Smith & Kelly Monahan } }
+      { d: { text: Kiyoshi Shigematsu<br>Translated by Jesse Kirkwood } }
     ]
   ]
