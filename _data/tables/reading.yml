@@ -48,5 +48,44 @@ table:
       },
       { d: { text: The Blanket Cats } },
       { d: { text: Kiyoshi Shigematsu<br>Translated by Jesse Kirkwood } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://global.oup.com/academic/covers/pdp/9780199678112",
+            href: "https://global.oup.com/academic/product/superintelligence-9780199678112?cc=us&lang=en&",
+            title: "Superintelligence: Paths, Dangers, Strategies",
+            alt: "Superintelligence: Paths, Dangers, Strategies"
+          },
+        }
+      },
+      { d: { text: "Superintelligence: Paths, Dangers, Strategies" } },
+      { d: { text: "Nick Bostrom" } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://pup-assets.imgix.net/onix/images/9780691177175.jpg?w=410&auto=format",
+            href: "https://press.princeton.edu/books/hardcover/9780691177175/reverse-mathematics",
+            title: "Reverse Mathematics: Proofs from the Inside Out",
+            alt: "Reverse Mathematics: Proofs from the Inside Out"
+          },
+        }
+      },
+      { d: { text: "Reverse Mathematics: Proofs from the Inside Out" } },
+      { d: { text: "John Stillwell" } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://read.sourcebooks.com/media/catalog/product/9/7/9781728292526_1.jpg?auto=webp&format=pjpg&width=640&height=800&fit=cover",
+            href: "https://read.sourcebooks.com/9781728292526-life-lessons-from-a-parasite-tp.html",
+            title: "Life Lessons from a Parasite: What Tapeworms, Flukes, Lice, and Roundworms Can Teach Us About Humanity's Most Difficult Problems",
+            alt: "Life Lessons from a Parasite: What Tapeworms, Flukes, Lice, and Roundworms Can Teach Us About Humanity's Most Difficult Problems"
+          },
+        }
+      },
+      { d: { text: "Life Lessons from a Parasite: What Tapeworms, Flukes, Lice, and Roundworms Can Teach Us About Humanity's Most Difficult Problems" } },
+      { d: { text: "John Janovy Jr." } }
     ]
   ]
