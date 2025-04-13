@@ -87,5 +87,18 @@ table:
       },
       { d: { text: "Life Lessons from a Parasite: What Tapeworms, Flukes, Lice, and Roundworms Can Teach Us About Humanity's Most Difficult Problems" } },
       { d: { text: "John Janovy Jr." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images4.penguinrandomhouse.com/cover/9780593084663",
+            href: "https://www.penguinrandomhouse.com/books/610963/the-data-detective-by-tim-harford/",
+            title: "The Data Detective: Ten Easy Rules to Make Sense of Statistics",
+            alt: "The Data Detective: Ten Easy Rules to Make Sense of Statistics"
+          },
+        }
+      },
+      { d: { text: "The Data Detective: Ten Easy Rules to Make Sense of Statistics" } },
+      { d: { text: "Tim Harford" } }
     ]
   ]
