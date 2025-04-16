@@ -39,19 +39,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://images3.penguinrandomhouse.com/cover/9780593852699",
-            href: "https://www.penguinrandomhouse.com/books/763702/the-blanket-cats-by-kiyoshi-shigematsu/",
-            title: The Blanket Cats,
-            alt: The Blanket Cats
-          },
-        }
-      },
-      { d: { text: The Blanket Cats } },
-      { d: { text: Kiyoshi Shigematsu<br>Translated by Jesse Kirkwood } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://global.oup.com/academic/covers/pdp/9780199678112",
             href: "https://global.oup.com/academic/product/superintelligence-9780199678112?cc=us&lang=en&",
             title: "Superintelligence: Paths, Dangers, Strategies",

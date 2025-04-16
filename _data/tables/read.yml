@@ -294,6 +294,21 @@ table:
       { d: { text: Steven Strogatz } },
       { d: { text: "<time datetime=\"2025-04-05\">April 5, 2025</time>" } },
       { d: { text: "This book talks about the history of Calculus from its inception to now.  It offers examples of is power and how is has impacted the world around us.  It also reveals that its birth was not through Newton but an accumulation of all that came before him.  It was such a pleasure to read and would recommend this book to anyone that is slightly interested in Math and its impact on our world." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images3.penguinrandomhouse.com/cover/9780593852699",
+            href: "https://www.penguinrandomhouse.com/books/763702/the-blanket-cats-by-kiyoshi-shigematsu/",
+            title: The Blanket Cats,
+            alt: The Blanket Cats
+          },
+        }
+      },
+      { d: { text: The Blanket Cats } },
+      { d: { text: Kiyoshi Shigematsu<br>Translated by Jesse Kirkwood } },
+      { d: { text: "<time datetime=\"2025-04-15\">April 15, 2025</time>" } },
+      { d: { text: "This book contains seven self-contained short stories that are connected by the blanket cats.  The stories can be read in any order and are interesting in and of themselves." } }
     ]
   ]
 
