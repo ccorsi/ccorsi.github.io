@@ -309,6 +309,53 @@ table:
       { d: { text: Kiyoshi Shigematsu<br>Translated by Jesse Kirkwood } },
       { d: { text: "<time datetime=\"2025-04-15\">April 15, 2025</time>" } },
       { d: { text: "This book contains seven self-contained short stories that are connected by the blanket cats.  The stories can be read in any order and are interesting in and of themselves." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images4.penguinrandomhouse.com/cover/9780593084663",
+            href: "https://www.penguinrandomhouse.com/books/610963/the-data-detective-by-tim-harford/",
+            title: "The Data Detective: Ten Easy Rules to Make Sense of Statistics",
+            alt: "The Data Detective: Ten Easy Rules to Make Sense of Statistics"
+          },
+        }
+      },
+      { d: { text: "The Data Detective: Ten Easy Rules to Make Sense of Statistics" } },
+      { d: { text: "Tim Harford" } },
+      { d: { text: "<time datetime=\"2025-04-20\">April 20, 2025</time>" } },
+      { d: { text: "This book is about the use of statistics in the real world.  It describes how statistics can skew or enlighten us
+                   about the world around us.  The author offers ten techniques to look at statistics to better understand the data.
+                   The main point that he is making is that we need to be curious about the data, from what it is using to what it is
+                   trying to show.  I enjoyed the different points and its reminder that doing statistics is not that simple." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://global.oup.com/academic/covers/pdp/9780199678112",
+            href: "https://global.oup.com/academic/product/superintelligence-9780199678112?cc=us&lang=en&",
+            title: "Superintelligence: Paths, Dangers, Strategies",
+            alt: "Superintelligence: Paths, Dangers, Strategies"
+          },
+        }
+      },
+      { d: { text: "Superintelligence: Paths, Dangers, Strategies" } },
+      { d: { text: "Nick Bostrom" } },
+      { d: { text: "<time datetime=\"2025-04-25\">April 25, 2025</time>" } },
+      { d: { text: "This book discusses the control problem involved with AGI and its current state.  It discusses what we should be thinking about while trying to create AGI.  It makes us realize that we are far from being ready to deal with super inteligent systems." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images1.penguinrandomhouse.com/cover/9780593311295",
+            href: "https://www.penguinrandomhouse.com/books/653825/klara-and-the-sun-a-gma-book-club-pick-by-kazuo-ishiguro/",
+            title: "Klara and the Sun",
+            alt: "Kazuo Ishiguro"
+          }
+        }
+      },
+      { d: { text: "Klara and the Sun" } },
+      { d: { text: "Kazuo Ishiguro" } },
+      { d: { text: "<time datetime=\"2025-05-02\">May 2, 2025</time>" } },
+      { d: { text: "This novel is about an AI Robot that is an Artificial Friend, (AF), to a teenager girl called Josie.  It is about its struggle to be able to help Josie through a difficult period.  It considers what an AF might be thinking while trying to care for someone." } }
     ]
   ]
-
