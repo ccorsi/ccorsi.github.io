@@ -357,5 +357,35 @@ table:
       { d: { text: "Kazuo Ishiguro" } },
       { d: { text: "<time datetime=\"2025-05-02\">May 2, 2025</time>" } },
       { d: { text: "This novel is about an AI Robot that is an Artificial Friend, (AF), to a teenager girl called Josie.  It is about its struggle to be able to help Josie through a difficult period.  It considers what an AF might be thinking while trying to care for someone." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://read.sourcebooks.com/media/catalog/product/9/7/9781728292526_1.jpg?auto=webp&format=pjpg&width=640&height=800&fit=cover",
+            href: "https://read.sourcebooks.com/9781728292526-life-lessons-from-a-parasite-tp.html",
+            title: "Life Lessons from a Parasite: What Tapeworms, Flukes, Lice, and Roundworms Can Teach Us About Humanity's Most Difficult Problems",
+            alt: "Life Lessons from a Parasite: What Tapeworms, Flukes, Lice, and Roundworms Can Teach Us About Humanity's Most Difficult Problems"
+          },
+        }
+      },
+      { d: { text: "Life Lessons from a Parasite: What Tapeworms, Flukes, Lice, and Roundworms Can Teach Us About Humanity's Most Difficult Problems" } },
+      { d: { text: "John Janovy Jr." } },
+      { d: { text: "<time datetime=\"2025-05-07\">May 7, 2025</time>" } },
+      { d: { text: "This book is written by a Parasitologist that offers fourteen chapters about the different kind of research that has been done.  While each chapter is interesting, it also not something for the faint of heart.  These articles are very instructive about how parasites move around our environment and how they are related to our society." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images3.penguinrandomhouse.com/cover/9780593316085",
+            href: "https://www.penguinrandomhouse.com/books/671106/minas-matchbox-by-yoko-ogawa/",
+            title: "Mina's Matchbox",
+            alt: "Yoko Ogawa<br>Translated by Stephen B. Snyder"
+          }
+        }
+      },
+      { d: { text: "Mina's Matchbox" } },
+      { d: { text: "Yoko Ogawa<br>Translated by Stephen B. Snyder" } },
+      { d: { text: "<time datetime=\"2025-05-14\">May 14, 2025</time>" } },
+      { d: { text: "This novel is about a middle school girl named Tomoko that goes a live with her cousin named Mina.  It was good about how they've grown closer during Tomoko year long stay with Mina and her family." } }
     ]
   ]

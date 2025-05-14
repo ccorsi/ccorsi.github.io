@@ -52,19 +52,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://read.sourcebooks.com/media/catalog/product/9/7/9781728292526_1.jpg?auto=webp&format=pjpg&width=640&height=800&fit=cover",
-            href: "https://read.sourcebooks.com/9781728292526-life-lessons-from-a-parasite-tp.html",
-            title: "Life Lessons from a Parasite: What Tapeworms, Flukes, Lice, and Roundworms Can Teach Us About Humanity's Most Difficult Problems",
-            alt: "Life Lessons from a Parasite: What Tapeworms, Flukes, Lice, and Roundworms Can Teach Us About Humanity's Most Difficult Problems"
-          },
-        }
-      },
-      { d: { text: "Life Lessons from a Parasite: What Tapeworms, Flukes, Lice, and Roundworms Can Teach Us About Humanity's Most Difficult Problems" } },
-      { d: { text: "John Janovy Jr." } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://content.packt.com/_/image/original/B19779/cover_image.jpg",
             href: "https://www.packtpub.com/en-us/product/mastering-kotlin-for-android-14-9781837631711",
             title: "Mastering Kotlin for Android 14: Build powerful Android apps from scratch using Jetpack libraries and Jetpack Compose",
@@ -74,19 +61,6 @@ table:
       },
       { d: { text: "Mastering Kotlin for Android 14: Build powerful Android apps from scratch using Jetpack libraries and Jetpack Compose" } },
       { d: { text: "Harun Wangereka" } }
-    ],
-    [
-      { d:
-        { img:
-          { src: "https://images3.penguinrandomhouse.com/cover/9780593316085",
-            href: "https://www.penguinrandomhouse.com/books/671106/minas-matchbox-by-yoko-ogawa/",
-            title: "Mina's Matchbox",
-            alt: "Yoko Ogawa<br>Translated by Stephen B. Snyder"
-          }
-        }
-      },
-      { d: { text: "Mina's Matchbox" } },
-      { d: { text: "Yoko Ogawa<br>Translated by Stephen B. Snyder" } }
     ],
     [
       { d:
