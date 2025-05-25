@@ -387,5 +387,20 @@ table:
       { d: { text: "Yoko Ogawa<br>Translated by Stephen B. Snyder" } },
       { d: { text: "<time datetime=\"2025-05-14\">May 14, 2025</time>" } },
       { d: { text: "This novel is about a middle school girl named Tomoko that goes a live with her cousin named Mina.  It was good about how they've grown closer during Tomoko year long stay with Mina and her family." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/06/9781541605510.jpg?resize=678,1024",
+            href: "https://www.hachettebookgroup.com/titles/john-warner/more-than-words/9781541605510/?lens=basic-books",
+            title: "More Than Words: How to Think About Writing in the Age of AI",
+            alt: "John Warner"
+          }
+        }
+      },
+      { d: { text: "More Than Words: How to Think About Writing in the Age of AI" } },
+      { d: { text: "John Warner" } },
+      { d: { text: "<time datetime=\"2025-05-21\">May 21, 2025</time>" } },
+      { d: { text: "This book argues why LLM's can not replace the emotional impact that a human writer can have on written work.  While LLM's can produce fundentally correct text it's unable to extract nor produce the emotional feeling that a human being can produce." } }
     ]
   ]

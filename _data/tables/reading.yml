@@ -65,14 +65,40 @@ table:
     [
       { d:
         { img:
-          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/06/9781541605510.jpg?resize=678,1024",
-            href: "https://www.hachettebookgroup.com/titles/john-warner/more-than-words/9781541605510/?lens=basic-books",
-            title: "More Than Words: How to Think About Writing in the Age of AI",
-            alt: "John Warner"
+          { src: "https://cdn2.wwnorton.com/wwnproducts/TRADE/6/6/9781324064466/9781324064466_300.jpg",
+            href: "https://wwnorton.com/books/9781324064466",
+            title: "Write for Your Life: A Guide to Clear and Purposeful Writing (and Presentations)",
+            alt: "Charles Wheelan"
           }
         }
       },
-      { d: { text: "More Than Words: How to Think About Writing in the Age of AI" } },
-      { d: { text: "John Warner" } }
+      { d: { text: "Write for Your Life: A Guide to Clear and Purposeful Writing (and Presentations)" } },
+      { d: { text: "Charles Wheelan" } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://yale-press-us.imgix.net/covers/9780300270884.jpg?auto=format&w=298&dpr=1&q=100",
+            href: "https://yalebooks.yale.edu/book/9780300270884/mathematica/",
+            title: "Mathematica: A Secret World of Intuition and Curiousity",
+            alt: "David Bessis<br>Translated by Kevin Frey"
+          }
+        }
+      },
+      { d: { text: "Mathematica: A Secret World of Intuition and Curiousity" } },
+      { d: { text: "David Bessis<br>Translated by Kevin Frey" } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images1.penguinrandomhouse.com/cover/9781101911815",
+            href: "https://www.penguinrandomhouse.com/books/252774/the-memory-police-by-yoko-ogawa/",
+            title: "The Memory Police",
+            alt: "Yoko Ogawa<br>Translated by Stephen Snyder"
+          }
+        }
+      },
+      { d: { text: "The Memory Police" } },
+      { d: { text: "Yoko Ogawa<br>Translated by Stephen Snyder" } }
     ]
   ]
