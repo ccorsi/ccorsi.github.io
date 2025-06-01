@@ -1,0 +1,22 @@
+{% assign imagesjs = "/assets/js/images.js" | relative_url %}
+{% assign imagesjson = page.imagesjson | default: site.imagesjson | default:"/assets/data/images.json" | relative_url %}
+
+<script src="{{ imagesjs }}"></script>
+
+<script lang="javascript">
+
+	/*
+		This function was created to be able to get past the issue that you can not
+		use jQuery prior to it being loaded and since this is loaded prior to jQuery
+		being loaded.  We needed to create a function that is called after jQuery
+		was loaded.  Note doing so will cause an error when the page is being loaded.
+	*/
+	function setupImages() {
+		// This will be called as soon as the page was loaded and ready to be used.
+		$( document ).ready( () => {
+			const headers = document.getElementsByClassName("big-img intro-header")
+			getImage( "{{ imagesjson }}", headers[0]);
+		});
+	}
+
+</script>
