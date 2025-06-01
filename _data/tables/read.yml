@@ -402,5 +402,35 @@ table:
       { d: { text: "John Warner" } },
       { d: { text: "<time datetime=\"2025-05-21\">May 21, 2025</time>" } },
       { d: { text: "This book argues why LLM's can not replace the emotional impact that a human writer can have on written work.  While LLM's can produce fundentally correct text it's unable to extract nor produce the emotional feeling that a human being can produce." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://cdn2.wwnorton.com/wwnproducts/TRADE/6/6/9781324064466/9781324064466_300.jpg",
+            href: "https://wwnorton.com/books/9781324064466",
+            title: "Write for Your Life: A Guide to Clear and Purposeful Writing (and Presentations)",
+            alt: "Charles Wheelan"
+          }
+        }
+      },
+      { d: { text: "Write for Your Life: A Guide to Clear and Purposeful Writing (and Presentations)" } },
+      { d: { text: "Charles Wheelan" } },
+      { d: { text: "<time datetime=\"2025-05-27\">May 27, 2025</time>" } },
+      { d: { text: "This is one of my favorite authors and this book doesn't disappoint.  This book is full of great advice on how to write and present." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images3.penguinrandomhouse.com/cover/9780140443356",
+            href: "https://www.penguinrandomhouse.com/books/302795/first-love-by-ivan-turgenev/#",
+            title: "First Love<br>Translated by Isaiah Berlin",
+            alt: "Ivan Turgenev"
+          }
+        }
+      },
+      { d: { text: "First Love" } },
+      { d: { text: "Ivan Turgenev<br>Translated by Isaiah Berlin" } },
+      { d: { text: "<time datetime=\"2025-05-31\">May 31, 2025</time>" } },
+      { d: { text: "This novel was mentioned in one of my prior novels that I read.  I decided to read it and alas I wasn't that impressed by the story.  The only good thing about this book was that it was a novella and I was done reading it fairly quickly." } }
     ]
   ]

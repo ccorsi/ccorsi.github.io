@@ -65,19 +65,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://cdn2.wwnorton.com/wwnproducts/TRADE/6/6/9781324064466/9781324064466_300.jpg",
-            href: "https://wwnorton.com/books/9781324064466",
-            title: "Write for Your Life: A Guide to Clear and Purposeful Writing (and Presentations)",
-            alt: "Charles Wheelan"
-          }
-        }
-      },
-      { d: { text: "Write for Your Life: A Guide to Clear and Purposeful Writing (and Presentations)" } },
-      { d: { text: "Charles Wheelan" } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://yale-press-us.imgix.net/covers/9780300270884.jpg?auto=format&w=298&dpr=1&q=100",
             href: "https://yalebooks.yale.edu/book/9780300270884/mathematica/",
             title: "Mathematica: A Secret World of Intuition and Curiousity",
