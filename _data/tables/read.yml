@@ -432,5 +432,20 @@ table:
       { d: { text: "Ivan Turgenev<br>Translated by Isaiah Berlin" } },
       { d: { text: "<time datetime=\"2025-05-31\">May 31, 2025</time>" } },
       { d: { text: "This novel was mentioned in one of my prior novels that I read.  I decided to read it and alas I wasn't that impressed by the story.  The only good thing about this book was that it was a novella and I was done reading it fairly quickly." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images1.penguinrandomhouse.com/cover/9781101911815",
+            href: "https://www.penguinrandomhouse.com/books/252774/the-memory-police-by-yoko-ogawa/",
+            title: "The Memory Police",
+            alt: "Yoko Ogawa<br>Translated by Stephen Snyder"
+          }
+        }
+      },
+      { d: { text: "The Memory Police" } },
+      { d: { text: "Yoko Ogawa<br>Translated by Stephen Snyder" } },
+      { d: { text: "<time datetime=\"2025-06-03\">June 3, 2025</time>" } },
+      { d: { text: "This is the second novel from Yoko Ogawa that I read.  It was an interesting look at the possibility that a \"Memory Police\" can control what disappears in their world.  This world is an island that different things disappear and how people just accept these disappearances." } }
     ]
   ]

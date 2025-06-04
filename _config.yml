@@ -27,6 +27,7 @@ exclude:
   - '*-sites'
   - pairs
   - PROJECTS.txt
+  - about.htm
 
 # These files are being kept around because they are part of other Jekyll projects
 # that should not be removed when using the watch feature of the Jekyll serve command.
