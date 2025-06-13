@@ -447,5 +447,35 @@ table:
       { d: { text: "Yoko Ogawa<br>Translated by Stephen Snyder" } },
       { d: { text: "<time datetime=\"2025-06-03\">June 3, 2025</time>" } },
       { d: { text: "This is the second novel from Yoko Ogawa that I read.  It was an interesting look at the possibility that a \"Memory Police\" can control what disappears in their world.  This world is an island that different things disappear and how people just accept these disappearances." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://yale-press-us.imgix.net/covers/9780300270884.jpg?auto=format&w=298&dpr=1&q=100",
+            href: "https://yalebooks.yale.edu/book/9780300270884/mathematica/",
+            title: "Mathematica: A Secret World of Intuition and Curiousity",
+            alt: "David Bessis<br>Translated by Kevin Frey"
+          }
+        }
+      },
+      { d: { text: "Mathematica: A Secret World of Intuition and Curiousity" } },
+      { d: { text: "David Bessis<br>Translated by Kevin Frey" } },
+      { d: { text: "<time datetime=\"2025-06-11\">June 11, 2025</time>" } },
+      { d: { text: "The author of this book tries to explain how Mathematicians think.  The objective is to try to get others interested in Math by removing the intrinsic fear that most people feel towards Math.  I must admit that he has done a pretty good job at removing the sense of fear for Math.  I am one that also believes that others will benefit from this book." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://mit-press-new-us.imgix.net/covers/9780262551069.jpg?auto=format&w=298&dpr=1&q=80",
+            href: "https://mitpress.mit.edu/9780262551069/taming-silicon-valley/",
+            title: "Taming Silicon Valley: How We Can Ensure That AI Works for Us",
+            alt: "Gary F. Marcus"
+          }
+        }
+      },
+      { d: { text: "Taming Silicon Valley: How We Can Ensure That AI Works for Us" } },
+      { d: { text: "Gary F. Marcus" } },
+      { d: { text: "<time datetime=\"2025-06-13\">June 13, 2025</time>" } },
+      { d: { text: "This book is about how generative AI is not really what it is cut out to be.  In fact, it explains that much of the hype is not something that we should be excited about.  The author explains that the lack of governance of AI is allowing the proleferation of unethical use of AI.  He goes on to explain that the use of governance will enable companies to focus on providing ethical products that will benefit society and not the tech companies and/or criminal organizations." } }
     ]
   ]

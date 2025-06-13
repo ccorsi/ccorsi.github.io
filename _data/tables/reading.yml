@@ -65,19 +65,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://yale-press-us.imgix.net/covers/9780300270884.jpg?auto=format&w=298&dpr=1&q=100",
-            href: "https://yalebooks.yale.edu/book/9780300270884/mathematica/",
-            title: "Mathematica: A Secret World of Intuition and Curiousity",
-            alt: "David Bessis<br>Translated by Kevin Frey"
-          }
-        }
-      },
-      { d: { text: "Mathematica: A Secret World of Intuition and Curiousity" } },
-      { d: { text: "David Bessis<br>Translated by Kevin Frey" } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://www.harpercollins.com/cdn/shop/files/9780544105850_8439f928-6a75-4ff0-b60d-aab586681905.jpg?v=1747243647&width=350",
             href: "https://www.harpercollins.com/products/the-joy-of-x-steven-strogatz?variant=39934976000034",
             title: "The Joy of X: A Guided Tour of Math, from One to Infinity",
@@ -91,19 +78,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://mit-press-new-us.imgix.net/covers/9780262551069.jpg?auto=format&w=298&dpr=1&q=80",
-            href: "https://mitpress.mit.edu/9780262551069/taming-silicon-valley/",
-            title: "Taming Silicon Valley: How We Can Ensure That AI Works for Us",
-            alt: "Gary F. Marcus"
-          }
-        }
-      },
-      { d: { text: "Taming Silicon Valley: How We Can Ensure That AI Works for Us" } },
-      { d: { text: "Gary F. Marcus" } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://images3.penguinrandomhouse.com/cover/9780593734223",
             href: "https://www.penguinrandomhouse.com/books/762444/nexus-by-yuval-noah-harari/",
             title: "Nexus: A Brief History of Information Networks from the Stone Age to AI",
@@ -113,5 +87,18 @@ table:
       },
       { d: { text: "Nexus: A Brief History of Information Networks from the Stone Age to AI" } },
       { d: { text: "Yuval Noah Harari" } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images1.penguinrandomhouse.com/cover/9780525556572",
+            href: "https://www.penguinrandomhouse.com/books/312472/everything-is-tuberculosis-by-john-green/",
+            title: "Everything Is Tuberculosis: The History and Persistence of Our Deadliest Infection",
+            alt: "John Green"
+          }
+        }
+      },
+      { d: { text: "Everything Is Tuberculosis: The History and Persistence of Our Deadliest Infection" } },
+      { d: { text: "John Green" } }
     ]
   ]
