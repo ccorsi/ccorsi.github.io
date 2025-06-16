@@ -1,0 +1,410 @@
+table:
+  header: [
+    [
+      { h: { text: Book } },
+      { h: { text: Title } },
+      { h: { text: Author } },
+      { h: { text: Completed On } },
+      { h: { text: Comments } }
+    ]
+  ]
+  entries: [
+    [
+      { h: { text: January, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
+      { d:
+        { img:
+          {
+            src: "https://images4.penguinrandomhouse.com/cover/9780593230381?width=80",
+            href: "https://www.penguinrandomhouse.com/books/653438/the-message-by-ta-nehisi-coates/",
+            title: The Message,
+            alt: The Message
+          },
+        }
+      },
+      { d: { text: The Message } },
+      { d: { text: Ta-Nehisi Coates } },
+      { d: { text: "<time datetime=\"2025-01-06\">January 6, 2025</time>" } },
+      { d: { text: This book take a look at the Israel Palestine Gaza conflict  } }
+    ],
+    [
+      { d:
+        { img:
+          {
+            src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/03/9781538757437_170fc5.jpg?resize=80,120",
+            href: "https://www.hachettebookgroup.com/titles/sanaka-hiiragi/the-lantern-of-lost-memories/9781538757437/",
+            title: The Lantern of Lost Memories,
+            alt: The Lantern of Lost Memories
+          },
+        }
+      },
+      { d: { text: The Lantern of Lost Memories } },
+      { d: { text: Sanaka Hiiragi<br>Translated by Jesse Kirkwood } },
+      { d: { text: "<time datetime=\"2025-01-11\">January 11, 2025</time>" } },
+      { d: { text: This book takes a look at what if you can relive the most important day of your life after departing this world  } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images3.penguinrandomhouse.com/cover/9780525432913",
+            href: "https://www.penguinrandomhouse.com/books/551075/you-should-have-left-by-daniel-kehlmann/",
+            title: You Should Have Left,
+            alt: You Should Have Left
+          },
+        }
+      },
+      { d: { text: You Should Have Left } },
+      { d: { text: Daniel Kehlmann } },
+      { d: { text: "<time datetime=\"2025-01-20\">January 20, 2025</time>" } },
+      { d: { text: "This ghost like story was interesting but it wasn't as good as the reviews lead to believe"   } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images1.penguinrandomhouse.com/cover/9780593191897",
+            href: "https://www.penguinrandomhouse.com/books/646981/life-as-no-one-knows-it-by-sara-imari-walker/",
+            title: "Life as No One Knows It: The Physics of Life's Emergence",
+            alt: "Life as No One Knows It: The Physics of Life's Emergence"
+          },
+        }
+      },
+      { d: { text: "Life as No One Knows It: The Physics of Life's Emergence" } },
+      { d: { text: Sara Imari Walker } },
+      { d: { text: "<time datetime=\"2025-01-26\">January 26, 2025</time>" } },
+      { d: { text: "This book talks about a new theory called Assembly Theory which combines the Laws of Physics and Algorithms.  It is being used to try to explain the difficult questions, What is Consciousness?, What is Matter? and What is Life?  It was a very interesting look into creating a new paradigm shift in Science."   } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/06/9781541606715.jpg?resize=80,120",
+            href: "https://www.hachettebookgroup.com/titles/eugenia-cheng/is-math-real/9781541606715/",
+            title: "Is Math Real: How Simple Questions Lead Us to Mathematics' Deepest Truths",
+            alt: "Is Math Real: How Simple Questions Lead Us to Mathematics' Deepest Truths"
+          },
+        }
+      },
+      { d: { text: "Is Math Real: How Simple Questions Lead Us to Mathematics' Deepest Truths" } },
+      { d: { text: Eugenia Cheng } },
+      { d: { text: "<time datetime=\"2025-01-26\">January 26, 2025</time>" } },
+      { d: { text: "This book looks at Math from a different perspective from how we normally look at Math.  It is trying to show that anyone can do Math.  She talks about elementary math and leads one into a field of Mathematics called, Category Theory." } }
+    ],
+    [
+      { h: { text: February, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://media.springernature.com/w158/springer-static/cover-hires/book/978-3-030-47487-4?as=webp",
+            href: "https://link.springer.com/book/10.1007/978-3-030-47487-4",
+            title: "A Journey of Embedded and Cyber-Physical Systems: Essays Dedicated to Peter Marwedel on the Occasion of His 70th Birthday",
+            alt: "A Journey of Embedded and Cyber-Physical Systems: Essays Dedicated to Peter Marwedel on the Occasion of His 70th Birthday"
+          },
+        }
+      },
+      { d: { text: "A Journey of Embedded and Cyber-Physical Systems: Essays Dedicated to Peter Marwedel on the Occasion of His 70th Birthday" } },
+      { d: { text: Jian-Jia Chen } },
+      { d: { text: "<time datetime=\"2025-02-07\">February 7, 2025</time>" } },
+      { d: { text: "This book contains research papers on embedded and cyber-physical systems.  It was interesting learning about this type of work even thou it isn't the type of work that I do.  I enjoyed learning about these different topics." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://i.harperapps.com/covers/9780063340800/x480.jpg",
+            href: "https://www.harperacademic.com/book/9780063340800/math-ish/",
+            title: "Math-ish: Finding Creativity, Diversity, and Meaning in Mathematics",
+            alt: "Math-ish: Finding Creativity, Diversity, and Meaning in Mathematics"
+          },
+        }
+      },
+      { d: { text: "Math-ish: Finding Creativity, Diversity, and Meaning in Mathematics" } },
+      { d: { text: Jo Boaler } },
+      { d: { text: "<time datetime=\"2025-02-13\">February 13, 2025</time>" } },
+      { d: { text: "This book discusses the state of our teaching of Mathematics and how archaic it is in its current state.  It offers a new way of teaching Mathematics that can be more beneficial to students and society.  These techniques have been used within other societies with great success." } }
+    ],
+    [
+      { h: { text: March, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781451654431/smartest-kids-in-the-world-9781451654431_lg.jpg",
+            href: "https://www.simonandschuster.com/books/The-Smartest-Kids-in-the-World/Amanda-Ripley/9781451654431",
+            title: "The Smartest Kids in the World: And How They Got That Way",
+            alt: "The Smartest Kids in the World: And How They Got That Way"
+          },
+        }
+      },
+      { d: { text: "The Smartest Kids in the World: And How They Got That Way" } },
+      { d: { text: Amanda Ripley } },
+      { d: { text: "<time datetime=\"2025-03-09\">March 9, 2025</time>" } },
+      { d: { text: "This book discusses the different level of education around the world.  It shows how the United States compares to other countries education system.  It looks who is successful and what makes them successful.  It also goes into greater details on what might make a great education system." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://assets.cambridge.org/97811088/41658/cover/9781108841658.jpg",
+            href: "https://www.cambridge.org/core/books/geography-of-words/96135D6C7A76C6BF0AB4978C9DD8C335",
+            title: "The Geography of Words: Vocabulary and Meaning in the World's Languages",
+            alt: "The Geography of Words: Vocabulary and Meaning in the World's Languages"
+          },
+        }
+      },
+      { d: { text: "The Geography of Words: Vocabulary and Meaning in the World's Languages" } },
+      { d: { text: Daniko Šipka } },
+      { d: { text: "<time datetime=\"2025-03-19\">March 19, 2025</time>" } },
+      { d: { text: "This book talks about how the different languages in the world can have different meanings with similar words and phrases.  It also talks about how similar languages culture impact words and phrases." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images1.penguinrandomhouse.com/cover/9780593489277",
+            href: "https://www.penguinrandomhouse.com/books/691257/the-life-impossible-by-matt-haig",
+            title: The Life Impossible,
+            alt: The Life Impossible
+          },
+        }
+      },
+      { d: { text: The Life Impossible } },
+      { d: { text: Matt Haig } },
+      { d: { text: "<time datetime=\"2025-03-22\">March 22, 2025</time>" } },
+      { d: { text: "This book was written by one of my favorite author in recent years.  It is a story about realizing that we should live our life with the understanding that we aren't perfect.  We shouldn't let our past influence our future well-being." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://pup-assets.imgix.net/onix/images/9780691145020.jpg?w=410&auto=format",
+            href: "https://press.princeton.edu/books/hardcover/9780691145020/oxygen",
+            title: "Oxygen: A Four Billion Year History",
+            alt: "Oxygen: A Four Billion Year History"
+          },
+        }
+      },
+      { d: { text: "Oxygen: A Four Billion Year History" } },
+      { d: { text: Donald E. Canfield } },
+      { d: { text: "<time datetime=\"2025-03-27\">March 27, 2025</time>" } },
+      { d: { text: "This book sets out to explain our current understanding of the evolution of the planet Earth.  It explains what we understand on how the planet Earth maintains itself now.  In turn, it tries to explain how our planet has evolved throughout is exists for 4.5 billions of years.  It explains that we are limited by what we can explain since Earth contains only so much information about the past.  With that, it then explains the different speculations that we have defined." } }
+    ],
+    [
+      { h: { text: April, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.wiley.com/storefront-pdp-assets/_next/image?url=https%3A%2F%2Fmedia.wiley.com%2Fproduct_data%2FcoverImage300%2F83%2F13942765%2F1394276583.jpg&w=384&q=75",
+            href: "https://www.wiley.com/en-us/Essential%3A+How+Distributed+Teams%2C+Generative+AI%2C+and+Global+Shifts+Are+Creating+a+New+Human-Powered+Leadership-p-9781394276592",
+            title: "Essential: How Distributed Teams, Generative AI, and Global Shifts Are Creating a New Human-Powered Leadership",
+            alt: "Essential: How Distributed Teams, Generative AI, and Global Shifts Are Creating a New Human-Powered Leadership"
+          },
+        }
+      },
+      { d: { text: "Essential: How Distributed Teams, Generative AI, and Global Shifts Are Creating a New Human-Powered Leadership" } },
+      { d: { text: Christie Smith <br> Kelly Monahan } },
+      { d: { text: "<time datetime=\"2025-04-02\">April 2, 2025</time>" } },
+      { d: { text: "This book explains the history of leadership since the industrial revolution.  It points out the good and the bad parts of those different leadership practices.  It then delves into the current evolution of leadership model that has proven to be successful.  This model encompasses the need to involve the humanistic side of leadership to be able to succeed in this age.  Specifically, it talks about the flywheel leadership model and its benefits to companies." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.harpercollins.com/cdn/shop/files/9780358299288_d111b131-2cf7-41d0-95ad-b6ee18578c5b.jpg?v=1736890784&width=80",
+            href: "https://www.harpercollins.com/products/infinite-powers-steven-strogatz?variant=40975101329442",
+            title: "Infinite Powers: How Calculus Reveals the Secrets of the Universe",
+            alt: "Infinite Powers: How Calculus Reveals the Secrets of the Universe"
+          },
+        }
+      },
+      { d: { text: "Infinite Powers: How Calculus Reveals the Secrets of the Universe" } },
+      { d: { text: Steven Strogatz } },
+      { d: { text: "<time datetime=\"2025-04-05\">April 5, 2025</time>" } },
+      { d: { text: "This book talks about the history of Calculus from its inception to now.  It offers examples of is power and how is has impacted the world around us.  It also reveals that its birth was not through Newton but an accumulation of all that came before him.  It was such a pleasure to read and would recommend this book to anyone that is slightly interested in Math and its impact on our world." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images3.penguinrandomhouse.com/cover/9780593852699",
+            href: "https://www.penguinrandomhouse.com/books/763702/the-blanket-cats-by-kiyoshi-shigematsu/",
+            title: The Blanket Cats,
+            alt: The Blanket Cats
+          },
+        }
+      },
+      { d: { text: The Blanket Cats } },
+      { d: { text: Kiyoshi Shigematsu<br>Translated by Jesse Kirkwood } },
+      { d: { text: "<time datetime=\"2025-04-15\">April 15, 2025</time>" } },
+      { d: { text: "This book contains seven self-contained short stories that are connected by the blanket cats.  The stories can be read in any order and are interesting in and of themselves." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images4.penguinrandomhouse.com/cover/9780593084663",
+            href: "https://www.penguinrandomhouse.com/books/610963/the-data-detective-by-tim-harford/",
+            title: "The Data Detective: Ten Easy Rules to Make Sense of Statistics",
+            alt: "The Data Detective: Ten Easy Rules to Make Sense of Statistics"
+          },
+        }
+      },
+      { d: { text: "The Data Detective: Ten Easy Rules to Make Sense of Statistics" } },
+      { d: { text: "Tim Harford" } },
+      { d: { text: "<time datetime=\"2025-04-20\">April 20, 2025</time>" } },
+      { d: { text: "This book is about the use of statistics in the real world.  It describes how statistics can skew or enlighten us
+                   about the world around us.  The author offers ten techniques to look at statistics to better understand the data.
+                   The main point that he is making is that we need to be curious about the data, from what it is using to what it is
+                   trying to show.  I enjoyed the different points and its reminder that doing statistics is not that simple." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://global.oup.com/academic/covers/pdp/9780199678112",
+            href: "https://global.oup.com/academic/product/superintelligence-9780199678112?cc=us&lang=en&",
+            title: "Superintelligence: Paths, Dangers, Strategies",
+            alt: "Superintelligence: Paths, Dangers, Strategies"
+          },
+        }
+      },
+      { d: { text: "Superintelligence: Paths, Dangers, Strategies" } },
+      { d: { text: "Nick Bostrom" } },
+      { d: { text: "<time datetime=\"2025-04-25\">April 25, 2025</time>" } },
+      { d: { text: "This book discusses the control problem involved with AGI and its current state.  It discusses what we should be thinking about while trying to create AGI.  It makes us realize that we are far from being ready to deal with super inteligent systems." } }
+    ],
+    [
+      { h: { text: May, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images1.penguinrandomhouse.com/cover/9780593311295",
+            href: "https://www.penguinrandomhouse.com/books/653825/klara-and-the-sun-a-gma-book-club-pick-by-kazuo-ishiguro/",
+            title: "Klara and the Sun",
+            alt: "Kazuo Ishiguro"
+          }
+        }
+      },
+      { d: { text: "Klara and the Sun" } },
+      { d: { text: "Kazuo Ishiguro" } },
+      { d: { text: "<time datetime=\"2025-05-02\">May 2, 2025</time>" } },
+      { d: { text: "This novel is about an AI Robot that is an Artificial Friend, (AF), to a teenager girl called Josie.  It is about its struggle to be able to help Josie through a difficult period.  It considers what an AF might be thinking while trying to care for someone." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://read.sourcebooks.com/media/catalog/product/9/7/9781728292526_1.jpg?auto=webp&format=pjpg&width=640&height=800&fit=cover",
+            href: "https://read.sourcebooks.com/9781728292526-life-lessons-from-a-parasite-tp.html",
+            title: "Life Lessons from a Parasite: What Tapeworms, Flukes, Lice, and Roundworms Can Teach Us About Humanity's Most Difficult Problems",
+            alt: "Life Lessons from a Parasite: What Tapeworms, Flukes, Lice, and Roundworms Can Teach Us About Humanity's Most Difficult Problems"
+          },
+        }
+      },
+      { d: { text: "Life Lessons from a Parasite: What Tapeworms, Flukes, Lice, and Roundworms Can Teach Us About Humanity's Most Difficult Problems" } },
+      { d: { text: "John Janovy Jr." } },
+      { d: { text: "<time datetime=\"2025-05-07\">May 7, 2025</time>" } },
+      { d: { text: "This book is written by a Parasitologist that offers fourteen chapters about the different kind of research that has been done.  While each chapter is interesting, it also not something for the faint of heart.  These articles are very instructive about how parasites move around our environment and how they are related to our society." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images3.penguinrandomhouse.com/cover/9780593316085",
+            href: "https://www.penguinrandomhouse.com/books/671106/minas-matchbox-by-yoko-ogawa/",
+            title: "Mina's Matchbox",
+            alt: "Yoko Ogawa<br>Translated by Stephen B. Snyder"
+          }
+        }
+      },
+      { d: { text: "Mina's Matchbox" } },
+      { d: { text: "Yoko Ogawa<br>Translated by Stephen B. Snyder" } },
+      { d: { text: "<time datetime=\"2025-05-14\">May 14, 2025</time>" } },
+      { d: { text: "This novel is about a middle school girl named Tomoko that goes a live with her cousin named Mina.  It was good about how they've grown closer during Tomoko year long stay with Mina and her family." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/06/9781541605510.jpg?resize=678,1024",
+            href: "https://www.hachettebookgroup.com/titles/john-warner/more-than-words/9781541605510/?lens=basic-books",
+            title: "More Than Words: How to Think About Writing in the Age of AI",
+            alt: "John Warner"
+          }
+        }
+      },
+      { d: { text: "More Than Words: How to Think About Writing in the Age of AI" } },
+      { d: { text: "John Warner" } },
+      { d: { text: "<time datetime=\"2025-05-21\">May 21, 2025</time>" } },
+      { d: { text: "This book argues why LLM's can not replace the emotional impact that a human writer can have on written work.  While LLM's can produce fundentally correct text it's unable to extract nor produce the emotional feeling that a human being can produce." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://cdn2.wwnorton.com/wwnproducts/TRADE/6/6/9781324064466/9781324064466_300.jpg",
+            href: "https://wwnorton.com/books/9781324064466",
+            title: "Write for Your Life: A Guide to Clear and Purposeful Writing (and Presentations)",
+            alt: "Charles Wheelan"
+          }
+        }
+      },
+      { d: { text: "Write for Your Life: A Guide to Clear and Purposeful Writing (and Presentations)" } },
+      { d: { text: "Charles Wheelan" } },
+      { d: { text: "<time datetime=\"2025-05-27\">May 27, 2025</time>" } },
+      { d: { text: "This is one of my favorite authors and this book doesn't disappoint.  This book is full of great advice on how to write and present." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images3.penguinrandomhouse.com/cover/9780140443356",
+            href: "https://www.penguinrandomhouse.com/books/302795/first-love-by-ivan-turgenev/#",
+            title: "First Love<br>Translated by Isaiah Berlin",
+            alt: "Ivan Turgenev"
+          }
+        }
+      },
+      { d: { text: "First Love" } },
+      { d: { text: "Ivan Turgenev<br>Translated by Isaiah Berlin" } },
+      { d: { text: "<time datetime=\"2025-05-31\">May 31, 2025</time>" } },
+      { d: { text: "This novel was mentioned in one of my prior novels that I read.  I decided to read it and alas I wasn't that impressed by the story.  The only good thing about this book was that it was a novella and I was done reading it fairly quickly." } }
+    ],
+    [
+      { h: { text: June, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images1.penguinrandomhouse.com/cover/9781101911815",
+            href: "https://www.penguinrandomhouse.com/books/252774/the-memory-police-by-yoko-ogawa/",
+            title: "The Memory Police",
+            alt: "Yoko Ogawa<br>Translated by Stephen Snyder"
+          }
+        }
+      },
+      { d: { text: "The Memory Police" } },
+      { d: { text: "Yoko Ogawa<br>Translated by Stephen Snyder" } },
+      { d: { text: "<time datetime=\"2025-06-03\">June 3, 2025</time>" } },
+      { d: { text: "This is the second novel from Yoko Ogawa that I read.  It was an interesting look at the possibility that a \"Memory Police\" can control what disappears in their world.  This world is an island that different things disappear and how people just accept these disappearances." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://yale-press-us.imgix.net/covers/9780300270884.jpg?auto=format&w=298&dpr=1&q=100",
+            href: "https://yalebooks.yale.edu/book/9780300270884/mathematica/",
+            title: "Mathematica: A Secret World of Intuition and Curiousity",
+            alt: "David Bessis<br>Translated by Kevin Frey"
+          }
+        }
+      },
+      { d: { text: "Mathematica: A Secret World of Intuition and Curiousity" } },
+      { d: { text: "David Bessis<br>Translated by Kevin Frey" } },
+      { d: { text: "<time datetime=\"2025-06-11\">June 11, 2025</time>" } },
+      { d: { text: "The author of this book tries to explain how Mathematicians think.  The objective is to try to get others interested in Math by removing the intrinsic fear that most people feel towards Math.  I must admit that he has done a pretty good job at removing the sense of fear for Math.  I am one that also believes that others will benefit from this book." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://mit-press-new-us.imgix.net/covers/9780262551069.jpg?auto=format&w=298&dpr=1&q=80",
+            href: "https://mitpress.mit.edu/9780262551069/taming-silicon-valley/",
+            title: "Taming Silicon Valley: How We Can Ensure That AI Works for Us",
+            alt: "Gary F. Marcus"
+          }
+        }
+      },
+      { d: { text: "Taming Silicon Valley: How We Can Ensure That AI Works for Us" } },
+      { d: { text: "Gary F. Marcus" } },
+      { d: { text: "<time datetime=\"2025-06-13\">June 13, 2025</time>" } },
+      { d: { text: "This book is about how generative AI is not really what it is cut out to be.  In fact, it explains that much of the hype is not something that we should be excited about.  The author explains that the lack of governance of AI is allowing the proliferation of unethical use of AI.  He goes on to explain that the use of governance will enable companies to focus on providing ethical products that will benefit society and not the tech companies and/or criminal organizations." } }
+    ]
+  ]
