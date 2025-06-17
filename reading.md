@@ -14,6 +14,8 @@ js:
 css:
   - /assets/css/reading.css # This is used for the table css style settings
 cover-img: " " # This is set to an spaced entry such that the cover img html code is generated for this page
+permalink: /reading/reading/ # Changing permanent link so that it doesn't conflict with the new design
+published: false # This was the original page that contained a list of current reading and read books since Dec 2024
 ---
 
 <!--

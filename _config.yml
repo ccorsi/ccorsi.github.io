@@ -488,6 +488,23 @@ defaults:
       footnotes:
         length: 80
         minimum: 1213
+  -
+    scope:
+      path: "reading*"
+    values:
+      layout: sb-fn-page
+      head-extra:
+        - favicon.html # This contains the definition for my favicon setttings
+      before-content:
+        - page-header.html # This will include the title/subtitle/image information from page
+        - images.html # This includes the required script to display an image
+        - quotes.html # This includes the required script to display quotes
+      js:
+        - /assets/js/quotes-handler.js # This is used to execute the quotes javascript command
+        - /assets/js/images-handler.js # This is used to execute the images javascript command
+      css:
+        - /assets/css/reading.css # This is used for the table css style settings
+      cover-img: " " # This is set to an spaced entry such that the cover img html code is generated for this page
   - # we are defining the different values that we want to use when processing assets related parsing
     scope:
       path: "assets"
