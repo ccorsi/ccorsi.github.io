@@ -406,5 +406,20 @@ table:
       { d: { text: "Gary F. Marcus" } },
       { d: { text: "<time datetime=\"2025-06-13\">June 13, 2025</time>" } },
       { d: { text: "This book is about how generative AI is not really what it is cut out to be.  In fact, it explains that much of the hype is not something that we should be excited about.  The author explains that the lack of governance of AI is allowing the proliferation of unethical use of AI.  He goes on to explain that the use of governance will enable companies to focus on providing ethical products that will benefit society and not the tech companies and/or criminal organizations." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.harpercollins.com/cdn/shop/files/9780544105850_8439f928-6a75-4ff0-b60d-aab586681905.jpg?v=1747243647&width=350",
+            href: "https://www.harpercollins.com/products/the-joy-of-x-steven-strogatz?variant=39934976000034",
+            title: "The Joy of X: A Guided Tour of Math, from One to Infinity",
+            alt: "Steven Strogatz"
+          }
+        }
+      },
+      { d: { text: "The Joy of X: A Guided Tour of Math, from One to Infinity" } },
+      { d: { text: "Steven Strogatz" } },
+      { d: { text: "<time datetime=\"2025-06-18\">June 18, 2025</time>" } },
+      { d: { text: "This is a book on Mathematics for the general public.  It is written is a very clear way that allows regular individuals to enjoy the subject of Math.  The author writes about different aspects of Mathematics starting with Numbers and ending with the concept of infinity.  I, for one, think that this is a great book for anyone that is curious about Math that has or doesn't have higher level Mathematical training.  Still, this book will still be interesting for individuals that have higher Mathematical training." } },
     ]
   ]

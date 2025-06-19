@@ -1,0 +1,5 @@
+sidebar:
+  title: TypeScript
+  entries:
+    - subbar: proglangs-typescript-individual
+    - subbar: proglangs-home

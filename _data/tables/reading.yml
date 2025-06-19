@@ -65,19 +65,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://www.harpercollins.com/cdn/shop/files/9780544105850_8439f928-6a75-4ff0-b60d-aab586681905.jpg?v=1747243647&width=350",
-            href: "https://www.harpercollins.com/products/the-joy-of-x-steven-strogatz?variant=39934976000034",
-            title: "The Joy of X: A Guided Tour of Math, from One to Infinity",
-            alt: "Steven Strogatz"
-          }
-        }
-      },
-      { d: { text: "The Joy of X: A Guided Tour of Math, from One to Infinity" } },
-      { d: { text: "Steven Strogatz" } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://images3.penguinrandomhouse.com/cover/9780593734223",
             href: "https://www.penguinrandomhouse.com/books/762444/nexus-by-yuval-noah-harari/",
             title: "Nexus: A Brief History of Information Networks from the Stone Age to AI",
