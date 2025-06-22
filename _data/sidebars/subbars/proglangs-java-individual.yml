@@ -2,7 +2,7 @@ subbar:
   entries:
     - title: OpenJDK
       submenu:
-        - entry: OpenJDK Main Page
+        - entry: "&nbsp;OpenJDK Main Page"
           ext-url: https://openjdk.org/
-        - entry: JDK Project Page
+        - entry: "&nbsp;JDK Project Page"
           ext-url: https://openjdk.org/projects/jdk/

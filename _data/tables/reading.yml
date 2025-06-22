@@ -78,14 +78,27 @@ table:
     [
       { d:
         { img:
-          { src: "https://images1.penguinrandomhouse.com/cover/9780525556572",
-            href: "https://www.penguinrandomhouse.com/books/312472/everything-is-tuberculosis-by-john-green/",
-            title: "Everything Is Tuberculosis: The History and Persistence of Our Deadliest Infection",
-            alt: "John Green"
+          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/01/9780465094738.jpg?resize=676,1024",
+            href: "https://www.hachettebookgroup.com/titles/michael-scott/ancient-worlds/9780465094738/?lens=basic-books",
+            title: "Ancient Worlds: A Global History of Antiquity",
+            alt: "Michael Scott"
           }
         }
       },
-      { d: { text: "Everything Is Tuberculosis: The History and Persistence of Our Deadliest Infection" } },
-      { d: { text: "John Green" } }
+      { d: { text: "Ancient Worlds: A Global History of Antiquity" } },
+      { d: { text: "Michael Scott" } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://cdn2.wwnorton.com/wwnproducts/TRADE/1/1/9781324106111/9781324106111_300.jpg",
+            href: "https://wwnorton.com/books/9781324106111",
+            title: "The Art of Uncertainty: How to Navigate Chance, Ignorance, Risk and Luck",
+            alt: "David Spiegelhalter"
+          }
+        }
+      },
+      { d: { text: "The Art of Uncertainty: How to Navigate Chance, Ignorance, Risk and Luck" } },
+      { d: { text: "David Spiegelhalter" } }
     ]
   ]
