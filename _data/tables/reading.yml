@@ -78,19 +78,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/01/9780465094738.jpg?resize=676,1024",
-            href: "https://www.hachettebookgroup.com/titles/michael-scott/ancient-worlds/9780465094738/?lens=basic-books",
-            title: "Ancient Worlds: A Global History of Antiquity",
-            alt: "Michael Scott"
-          }
-        }
-      },
-      { d: { text: "Ancient Worlds: A Global History of Antiquity" } },
-      { d: { text: "Michael Scott" } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://cdn2.wwnorton.com/wwnproducts/TRADE/1/1/9781324106111/9781324106111_300.jpg",
             href: "https://wwnorton.com/books/9781324106111",
             title: "The Art of Uncertainty: How to Navigate Chance, Ignorance, Risk and Luck",

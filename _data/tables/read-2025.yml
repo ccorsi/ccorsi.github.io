@@ -436,5 +436,20 @@ table:
       { d: { text: "John Green" } },
       { d: { text: "<time datetime=\"2025-06-22\">June 22, 2025</time>" } },
       { d: { text: "This was an interesting book about Tuberculosis (TB).  Its history and the current state of this disease around the world today.  The fact that we as a human race can save so many individuals that have TB.  Yet, we don't because of them being poor or because of racism.  Why do we not understand how lucky we are living within a developed country.  With all of its conveniences and benefits compared to under developed countries that don't have what we have.  This book talks about this with respect to TB.  It lets us know that we can eradicate this disease if we choose to.  Lastly, it talks about how there are groups that are trying to do just that.  It is trying to instill a desire to join the cause against TB." } },
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/01/9780465094738.jpg?resize=676,1024",
+            href: "https://www.hachettebookgroup.com/titles/michael-scott/ancient-worlds/9780465094738/?lens=basic-books",
+            title: "Ancient Worlds: A Global History of Antiquity",
+            alt: "Michael Scott"
+          }
+        }
+      },
+      { d: { text: "Ancient Worlds: A Global History of Antiquity" } },
+      { d: { text: "Michael Scott" } },
+      { d: { text: "<time datetime=\"2025-07-10\">July 10, 2025</time>" } },
+      { d: { text: "This book took a different perspective about Ancient Historical Cultures that included the Roman Empire in the West all the way to China in the East.  It describes how the Roman Empire, India, China and others came together through trade and religous pilgrimages from around 800 BC to 400 CE.  I really enjoyed the stories that were written about those times, even thou we cannot be certain how exact they are.  Nonetheless, these stories were interesting and gave you an idea how the world was functioning during that period in time." } }
     ]
   ]
