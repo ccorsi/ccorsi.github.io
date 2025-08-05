@@ -87,5 +87,31 @@ table:
       },
       { d: { text: "The Art of Uncertainty: How to Navigate Chance, Ignorance, Risk and Luck" } },
       { d: { text: "David Spiegelhalter" } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images.randomhouse.com/cover/9780593466797",
+            href: "https://www.penguinrandomhouse.ca/books/695902/filterworld-by-kyle-chayka/9780593466797",
+            title: "Filterworld: How Algorithms Flattened Culture",
+            alt: "Kyle Chayka"
+          }
+        }
+      },
+      { d: { text: "Filterworld: How Algorithms Flattened Culture" } },
+      { d: { text: "Kyle Chayka" } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images.randomhouse.com/cover/9780593137901",
+            href: "https://www.penguinrandomhouse.ca/books/624531/the-family-dynamic-by-susan-dominus/9780593137901",
+            title: "The Family Dynamic: A Journey into the Mystery of Sibling Success",
+            alt: "Susan Dominus"
+          }
+        }
+      },
+      { d: { text: "The Family Dynamic: A Journey into the Mystery of Sibling Success" } },
+      { d: { text: "Susan Dominus" } }
     ]
   ]

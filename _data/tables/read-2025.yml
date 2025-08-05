@@ -26,7 +26,7 @@ table:
       { d: { text: The Message } },
       { d: { text: Ta-Nehisi Coates } },
       { d: { text: "<time datetime=\"2025-01-06\">January 6, 2025</time>" } },
-      { d: { text: This book take a look at the Israel Palestine Gaza conflict  } }
+      { d: { text: This book takes a look at the Isreal Palestine Gaza conflict  } }
     ],
     [
       { d:
@@ -438,6 +438,9 @@ table:
       { d: { text: "This was an interesting book about Tuberculosis (TB).  Its history and the current state of this disease around the world today.  The fact that we as a human race can save so many individuals that have TB.  Yet, we don't because of them being poor or because of racism.  Why do we not understand how lucky we are living within a developed country.  With all of its conveniences and benefits compared to under developed countries that don't have what we have.  This book talks about this with respect to TB.  It lets us know that we can eradicate this disease if we choose to.  Lastly, it talks about how there are groups that are trying to do just that.  It is trying to instill a desire to join the cause against TB." } },
     ],
     [
+      { h: { text: July, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
       { d:
         { img:
           { src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/01/9780465094738.jpg?resize=676,1024",
@@ -451,5 +454,53 @@ table:
       { d: { text: "Michael Scott" } },
       { d: { text: "<time datetime=\"2025-07-10\">July 10, 2025</time>" } },
       { d: { text: "This book took a different perspective about Ancient Historical Cultures that included the Roman Empire in the West all the way to China in the East.  It describes how the Roman Empire, India, China and others came together through trade and religous pilgrimages from around 800 BC to 400 CE.  I really enjoyed the stories that were written about those times, even thou we cannot be certain how exact they are.  Nonetheless, these stories were interesting and gave you an idea how the world was functioning during that period in time." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images4.penguinrandomhouse.com/cover/9780593314920",
+            href: "https://www.penguinrandomhouse.com/books/678116/the-rainbow-by-yasunari-kawabata/",
+            title: "The Rainbow",
+            alt: "Yasunari Kawabata"
+          }
+        }
+      },
+      { d: { text: "The Rainbow" } },
+      { d: { text: "Yasunari Kawabata<br>Translated by Haydn Trowell" } },
+      { d: { text: "<time datetime=\"2025-07-19\">July 19, 2025</time>" } },
+      { d: { text: "This was a nice story about three sisters that have the same father but different mothers.  The three sisters are completely different people that have their own way of life that doesn't agree with each of them.  It offered how people from Japan perceive life that is different than how I do.  Which, I found this is interesting in and of itself.  I also enjoyed the way that the author described Japan from the landscape to their way of life." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://ingram-nyu.imgix.net/covers/9781479837243.jpg?auto=format&w=298&dpr=1&q=20",
+            href: "https://nyupress.org/9781479837243/algorithms-of-oppression/",
+            title: "Algorithms of Oppression: How Search Engines Reinforce Racism",
+            alt: "Safiya Umoja Noble"
+          }
+        }
+      },
+      { d: { text: "Algorithms of Oppression: How Search Engines Reinforce Racism" } },
+      { d: { text: "Safiya Umoja Noble" } },
+      { d: { text: "<time datetime=\"2025-07-18\">July 18, 2025</time>" } },
+      { d: { text: "This book gives a really great perspective of how Artificial Inteligence effects our lives in a good and bad way.  It talks about the need to be able to vet our models before publishing them to the world.  It also reflects on the need to generate policies that companies should follow before releasing these types of products.  I find that it isn't trying to criticize but that it asks us to reflect on what we are creating before relasing it to the world." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://mpd-biblio-covers.imgix.net/9781250425362.jpg?ixlib=imgixjs-4.0.1&w=1074",
+            href: "https://torpublishinggroup.com/rapport-friendship-solidarity-communion-empathy/?isbn=9781250425362&format=ebook",
+            title: "Rapport: Friendship, Solidarity, Communion, Empathy",
+            alt: "Martha Wells"
+          }
+        }
+      },
+      { d: { text: "Rapport: Friendship, Solidarity, Communion, Empathy" } },
+      { d: { text: "Martha Wells" } },
+      { d: { text: "<time datetime=\"2025-07-28\">July 28, 2025</time>" } },
+      { d: { text: "This short story is part of the \"Murderbot Diaries\" series about a mission to a planet that doesn't include the main character of the series.  It was an alright short story but it felt lacking in substance compared to the other stories that I have read in the series." } }
+    ],
+    [
+      { h: { text: August, attributes: { colspan: 5, class: "center-text" } } }
     ]
   ]
