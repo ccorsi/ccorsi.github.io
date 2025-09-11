@@ -78,32 +78,6 @@ table:
     [
       { d:
         { img:
-          { src: "https://cdn2.wwnorton.com/wwnproducts/TRADE/1/1/9781324106111/9781324106111_300.jpg",
-            href: "https://wwnorton.com/books/9781324106111",
-            title: "The Art of Uncertainty: How to Navigate Chance, Ignorance, Risk and Luck",
-            alt: "David Spiegelhalter"
-          }
-        }
-      },
-      { d: { text: "The Art of Uncertainty: How to Navigate Chance, Ignorance, Risk and Luck" } },
-      { d: { text: "David Spiegelhalter" } }
-    ],
-    [
-      { d:
-        { img:
-          { src: "https://images.randomhouse.com/cover/9780593466797",
-            href: "https://www.penguinrandomhouse.ca/books/695902/filterworld-by-kyle-chayka/9780593466797",
-            title: "Filterworld: How Algorithms Flattened Culture",
-            alt: "Kyle Chayka"
-          }
-        }
-      },
-      { d: { text: "Filterworld: How Algorithms Flattened Culture" } },
-      { d: { text: "Kyle Chayka" } }
-    ],
-    [
-      { d:
-        { img:
           { src: "https://images.randomhouse.com/cover/9780593137901",
             href: "https://www.penguinrandomhouse.ca/books/624531/the-family-dynamic-by-susan-dominus/9780593137901",
             title: "The Family Dynamic: A Journey into the Mystery of Sibling Success",
@@ -113,5 +87,18 @@ table:
       },
       { d: { text: "The Family Dynamic: A Journey into the Mystery of Sibling Success" } },
       { d: { text: "Susan Dominus" } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2021/06/PhantomPlague_3b.jpg?resize=660,1024",
+            href: "https://www.hachettebookgroup.com/titles/vidya-krishnan/phantom-plague/9781541768475/?lens=publicaffairs",
+            title: "Phantom Plague: How Tuberculosis Shaped History",
+            alt: "Vidya Krishnan"
+          }
+        }
+      },
+      { d: { text: "Phantom Plague: How Tuberculosis Shaped History" } },
+      { d: { text: "Vidya Krishnan" } }
     ]
   ]

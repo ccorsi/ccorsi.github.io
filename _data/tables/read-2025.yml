@@ -502,5 +502,38 @@ table:
     ],
     [
       { h: { text: August, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images.randomhouse.com/cover/9780593466797",
+            href: "https://www.penguinrandomhouse.ca/books/695902/filterworld-by-kyle-chayka/9780593466797",
+            title: "Filterworld: How Algorithms Flattened Culture",
+            alt: "Kyle Chayka"
+          }
+        }
+      },
+      { d: { text: "Filterworld: How Algorithms Flattened Culture" } },
+      { d: { text: "Kyle Chayka" } },
+      { d: { text: "<time datetime=\"2025-08-25\">August 25, 2025</time>" } },
+      { d: { text: "This book contained some really interesting food for thought issues with respect to how we as a society are consistently being distracted.  The author talks about the different effect that this has on individuals and society.  He ultimately talks about his experience trying to control this distraction such that he can live his life without the need to be entertained every second.  I highly recommend this book to whoever is interested in how technology is being used to keep our attention for the different companies benefit and not our own." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://cdn2.wwnorton.com/wwnproducts/TRADE/1/1/9781324106111/9781324106111_300.jpg",
+            href: "https://wwnorton.com/books/9781324106111",
+            title: "The Art of Uncertainty: How to Navigate Chance, Ignorance, Risk and Luck",
+            alt: "David Spiegelhalter"
+          }
+        }
+      },
+      { d: { text: "The Art of Uncertainty: How to Navigate Chance, Ignorance, Risk and Luck" } },
+      { d: { text: "David Spiegelhalter" } },
+      { d: { text: "<time datetime=\"2025-08-28\">August 28, 2025</time>" } },
+      { d: { text: "This book offers a really good representation of how statistics and probability is used currently and how it can be misunderstood.  The author offers many examples on how the public can be misrepresented with respect to estimates about different conditions.  For instance, how some have use the total number of individuals that have died after getting the vacine compared to the number of individuals that died that didn't get the covid vacine.  Yes, more died that got the vacine compared to those that didn't.  If you compare the percentage of people who died who got the vacine compared to those that didn't.  You would see that a greater percentage of people died who didn't get the vacine compared to those that did.  This was just one example where we see how easy it is to misinterpret the data.  The author does talk about how much certainty one has with certain set of data compared to others.  The more uncertainty there is the greater the range of estimates because of being unable to properly quantify the information.  This is a great book for those that want to have a better understanding on how we use Statistics and Propabilty to access the world around us." } }
+    ],
+    [
+      { h: { text: September, attributes: { colspan: 5, class: "center-text" } } }
     ]
   ]

@@ -3,6 +3,7 @@ title: Books
 subtitle: Reading and Read
 permalink: /reading/
 sidebar: reading
+id: reading
 ---
 
 This page contains a list of books that I am currently reading.  While this list is fairly small since there is only
