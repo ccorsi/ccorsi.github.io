@@ -535,5 +535,131 @@ table:
     ],
     [
       { h: { text: September, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2021/06/PhantomPlague_3b.jpg?resize=660,1024",
+            href: "https://www.hachettebookgroup.com/titles/vidya-krishnan/phantom-plague/9781541768475/?lens=publicaffairs",
+            title: "Phantom Plague: How Tuberculosis Shaped History",
+            alt: "Vidya Krishnan"
+          }
+        }
+      },
+      { d: { text: "Phantom Plague: How Tuberculosis Shaped History" } },
+      { d: { text: "Vidya Krishnan" } },
+      { d: { text: "<time datetime=\"2025-09-12\">September 12, 2025</time>" } },
+      { d: { text: "This is a wonderful book that gives you a great history of our relationship with Tuberculosis.  It then describes how our greed for money has created a world that still has to deal with Tuberculosis instead of eradicating this disease.  It talks about foolishly ignoring that many poor people around the world are dealing with this disease when we have a means to cure them.  What is worse is that we've offered solutions that we known don't work to the poor people around the world.  These solutions end up making their lives worse instead of better.  On top of that, they require some unreasonable requirements like having to travel long distances to be able to be administered the drugs to fight the disease.  It also talks about the struggles of correcting these issues.  While, incurring unnecessary deaths along the way.  This is a book that is very informative and easy to read that will cause strong emotions for the reader." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781668003152/now-or-never-9781668003152_lg.jpg",
+            href: "https://www.simonandschuster.com/books/Now-or-Never/Janet-Evanovich/Stephanie-Plum/9781668003152",
+            title: "Now and Never",
+            alt: "Janet Evanovich"
+          }
+        }
+      },
+      { d: { text: "Now and Never" } },
+      { d: { text: "Janet Evanovich" } },
+      { d: { text: "<time datetime=\"2025-09-28\">September 28, 2025</time>" } },
+      { d: { text: "This is a book that I started reading because of it being one of my of mother in-law favorite author.  While the story wasn't that interesting to me as I had hoped.  I have liked the main character, Stephanie Plum, that always seems to get herself into some kind of trouble.  Her bounty hunter job doesn't offer her much cash but it is something that she uses to try to do good.  I like the way she has to deal with doing her job and just being a good human being.  This is something that we should all aspire to become.  It will only make this world a better place for all of us." } }
+    ],
+    [
+      { h: { text: October, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images4.penguinrandomhouse.com/cover/9781401971366",
+            href: "https://www.penguinrandomhouse.com/books/743134/the-let-them-theory-by-mel-robbins/",
+            title: "The Let Them Theory: A Life-Changing Tool That Millions of People Can't Stop Talking About",
+            alt: "Mel Robbins"
+          }
+        }
+      },
+      { d: { text: "The Let Them Theory: A Life-Changing Tool That Millions of People Can't Stop Talking About" } },
+      { d: { text: "Mel Robbins" } },
+      { d: { text: "<time datetime=\"2025-10-2\">October 2, 2025</time>" } },
+      { d: { text: "This self-help book is something that I enjoy reading in general.  While this book has many good suggestions.  It didn't provide me with anything new.  I guess that what happens when someone likes to read these types of books.  It is a good book for someone that wants to make better judgement calls that will help themselves and others around them.  I do think that this book can benefit others but I also believe that we need to read other similar books to gain more perspective on this subject.  The reason is a single method will not work for everyone and we all need to find the right method that can best help us.  This book can be one for some of us." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://faithgateway.com/cdn/shop/files/9780310368014_590x590@2x.jpg?v=1702893761",
+            href: "https://faithgateway.com/products/learning-to-disagree-the-surprising-path-to-navigating-differences-with-empathy-and-respect?variant=41318580912264",
+            title: "Learning to Disagree: The Surprising Path to Navigating Differences with Empathy and Respect",
+            alt: "John Inazu"
+          }
+        }
+      },
+      { d: { text: "Learning to Disagree: The Surprising Path to Navigating Differences with Empathy and Respect" } },
+      { d: { text: "John Inazu" } },
+      { d: { text: "<time datetime=\"2025-10-6\">October 6, 2025</time>" } },
+      { d: { text: "This book talks about how things are not always black and white.  While, his discussion centers around the law since he is a lawyer professor.  It nonetheless does give us some food for thought on how to deal with disagreements between each other.  I am one that strongly believes that having disagreements is a good thing.  I just would like to see more of us being able to accept our differences with respect." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781668023488/abundance-9781668023488_lg.jpg",
+            href: "https://www.simonandschuster.com/books/Abundance/Ezra-Klein/9781668023488",
+            title: "Abundance",
+            alt: "Ezra Klein and Derek Thompson"
+          }
+        }
+      },
+      { d: { text: "Abundance" } },
+      { d: { text: "Ezra Klein and<br/> Derek Thompson" } },
+      { d: { text: "<time datetime=\"2025-10-12\">October 12, 2025</time>" } },
+      { d: { text: "This is a great book that describes how the United States is continuously slowing down progress to a stand still.  It offers many an example of how this is be done.  While I can understand why that is so.  We do need to find a middle ground that allows us to move forward without causing serious consequences." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://cdn2.wwnorton.com/wwnproducts/TRADE/9/4/9781324076049/9781324076049_300.jpg",
+            href: "https://wwnorton.com/books/9781324005421",
+            title: "From One Cell: A Journey into Life's Origins and the Future of Medicine",
+            alt: "From One Cell: A Journey into Life's Origins and the Future of Medicine"
+          },
+        }
+      },
+      { d: { text: "From One Cell: A Journey into Life's Origins and the Future of Medicine" } },
+      { d: { text: "Ben Stanger" } },
+      { d: { text: "<time datetime=\"2025-10-31\">October 31, 2025</time>" } },
+      { d: { text: "This book initially was just telling me things that I have already read.  This caused me to put this book down but as soon as I picked it up.  It started to talk about recent advancements in stem cell research.  It offered some hope that we can really use this technology to provide better care for us all.  While, it initially talked about the ethic issues surrounding the initial stem cell research.  It then described how scientist were able to remove the ethics issue around stem cell research.  This has allow scrientist to make great strides in stem cell research to the point that we are starting to see its benefits." } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.harpercollins.com/cdn/shop/files/9780062388773.jpg?v=1762698572&width=350",
+            href: "https://www.harpercollins.com/products/reader-come-home-maryanne-wolf?variant=32128334594082",
+            title: "Reader, Come Home: The Reading Brain in a Digital World",
+            alt: "Reader, Come Home: The Reading Brain in a Digital World"
+          },
+        }
+      },
+      { d: { text: "Reader, Come Home: The Reading Brain in a Digital World" } },
+      { d: { text: "Maryanne Wolf" } },
+      { d: { text: "<time datetime=\"2025-10-31\">October 31, 2025</time>" } },
+      { d: { text: "This was a great book that explained the intricacy of how reading affects us.  It was particularly interesting how our digital world is changing the way how we read.  It offers a warming that we need to be more deliberate in our teaching of reading that involves not only our teachers but also the parents.  Mainly, the importance of minimizing the use of digital media for young children.  It also made me realize how much of an impact can have on their children when reading to them consistently through their early younger years." } }
+    ],
+    [
+      { h: { text: November, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images1.penguinrandomhouse.com/cover/9780593979044",
+            href: "https://www.penguinrandomhouse.com/books/787334/tokyo-express-by-seicho-matsumoto/",
+            title: "Tokyo Express: A Novel",
+            alt: "Tokyo Express: A Novel"
+          },
+        }
+      },
+      { d: { text: "Tokyo Express: A Novel" } },
+      { d: { text: "Seicho Matsumoto<br>Translated By Jesse Kirkwood" } },
+      { d: { text: "<time datetime=\"2025-11-13\">November 13, 2025</time>" } },
+      { d: { text: "This is supposed to be Japan's version of Agatha Cristie.  I did find this book to be a good mystery novel.  I did enjoy how the detective went about looking for to pinpoint the murder on the suspect.  I liked how the author writes hiw thought process that is then summaries in the last chapter." } }
     ]
   ]
