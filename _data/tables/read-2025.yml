@@ -661,5 +661,23 @@ table:
       { d: { text: "Seicho Matsumoto<br>Translated By Jesse Kirkwood" } },
       { d: { text: "<time datetime=\"2025-11-13\">November 13, 2025</time>" } },
       { d: { text: "This is supposed to be Japan's version of Agatha Cristie.  I did find this book to be a good mystery novel.  I did enjoy how the detective went about looking for to pinpoint the murder on the suspect.  I liked how the author writes hiw thought process that is then summaries in the last chapter." } }
+    ],
+    [
+      { h: { text: December, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://images2.penguinrandomhouse.com/cover/9780593718728",
+            href: "https://www.penguinrandomhouse.com/books/750014/the-next-conversation-by-jefferson-fisher/",
+            title: "The Next Conversation: Argue Less, Talk More",
+            alt: "The Next Conversation: Argue Less, Talk More"
+          },
+        }
+      },
+      { d: { text: "The Next Conversation: Argue Less, Talk More" } },
+      { d: { text: "Jefferson Fisher" } },
+      { d: { text: "<time datetime=\"2025-12-2\">December 2, 2025</time>" } },
+      { d: { text: "This book offers a lot of personal advise that the author has gained through his life dealing with different situations that involve communication.  He does offer some sound advise that we can all use.  While the author does offer these advise and they can be useful by others.  I feel that we all need to be able to find our place within his advise.  What I mean is that what is said can be useful.  We still need to figure out what are our particular way of communicating without incurring any of the difficult conversations.  In the end, this is something that each one that reads this book needs to figure out." } }
     ]
   ]
