@@ -42,7 +42,7 @@ table:
           { src: "https://content.packt.com/_/image/original/B19779/cover_image.jpg",
             href: "https://www.packtpub.com/en-us/product/mastering-kotlin-for-android-14-9781837631711",
             title: "Mastering Kotlin for Android 14: Build powerful Android apps from scratch using Jetpack libraries and Jetpack Compose",
-            alt: "Harun Wangereka"
+            alt: "Mastering Kotlin for Android 14: Build powerful Android apps from scratch using Jetpack libraries and Jetpack Compose"
           }
         }
       },
@@ -55,37 +55,11 @@ table:
           { src: "https://images3.penguinrandomhouse.com/cover/9780593734223",
             href: "https://www.penguinrandomhouse.com/books/762444/nexus-by-yuval-noah-harari/",
             title: "Nexus: A Brief History of Information Networks from the Stone Age to AI",
-            alt: "Yuval Noah Harari"
+            alt: "Nexus: A Brief History of Information Networks from the Stone Age to AI"
           }
         }
       },
       { d: { text: "Nexus: A Brief History of Information Networks from the Stone Age to AI" } },
       { d: { text: "Yuval Noah Harari" } }
-    ],
-    [
-      { d:
-        { img:
-          { src: "https://images.randomhouse.com/cover/9780593137901",
-            href: "https://www.penguinrandomhouse.ca/books/624531/the-family-dynamic-by-susan-dominus/9780593137901",
-            title: "The Family Dynamic: A Journey into the Mystery of Sibling Success",
-            alt: "Susan Dominus"
-          }
-        }
-      },
-      { d: { text: "The Family Dynamic: A Journey into the Mystery of Sibling Success" } },
-      { d: { text: "Susan Dominus" } }
-    ],
-    [
-      { d:
-        { img:
-          { src: "https://res.cloudinary.com/bloomsbury-atlas/image/upload/w_360,c_scale,dpr_1.5/jackets/9781639734191.jpg",
-            href: "https://www.bloomsbury.com/us/longing-for-less-9781639734191/",
-            title: "The Longing for Less: What’s Missing from Minimalism",
-            alt: "Kyle Chayka"
-          }
-        }
-      },
-      { d: { text: "The Longing for Less: What’s Missing from Minimalism" } },
-      { d: { text: "Kyle Chayka" } }
     ]
   ]
