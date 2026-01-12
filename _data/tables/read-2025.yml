@@ -739,5 +739,20 @@ table:
       { d: { text: "Toni Morrison" } },
       { d: { text: "<time datetime=\"2025-12-27\">December 27, 2025</time>" } },
       { d: { text: "" } }
+    ],
+    [
+      { d:
+        { img:
+          { src: "https://www.hachettebookgroup.com/wp-content/uploads/2024/09/9780316459020_aa4675.jpg?resize=660,1024",
+            href: "https://www.hachettebookgroup.com/titles/alexander-clapp/waste-wars/9780316459020/",
+            title: "Waste Wars: The Wild Afterlife of Your Trash",
+            alt: "Waste Wars: The Wild Afterlife of Your Trash"
+          }
+        }
+      },
+      { d: { text: "Waste Wars: The Wild Afterlife of Your Trash" } },
+      { d: { text: "Alexander Clapp" } },
+      { d: { text: "<time datetime=\"2025-12-30\">December 30, 2025</time>" } },
+      { d: { text: "" } }
     ]
   ]

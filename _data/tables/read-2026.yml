@@ -1,0 +1,47 @@
+table:
+  header: [
+    [
+      { h: { text: Book } },
+      { h: { text: Title } },
+      { h: { text: Author } },
+      { h: { text: Completed On } },
+      { h: { text: Comments } }
+    ]
+  ]
+  entries: [
+    [
+      { h: { text: January, attributes: { colspan: 5, class: "center-text" } } }
+    ],
+    [
+      { d:
+        { img:
+          {
+            src: "https://m.media-amazon.com/images/I/61C-vWLSQpL._SL1500_.jpg",
+            href: "https://www.amazon.com/Introverts-Edge-Quiet-Outsell-Anyone/dp/0814438873?crid=2LAHMZDOJNWWC&dib=eyJ2IjoiMSJ9.Rup9sHLIpbu_LFXc5DxVpj3mtRjuETjk2D1VY8MYh4tvI-BSflN5-z4QU5LvuJHhG96YXYg37YFdjTFme8OVlLpur_atWrZJanloTC2iIlU.es1J9B5sLp4PwC0oF684LV5jz_isbAefaR6CwszxCig&dib_tag=se&keywords=the+introverts+edge+how+the+quiet+and+shy&nsdOptOutParam=true&qid=1767900585&sprefix=the+introvers+edge+how+the+quiet+and+shy%2Caps%2C133&sr=8-1",
+            title: "The Introverts Edge: How the Quiet and Shy Can Outsell Anyone",
+            alt: "The Introverts Edge: How the Quiet and Shy Can Outsell Anyone"
+          },
+        }
+      },
+  { d: { text: "The Introverts Edge: How the Quiet and Shy Can Outsell Anyone" } },
+      { d: { text: "By Matthew Pollard<br>By Derek Lewis" } },
+      { d: { text: "<time datetime=\"2026-01-05\">January 5, 2026</time>" } },
+      { d: { text: "This book was...." } }
+    ],
+    [
+      { d:
+        { img:
+          {
+            src: "https://m.media-amazon.com/images/I/71mFMDjoDEL._SL1500_.jpg",
+            href: "https://www.amazon.com/Why-Read-Mark-Edmundson/dp/1582346089",
+            title: "Why Read?",
+            alt: "Why Read?"
+          },
+        }
+      },
+      { d: { text: "Why Read?" } },
+      { d: { text: "Mark Edmundson" } },
+      { d: { text: "<time datetime=\"2026-01-08\">January 8, 2026</time>" } },
+      { d: { text: "This book was...."  } }
+    ]
+  ]
