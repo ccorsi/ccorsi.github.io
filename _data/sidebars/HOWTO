@@ -32,7 +32,7 @@ sub-section home subbar will have the following format:
 The sub-section-name will become a sub-directory within the top-level repository
 directory named top-level-sidebar-directory-name.  This will allow you to seperate
 the articles within their own directory which segregates these articles such
-that it reduces the amount of files are located within each directory.
+that it reduces the amount of files located within each directory.
 
 While the above is an example of a sub-section sidebar.  It only describes a
 single sub-section sidebar.  What is doesn't is provide the format for how

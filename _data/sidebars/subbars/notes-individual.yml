@@ -3,3 +3,4 @@ subbar:
     - subbar: notes-latex-home
     - subbar: notes-git-home
     - subbar: notes-curl-home
+    - subbar: notes-npm-home

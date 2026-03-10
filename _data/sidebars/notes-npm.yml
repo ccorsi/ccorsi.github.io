@@ -1,0 +1,5 @@
+sidebar:
+  title: NPM
+  entries:
+    - subbar: notes-npm-individual
+    - subbar: notes-home
