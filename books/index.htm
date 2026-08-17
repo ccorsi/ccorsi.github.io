@@ -100,7 +100,7 @@
                 return
             }
 
-            if (tyepof( node.value ) == 'undefined' || node.value.length == 0) {
+            if (typeof( node.value ) == 'undefined' || node.value.length == 0) {
                 console.info(`Disabling node id: ${bid} "${node?.value}"`)
                 bnode.disabled = true
             } else {
