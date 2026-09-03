@@ -23,6 +23,35 @@
 
 ############################### Functions ##############################
 
+function get_help {
+   local selected="0"
+   local selections=("page" "sidebar" "subbar" "post" "update")
+
+   while [ ! -z "$selected" ]
+   do
+      # Select what to create
+      select_from_array selections selected
+      trace selected: ${selected}
+      case "${selected}" in
+      page)
+         usage_page
+         ;;
+      post)
+         usage_post
+         ;;
+      sidebar)
+         usage_sidebar
+         ;;
+      subbar)
+         usage_subbar
+         ;;
+      update)
+         usage_update
+         ;;
+      esac
+   done
+}
+
 function usage {
    case "$1" in
       page)
@@ -54,13 +83,13 @@ function usage {
 # that the user can then understand the common reason for this type of help
 # within this script
 HEADER=$(cat << 'EOF'
-This script provides several different ways of creating and updating the current
-type of web pages and their menus.
+This script provides different options of creating and updating the current set of web
+pages and their menus.
 
 The objective is to provide a common means of producing web pages, including posts,
-for this web site such that the design is consistent throughout the site.
+such that the design is consistent throughout the web site.
 
-The following describes the specific detailed help associated to the requested feature.
+The following describes the detailed help associated to the requested feature.
 
 EOF
 )
@@ -116,12 +145,12 @@ function usage_sidebar {
    OUTPUT=$(cat << EOF
 $HEADER
 
-This selection is used to create a sidebar to used by a page.  This sidebar is a in page
-menu that the user can use to navigate through the current page.  The reason behind creating
-a sidebar is that the current general navigation bar is limited to the number of levels deep
-that is can be defined.  The current navigation bar on the top of each page can only go one
-level deep.  Thus, the use of sidebars allow us the ability to produce links to multiple
-pages within a single topic/selection.
+This is used to create a sidebar to be used by a page.  The sidebar is part of a page
+menu that the user uses to navigate through the current page.  The reason behind creating
+a sidebar is that the current general navigation bar is limited to the number of levels
+that can be defined.  The current top navigation bar of each page can only go one level
+deep.  Thus, the use of sidebars gives us the ability to produce links to multiple pages
+within a single topic/selection.
 
 The creation of a sidebar should be done after you've created all the referencing subbars
 associated with the sidebar.  Granted, this tool does provide the ability to append to a
@@ -134,9 +163,9 @@ The creation of a sidebar should reference one or more of the following types of
    - a "INDIVIDUAL" subbar
 
 The above types of subbar provide logic that makes it easier to create and use the different
-subbars that are used by a sidebar.  These types of subbars are further explained within the
-subbar help sectio of this script.  We are then going to continue describing how a sidebar
-is created.
+subbars used by a sidebar.  These types of subbars are further explained within the subbar
+help section of this script.  We are then going to continue describing how a sidebar is
+created.
 
 A sidebar is created using the "HOME" subbar to reference a different page within the current
 topic/section.  This subbar is usually defined as "<section_name>[-<subsection_name>]*-home",
@@ -146,6 +175,25 @@ sidebar topic/selection.
 While the use of the "INDIVIDUAL" subbar references are used to link the different topic specific
 pages that is related to the current topic/section.  This can be anything from in host pages or
 external links associated with the current topic/section.
+
+Here is the format associated with the creation and updating of a sidebar:
+
+sidebar:
+    title: <Main Sidebar Menu Title>
+    entries:
+        - entry: <Entry Title>
+          url: <Local Page Url>
+        - entry: <Entry Title>
+          ext-url: <External Page Url>
+        - subbar: <Subbar file name>
+        - title: <Submenu Title>
+          submenu:
+            - entry: <Entry Title>
+              url: <Local Page Url>
+            - entry: <Entry Title>
+              ext-url: <External Page Url>
+            - subbar: <Subbar file name>
+
 
 EOF
 )
@@ -157,12 +205,13 @@ function usage_subbar {
    OUTPUT=$(cat << EOF
 $HEADER
 
-This selection is used to create a subbar. Subbars are associated with a sidebar and offer specific
-links for navigation within the current topic/section.  These navigations can be anything from
-going to a top-level page to pointing to a sub-topic/sub-section of the current topic/section.
-Thus, different subbars can be created depending on what they are used for.  While there is a
-flexible feature of creating and using a subbar.  There is a recommended design and usage of
-subbars.  These will be described in the next section.
+This is used to create a subbar that are associated with sidebars. The subbars are associated
+with a sidebar and offer specific links for navigation within the current topic/section.  These
+navigations can be anything from going to a top-level page to pointing to a
+sub-topic/sub-section in the current topic/section.  Thus, different subbars can be created
+depending on what they are used for.  While there is a flexible feature of creating and using a
+subbar.  There is a recommended design and usage of these subbars.  This will be described in
+the next section.
 
 There are two different types of subbars that should be created.
 
@@ -172,13 +221,14 @@ There are two different types of subbars that should be created.
 The above types will be able to seperate how each will be used within the context of a sidebar.
 The HOME subbar will contain a reference to a given page within the web site.  While an
 INDIVIDUAL subbar will contain references to links relevant to the current topic/section.  This
-will then be able to use the HOME subbar within a sidebar that references a different topic/section
-than the current page topic/section.  While the INDIVIDUAL subbar is used to reference all of the
-different topic/sections associated with the current topic/section.
+will allow you to be able to use the HOME subbar within a sidebar that references a different
+topic/section than the current page topic/section.  While the INDIVIDUAL subbar is used to
+reference all other types of the different lower referencing topic/sections associated with the
+current topic/section or external links like product documentation.
 
 Let us describe the different options associated to creating a subbar.  A subbar can reference one
-or more entries and each entry can define one or more types.   Let us then expand on what each ones
-contain as options.
+or more entries and each entry can define one or more types.   Let us then expand on what each
+option can do.
 
 The subbars list of entries can be one of the following:
 
@@ -186,39 +236,54 @@ The subbars list of entries can be one of the following:
    - entry
    - submenu
 
-The subbar entry is just being able to reference another defined subbar that will be references within
-this currently defining subbar. 
+The subbar entry is used to reference another defined subbar. 
 
-The entry options can then define the following options:
+The entry option can then define the following options:
 
    - url
    - ext-url
 
 The url option is just a local reference to the site pages.  While the ext-url is a link that is located
-outside of the web site.  This will open the page within a new tab allowing you to be able to come back
-to the site current page.
+outside of the web site.  This will open a page within a new tab allowing you to be able to come back
+to the current site page.
 
-The url option will define a url path relative to the root url path of the current site.  For instance,
+The url option will define a url path relative to the root path of the current site.  For instance,
 if we have the following path:
 
    - /home/foo/bar/
 
-The above will then open current site web page at http{s}://home/foo/bar/.  Note that in the example
-above that a '/' was added at the end.  This is required whenever you want to open the define index
-web file that is located within the /home/foo/bar directory of the web site.  If you want to reference
-a web page that is not the default.  You need to include the fully qualified web page like:
+The above will then open current site web page at http{s}://<web_site_url>/home/foo/bar/.  Note that in
+the example above, a '/' was added at the end.  This is required whenever you want to open the define index
+web file located at the web site /home/foo/bar directory.  If you want to reference a web page that is not
+the default.  You need to include the fully qualified web page like:
 
    - /home/foo/bar/list.html
 
-This will then be referencing the specific local web page.
+This will then reference the specific local web page.
 
-The ext-url option will define an external link that will be opened within its own browser tab.  This
-will then allow you to be able to move back and fourth between the current web site and the external
-web site.
+The ext-url option will define an external link that will be opened within a new browser tab.  This
+will allow you to move back and fourth between the current web site and the external web site.
 
 Lastly, the submenu option just allows you to create a section that will contain similar topic/selection
 within the submenu.  Upon creating the submenu, you can then add one or more of the entry, subbar or
 submenu.
+
+Here is the general format of the different options that you can use when creating or updating a subbar:
+
+subbar:
+    entries:
+        - entry: <Entry Title>
+          url: <Local Page Url>
+        - entry: <Entry Title>
+          ext-url: <External Page Url>
+        - subbar: <Subbar file name>
+        - title: <Submenu Title>
+          submenu:
+            - entry: <Entry Title>
+              url: <Local Page Url>
+            - entry: <Entry Title>
+              ext-url: <External Page Url>
+            - subbar: <Subbar file name>
 
 EOF
 )
@@ -230,20 +295,20 @@ function usage_post {
    OUTPUT=$(cat << EOF
 $HEADER
 
-This selection is used to create a post page that is different from a regular web page using the
-page option.  There are differences between creating a post and page.  The main difference is that
-a post will request other types of information that will be attached to the creating post.  This
-information is specific to a regular web site post that is not associated with a regular web page.
+This is used to create a post page that is different from a regular web page using the page option.
+There are differences between creating a post and page.  The main difference is that a post will
+request other types of information that will be attached to the creating post.  This information is
+specific to a regular web site post that is not part of a regular web page.
 
 The creation of a post will then prompt you for different information associated with the newly
-creating post.  While some of them are obvious and these will not be mentioned here.  Thus, we will
-only discuss the ones that aren't as obvious options.
+creating post.  While some of them are obvious and will not be mentioned here.  We will then only
+discuss the ones that aren't obvious options.
 
 You will be asked to associate a list of tags to your post.  These tags are used as a search mechanism
 for your posts.  It allows visitors the ability to find specific topics that they would be interested
 in reading.
 
-The next option are categories that you would enter for the creating post.  Categories are used to
+The next option are categories that you would enter when the creating a post.  Categories are used to
 associate a general topic instead of specific identities like tags.  This allows the site to be
 organized to reflect the seperation of the post themselves.  While creating different categories is
 a great idea.  There is the caveat that you should keep the number of categories under ten for better
@@ -254,18 +319,18 @@ category.
 
 The next option is to enable debugging of your post generation.  This is only useful when you are
 trying to understand why a particular page generation is not what you are looking for.  It can be
-useful but then it was added such that it might be useful in the future.
+useful but it was added such that it might be useful in the future.
 
 The next option is weather this post should be published or if it is still being developed.  This
 simplifies the need to complete your post as soon as possible.  This then will allow you the space
-and time to properly develop the post without having to keep the copy locally.
+and time to properly develop the post without having to keep only a local copy.
 
-The final step offer you an oppurtunity to add some initial content to your post when it is being
+The final step offer you the opportunity to add some initial content to your post when it is being
 created.  While this section doesn't offer the flexibility of an editor.  It nonetheless provides
-some beginning to your post.
+some initial content to your post.
 
 The last step requires that you associate a filename to this post.  The name of the file should
-also include the .md prefix for it to be properly processed using Jekyll.  The name of the file
+also include the .md postfix for it to be properly processed using Jekyll.  The name of the file
 post doesn't require it to be preceeded by '/' since these files will be created within the posts
 directory.
 
@@ -279,11 +344,11 @@ function usage_update {
    OUTPUT=$(cat << EOF
 $HEADER
 
-This selection is used whenever you need to make changes to the currently created sidebar and subbar.
-The current implementation of this feature is that you can only add to the current sidebar and subbar.
-If you want to replace any of the entries, you would need to edit these implementations directly.
-Hopefully, in the future we can then update the current set of entries instead of only be able to add
-to the current entries for the selected sidebar and/or subbar.
+This is used whenever you need to make changes to the currently created sidebar and subbar. The
+current implementation of this feature can only add to the current sidebar and subbar.  If you want
+to replace any of the entries, you would need to edit them directly.  Hopefully, in the future we
+can be able to update the current set of entries instead of only be able to add to the current set
+of entries for the selected sidebar and/or subbar.
 
 EOF
 )
@@ -301,7 +366,7 @@ EOF
 ########################################################################
 function create_selection {
    local selected="0"
-   local selections=("page" "sidebar" "subbar" "post" "update")
+   local selections=("page" "sidebar" "subbar" "post" "update" "help")
 
    while [ ! -z "$selected" ]
    do
@@ -323,6 +388,10 @@ function create_selection {
             ;;
          "update")
             update_data
+            ;;
+         "help")
+            # add a help function that can be used to display help informationk pertaining to the above selections
+            get_help
             ;;
          *)
             break ;;
